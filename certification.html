@@ -94,6 +94,7 @@ a:hover{color:var(--accent-bright)}
       <button onclick="toggleMega(this)" style="background:none;border:none;color:var(--text);padding:.5rem 1rem;font-size:.9rem;font-weight:500;cursor:pointer;font-family:inherit">Ecosystem ▾</button>
       <div class="mega-panel" style="display:none;position:absolute;top:100%;right:0;width:520px;background:rgba(13,11,33,.98);border:1px solid rgba(212,168,67,.2);border-radius:12px;padding:1.5rem;margin-top:.5rem;box-shadow:0 20px 60px rgba(0,0,0,.5);backdrop-filter:blur(20px);z-index:999">
         <div style="color:var(--accent);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:.75rem">CSOAI Group Network</div>
+        <a href="https://meok.ai" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">🧠</span><span><strong style="display:block;font-size:.9rem">MEOK.AI</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">Sovereign AI OS &amp; agent marketplace</small></span></a>
         <a href="https://csga-global.vercel.app" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">🌐</span><span><strong style="display:block;font-size:.9rem">CSGA Global</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">Education & workforce development</small></span></a>
         <a href="https://csga-ai.vercel.app" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">🔬</span><span><strong style="display:block;font-size:.9rem">CSGA AI Research</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">150+ peer-reviewed publications</small></span></a>
         <a href="https://bmcc-cyber.vercel.app" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">🎓</span><span><strong style="display:block;font-size:.9rem">BMCC Cybersecurity</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">US education partner</small></span></a>
@@ -194,6 +195,44 @@ document.addEventListener('click',e=>{if(!e.target.closest('.mega-wrap'))documen
 </div>
 </section>
 
+<section class="section" style="background:rgba(212,168,67,.03)">
+<div class="container">
+  <div class="section-label">Common Questions</div>
+  <h2 class="section-title">Certification FAQ</h2>
+  <div style="max-width:800px;margin:2rem auto 0">
+    <details style="background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:12px;margin-bottom:1rem;padding:1rem 1.25rem">
+      <summary style="font-weight:600;cursor:pointer;color:var(--white)">What happens if I fail?</summary>
+      <p style="color:rgba(232,228,240,.7);margin-top:.75rem;font-size:.9rem">You receive a detailed gap report and can retake the exam once at no extra cost within 30 days.</p>
+    </details>
+    <details style="background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:12px;margin-bottom:1rem;padding:1rem 1.25rem">
+      <summary style="font-weight:600;cursor:pointer;color:var(--white)">How long is the certification valid?</summary>
+      <p style="color:rgba(232,228,240,.7);margin-top:.75rem;font-size:.9rem">CASA Foundation is valid for 12 months, Professional for 24 months, and Enterprise for 36 months. All tiers include a streamlined renewal process.</p>
+    </details>
+    <details style="background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:12px;margin-bottom:1rem;padding:1rem 1.25rem">
+      <summary style="font-weight:600;cursor:pointer;color:var(--white)">Is the audit conducted remotely?</summary>
+      <p style="color:rgba(232,228,240,.7);margin-top:.75rem;font-size:.9rem">Yes — our auditors can conduct the full assessment remotely via secure video calls and document review. On-site options are available for Enterprise clients.</p>
+    </details>
+  </div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+  <div class="section-label">Trusted by Leaders</div>
+  <h2 class="section-title">What Our Clients Say</h2>
+  <div class="grid-2" style="margin-top:2rem">
+    <div class="card">
+      <p style="font-style:italic;color:rgba(232,228,240,.85);margin-bottom:1rem">"CSOAI's CASA certification gave our board the language and framework we needed to govern AI responsibly."</p>
+      <div style="font-weight:700;color:var(--white)">— Director of Risk, Global Bank</div>
+    </div>
+    <div class="card">
+      <p style="font-style:italic;color:rgba(232,228,240,.85);margin-bottom:1rem">"The audit was rigorous, fair, and genuinely improved our safety posture."</p>
+      <div style="font-weight:700;color:var(--white)">— CTO, HealthTech Startup</div>
+    </div>
+  </div>
+</div>
+</section>
+
 <section class="section">
 <div class="container" style="text-align:center">
   <h2 class="section-title">Ready to Get Certified?</h2>
@@ -212,7 +251,7 @@ document.addEventListener('click',e=>{if(!e.target.closest('.mega-wrap'))documen
     </div>
     <div><h4 style="color:var(--accent);font-size:.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem;font-family:'Space Grotesk',sans-serif">Standards</h4><a href="charter.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Charter</a><a href="crosswalks.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Crosswalks</a><a href="guides.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Guides</a><a href="glossary.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Glossary</a></div>
     <div><h4 style="color:var(--accent);font-size:.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem;font-family:'Space Grotesk',sans-serif">Products</h4><a href="certification.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Certification</a><a href="enterprise.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Enterprise</a><a href="advisory.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Advisory</a><a href="pricing.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Pricing</a></div>
-    <div><h4 style="color:var(--accent);font-size:.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem;font-family:'Space Grotesk',sans-serif">Ecosystem</h4><a href="https://csga-global.vercel.app" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">CSGA Global</a><a href="https://csga-ai.vercel.app" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">CSGA AI Research</a><a href="https://bmcc-cyber.vercel.app" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">BMCC Cyber</a><a href="https://terranova-secdef.vercel.app" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Terranova SecDef</a></div>
+    <div><h4 style="color:var(--accent);font-size:.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem;font-family:'Space Grotesk',sans-serif">Ecosystem</h4><a href="https://meok.ai" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">MEOK.AI</a><a href="https://csga-global.vercel.app" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">CSGA Global</a><a href="https://csga-ai.vercel.app" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">CSGA AI Research</a><a href="https://bmcc-cyber.vercel.app" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">BMCC Cyber</a><a href="https://terranova-secdef.vercel.app" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Terranova SecDef</a></div>
     <div><h4 style="color:var(--accent);font-size:.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem;font-family:'Space Grotesk',sans-serif">Company</h4><a href="about.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">About</a><a href="case-studies.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Case Studies</a><a href="blog.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Blog</a><a href="contact.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Contact</a></div>
     <div><h4 style="color:var(--accent);font-size:.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem;font-family:'Space Grotesk',sans-serif">Account</h4><a href="dashboard.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Dashboard</a><a href="faq.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">FAQ</a><a href="resources.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Resources</a></div>
   </div>
@@ -222,4 +261,23 @@ document.addEventListener('click',e=>{if(!e.target.closest('.mega-wrap'))documen
   </div>
 </div>
 </footer>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "CASA Certification",
+  "description": "Industry-standard AI safety certification programme by CSOAI. Demonstrate your organisation's commitment to responsible AI governance with internationally recognised credentials.",
+  "brand": {
+    "@type": "Organization",
+    "name": "CSOAI"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "GBP",
+    "price": "4999",
+    "availability": "https://schema.org/InStock",
+    "url": "https://csoai.org/certification.html"
+  }
+}
+</script>
 </body></html>

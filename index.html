@@ -1299,7 +1299,8 @@
             }
         }
     </style>
-    <link rel="canonical" href="https://csoai.org/index.html">
+    <link rel="canonical" href="https://csoai.org/">
+    <meta property="og:url" content="https://csoai.org/">
 </head>
 <body>
     <div class="progress-bar"></div>
@@ -1976,6 +1977,7 @@ document.addEventListener('click',e=>{if(!e.target.closest('.mega-wrap'))documen
             const banner = document.getElementById('cookieBanner');
             banner.style.animation = 'slideUp 0.5s ease reverse';
             setTimeout(() => banner.remove(), 500);
+            localStorage.setItem('csoai-cookie-consent', 'true');
         }
 
         // Smooth scroll anchor links
@@ -2445,5 +2447,12 @@ document.addEventListener('click',e=>{if(!e.target.closest('.mega-wrap'))documen
 </script>
 <!-- END GLOBAL i18n -->
 
+
+<script>
+    if (localStorage.getItem('csoai-cookie-consent') === 'true') {
+        const banner = document.getElementById('cookieBanner');
+        if (banner) banner.style.display = 'none';
+    }
+</script>
 </body>
 </html>
