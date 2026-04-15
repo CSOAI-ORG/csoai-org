@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — CSOAI</title>
+    <meta name="description" content="CSOAI is the Chief Standards Office for Artificial Intelligence. Founded by Nicholas Templeman, we build the governance infrastructure that powers safe AI at scale.">
+    <link rel="canonical" href="https://csoai.org/about">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --navy: #1B2A4A; --dark-navy: #0F1A2E; --teal: #0D7377; --teal-light: #14919B;
+            --gold: #D4A843; --gold-dark: #B8912E; --white: #FFFFFF; --gray-light: #E8E8E8; --gray-dark: #2A3F5F;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--navy); color: var(--white); line-height: 1.6; overflow-x: hidden; }
+        header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1.5rem 2rem; background: rgba(27, 42, 74, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(13, 115, 119, 0.2); transition: all 0.3s ease; }
+        header.scrolled { padding: 1rem 2rem; background: rgba(27, 42, 74, 0.98); box-shadow: 0 4px 30px rgba(0,0,0,0.3); }
+        .header-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: 800; color: var(--gold); letter-spacing: 2px; text-decoration: none; }
+        .logo span { color: var(--teal); }
+        nav { display: flex; gap: 2rem; align-items: center; }
+        nav a { color: var(--white); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.3s ease; position: relative; }
+        nav a:hover { color: var(--teal); }
+        nav a::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: var(--gold); transition: width 0.3s ease; }
+        nav a:hover::after { width: 100%; }
+        .cta-button { background: linear-gradient(135deg, var(--teal), var(--teal-light)); color: var(--white); padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; border: none; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(13,115,119,0.3); font-size: 0.95rem; }
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(13,115,119,0.5); background: linear-gradient(135deg, var(--teal-light), var(--teal)); }
+        .cta-button.secondary { background: transparent; border: 2px solid var(--gold); color: var(--gold); box-shadow: none; }
+        .cta-button.secondary:hover { background: var(--gold); color: var(--navy); }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+        .page-hero { min-height: 50vh; display: flex; align-items: center; justify-content: center; padding-top: 100px; background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 50%, #0A1428 100%); text-align: center; }
+        .page-hero h1 { font-size: clamp(2rem, 6vw, 3.5rem); font-weight: 800; margin-bottom: 1rem; }
+        .page-hero h1 span { color: var(--gold); }
+        .page-hero p { color: #B0B8C8; font-size: 1.1rem; max-width: 700px; margin: 0 auto; }
+        section { padding: 5rem 0; }
+        section.light-bg { background-color: #273548; }
+        h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: 1rem; }
+        h2 span { color: var(--gold); }
+        p.lead { color: #B0B8C8; font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+        @media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } }
+        .value-list { list-style: none; margin-top: 1.5rem; }
+        .value-list li { color: #B0B8C8; padding-left: 1.5rem; position: relative; margin-bottom: 0.8rem; }
+        .value-list li::before { content: '✓'; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
+        .card { background: linear-gradient(135deg, #273548 0%, #2A4A6A 100%); border: 1px solid rgba(13,115,119,0.3); padding: 2rem; border-radius: 8px; }
+        .card h3 { color: var(--gold); margin-bottom: 0.5rem; }
+        .card p { color: #B0B8C8; font-size: 0.95rem; }
+        footer { background: linear-gradient(180deg, var(--dark-navy) 0%, #050A15 100%); border-top: 1px solid rgba(13,115,119,0.2); padding: 3rem 0 2rem; margin-top: 3rem; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h4 { color: var(--gold); font-size: 1rem; font-weight: 700; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 0.5rem; }
+        .footer-section a { color: #B0B8C8; text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease; }
+        .footer-section a:hover { color: var(--teal); }
+        .footer-bottom { border-top: 1px solid rgba(13,115,119,0.1); padding-top: 1.5rem; text-align: center; color: #8A92A2; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="header-container">
+            <a href="/" class="logo">CS<span>AI</span></a>
+            <nav>
+                <a href="/about">About</a>
+                <a href="/mcp-infrastructure">MCP Infrastructure</a>
+                <a href="/">Ecosystem</a>
+                <a href="/">CASA</a>
+                <a href="/contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>About <span>CSOAI</span></h1>
+            <p>The Chief Standards Office for Artificial Intelligence is building the governance infrastructure that enables safe, scalable, and trustworthy AI across the global economy.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container two-col">
+            <div>
+                <h2>Our <span>Mission</span></h2>
+                <p class="lead">CSOAI exists to close the governance gap between frontier AI capabilities and the institutional frameworks required to deploy them safely. We do this by establishing standards, certifications, and trust infrastructure that regulators, enterprises, and citizens can rely on.</p>
+                <p class="lead">We believe AI should be developed and deployed under clear, enforceable governance — not left to self-regulation or fragmented national rules that cannot keep pace with technological change.</p>
+            </div>
+            <div class="card">
+                <h3>What we do</h3>
+                <ul class="value-list">
+                    <li>Draft and maintain the CSOAI Charter</li>
+                    <li>Operate the CASA certification program</li>
+                    <li>Build cross-border mutual recognition frameworks</li>
+                    <li>Provide safety testing via AIdome</li>
+                    <li>Train 40,000+ AI safety auditors globally</li>
+                    <li>Power the MEOK AI Labs sovereign stack</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="light-bg">
+        <div class="container">
+            <h2>Founder</h2>
+            <p class="lead"><strong>Nicholas Templeman</strong> is President & COO of CSOAI and the architect of the 52-article CSOAI Charter. He leads the technical and operational implementation of the 8-layer governance ecosystem, from standards-setting to frontline deployment.</p>
+            <p class="lead">Nicholas is also the founder of <a href="https://meok.ai" style="color:var(--gold);text-decoration:none;">MEOK AI Labs</a>, the living research and product front-end of the CSOAI infrastructure stack. Under his leadership, MEOK has developed the world's largest ensemble of production-grade MCP servers, sovereign AI memory architecture, and the Guardian safety layer.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Powered <span>By CSOAI</span></h2>
+            <p class="lead">Our infrastructure powers a growing ecosystem of products, research programmes, and certification bodies:</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-top:2rem;">
+                <div class="card"><h3>MEOK AI Labs</h3><p>The sovereign AI OS and 255-node MCP marketplace — our living lab.</p></div>
+                <div class="card"><h3>AIdome</h3><p>Defence-grade AI security testing and adversarial validation.</p></div>
+                <div class="card"><h3>Proof of AI</h3><p>Cryptographic verification and financial primitives for certified AI.</p></div>
+                <div class="card"><h3>CASA</h3><p>Certified AI Safety Auditor programme across Commercial, Government, and Defence tiers.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CSOAI</h4>
+                    <p style="color:#B0B8C8;font-size:0.9rem;">The governance infrastructure for the global AI economy.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/mcp-infrastructure">MCP Infrastructure</a></li>
+                        <li><a href="/">Ecosystem</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/legal">Privacy & Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CSOAI - Chief Standards Office for Artificial Intelligence</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
+    </script>
+</body>
+</html>

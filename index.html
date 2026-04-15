@@ -1,0 +1,2068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSOAI - Chief Standards Office for Artificial Intelligence</title>
+    <meta name="description" content="The governance infrastructure for the global AI economy. Standards, certification, and trust for artificial intelligence.">
+    <link rel="canonical" href="https://csoai.org/">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #1B2A4A;
+            --dark-navy: #0F1A2E;
+            --teal: #0D7377;
+            --teal-light: #14919B;
+            --gold: #D4A843;
+            --gold-dark: #B8912E;
+            --white: #FFFFFF;
+            --gray-light: #E8E8E8;
+            --gray-dark: #2A3F5F;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--navy);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.5rem 2rem;
+            background: rgba(27, 42, 74, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(13, 115, 119, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 1rem 2rem;
+            background: rgba(27, 42, 74, 0.98);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--gold);
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--teal);
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--teal);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--teal), var(--teal-light));
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(13, 115, 119, 0.3);
+            font-size: 0.95rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(13, 115, 119, 0.5);
+            background: linear-gradient(135deg, var(--teal-light), var(--teal));
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            box-shadow: none;
+        }
+
+        .cta-button.secondary:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        /* HERO SECTION */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 50%, #0A1428 100%);
+        }
+
+        .hero-bg-animated {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(13, 115, 119, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(212, 168, 67, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(13, 115, 119, 0.08) 0%, transparent 50%);
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                filter: brightness(1);
+            }
+            50% {
+                filter: brightness(1.1);
+            }
+            100% {
+                filter: brightness(1);
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-content h1 span {
+            color: var(--gold);
+        }
+
+        .hero-content .subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            color: #B0B8C8;
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 1s ease 0.4s both;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* CONTAINER & GENERAL LAYOUT */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        section.light-bg {
+            background-color: #273548;
+        }
+
+        section h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        section h2 span {
+            color: var(--gold);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #B0B8C8;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* THE PROBLEM SECTION */
+        #problem {
+            background-color: var(--navy);
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .problem-card {
+            background: linear-gradient(135deg, #273548 0%, #2A4A6A 100%);
+            border: 1px solid rgba(13, 115, 119, 0.3);
+            padding: 2.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .problem-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--teal), var(--gold));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .problem-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .problem-card:hover {
+            border-color: rgba(13, 115, 119, 0.6);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(13, 115, 119, 0.2);
+        }
+
+        .problem-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .problem-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        .problem-card p {
+            color: #B0B8C8;
+            line-height: 1.8;
+        }
+
+        /* THE 8-LAYER ECOSYSTEM */
+        #ecosystem {
+            background-color: #273548;
+        }
+
+        .ecosystem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .layer-card {
+            background: linear-gradient(135deg, var(--navy) 0%, #1F3550 100%);
+            border: 2px solid rgba(13, 115, 119, 0.2);
+            padding: 2.5rem;
+            border-radius: 8px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 400px;
+        }
+
+        .layer-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .layer-card:hover::before {
+            opacity: 1;
+        }
+
+        .layer-number {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--teal), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .layer-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--white);
+            transition: color 0.3s ease;
+        }
+
+        .layer-card:hover h3 {
+            color: var(--gold);
+        }
+
+        .layer-card p {
+            color: #B0B8C8;
+            line-height: 1.8;
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .layer-details {
+            background: rgba(13, 115, 119, 0.1);
+            padding: 1.5rem;
+            border-radius: 4px;
+            border-left: 3px solid var(--teal);
+            font-size: 0.9rem;
+            color: #A8B0C0;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .layer-card:hover .layer-details {
+            opacity: 1;
+            max-height: 200px;
+            margin-top: 1rem;
+        }
+
+        .layer-card:hover {
+            border-color: var(--teal);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(13, 115, 119, 0.25);
+            background: linear-gradient(135deg, #1B2A4A 0%, #243548 100%);
+        }
+
+        /* BY THE NUMBERS */
+        #numbers {
+            background: linear-gradient(135deg, var(--navy) 0%, #1A3A4A 100%);
+        }
+
+        .numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .number-card {
+            text-align: center;
+            padding: 2.5rem;
+            background: rgba(13, 115, 119, 0.1);
+            border: 1px solid rgba(13, 115, 119, 0.2);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .number-card:hover {
+            background: rgba(13, 115, 119, 0.2);
+            border-color: var(--teal);
+            transform: scale(1.05);
+        }
+
+        .number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .number-label {
+            color: #B0B8C8;
+            font-size: 1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* THE CHARTER SECTION */
+        #charter {
+            background-color: #273548;
+        }
+
+        .charter-content {
+            max-width: 900px;
+            margin: 3rem auto 0;
+        }
+
+        .charter-intro {
+            text-align: center;
+            color: #B0B8C8;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .accordion {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .accordion-item {
+            background: linear-gradient(135deg, var(--navy) 0%, #1F3550 100%);
+            border: 1px solid rgba(13, 115, 119, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-header {
+            padding: 1.5rem;
+            background: rgba(13, 115, 119, 0.1);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--white);
+            transition: all 0.3s ease;
+            user-select: none;
+        }
+
+        .accordion-header:hover {
+            background: rgba(13, 115, 119, 0.15);
+            color: var(--gold);
+        }
+
+        .accordion-header.active {
+            background: linear-gradient(135deg, var(--teal), var(--teal-light));
+            color: var(--navy);
+        }
+
+        .accordion-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-header.active .accordion-toggle {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-content.active {
+            max-height: 400px;
+            padding: 1.5rem;
+        }
+
+        .accordion-text {
+            color: #B0B8C8;
+            line-height: 1.8;
+        }
+
+        /* PARTNERS & ECOSYSTEM SECTION */
+        #partners {
+            background-color: var(--navy);
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .partner-card {
+            background: linear-gradient(135deg, #273548 0%, #2A4A6A 100%);
+            border: 1px solid rgba(13, 115, 119, 0.3);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 350px;
+        }
+
+        .partner-card:hover {
+            border-color: var(--teal);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(13, 115, 119, 0.25);
+        }
+
+        .partner-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .partner-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        .partner-card p {
+            color: #B0B8C8;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .partner-link {
+            display: inline-block;
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border: 1px solid var(--teal);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+        .partner-link:hover {
+            background: var(--teal);
+            color: var(--navy);
+        }
+
+        /* CASA CERTIFICATION SECTION */
+        #casa {
+            background-color: #273548;
+        }
+
+        .casa-intro {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            color: #B0B8C8;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .cert-levels {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .cert-card {
+            background: linear-gradient(135deg, var(--navy) 0%, #1F3550 100%);
+            border: 2px solid rgba(212, 168, 67, 0.2);
+            padding: 2.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cert-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), transparent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .cert-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .cert-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(212, 168, 67, 0.2);
+        }
+
+        .cert-level {
+            font-size: 1.1rem;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cert-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .cert-price {
+            font-size: 1.8rem;
+            color: var(--teal);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .cert-features {
+            text-align: left;
+            margin-bottom: 2rem;
+            color: #B0B8C8;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .cert-features li {
+            list-style: none;
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.8rem;
+        }
+
+        .cert-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--teal);
+            font-weight: 700;
+        }
+
+        /* LEADERSHIP SECTION */
+        #leadership {
+            background-color: var(--navy);
+        }
+
+        .leadership-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: #B0B8C8;
+            font-size: 1.05rem;
+        }
+
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .leader-card {
+            background: linear-gradient(135deg, #273548 0%, #2A4A6A 100%);
+            border: 1px solid rgba(13, 115, 119, 0.3);
+            padding: 2.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .leader-card:hover {
+            border-color: var(--teal);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(13, 115, 119, 0.2);
+        }
+
+        .leader-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .leader-title {
+            color: var(--teal);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .leader-bio {
+            color: #B0B8C8;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .leadership-stats {
+            background: rgba(13, 115, 119, 0.1);
+            border: 1px solid rgba(13, 115, 119, 0.2);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            color: #B0B8C8;
+        }
+
+        .leadership-stats p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .leadership-stats strong {
+            color: var(--gold);
+        }
+
+        /* TIMELINE/ROADMAP SECTION */
+        #timeline {
+            background-color: #273548;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 3rem auto 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--teal), var(--gold), var(--teal));
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            width: 50%;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            margin-left: 0;
+            padding-right: 3rem;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            margin-left: 50%;
+            padding-left: 3rem;
+            text-align: left;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--gold);
+            border: 4px solid var(--navy);
+            border-radius: 50%;
+            top: 0;
+            z-index: 1;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -3.7rem;
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -3.7rem;
+        }
+
+        .timeline-content {
+            background: linear-gradient(135deg, var(--navy) 0%, #1F3550 100%);
+            border: 1px solid rgba(13, 115, 119, 0.3);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            border-color: var(--teal);
+            box-shadow: 0 10px 30px rgba(13, 115, 119, 0.2);
+            transform: scale(1.05);
+        }
+
+        .timeline-date {
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            color: var(--white);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-desc {
+            color: #B0B8C8;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 0;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                width: 100%;
+                margin-left: 0;
+                padding-left: 3rem;
+                padding-right: 0;
+                text-align: left;
+            }
+
+            .timeline-dot {
+                left: -3.7rem !important;
+            }
+        }
+
+        /* NEWS/BLOG SECTION */
+        #news {
+            background-color: var(--navy);
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .news-card {
+            background: linear-gradient(135deg, #273548 0%, #2A4A6A 100%);
+            border: 1px solid rgba(13, 115, 119, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            border-color: var(--teal);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(13, 115, 119, 0.25);
+        }
+
+        .news-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--teal), var(--gold));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .news-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-date {
+            color: var(--teal);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.75rem;
+        }
+
+        .news-desc {
+            color: #B0B8C8;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .news-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            align-self: flex-start;
+        }
+
+        .news-link:hover {
+            color: var(--teal);
+        }
+
+        /* FOOTER */
+        footer {
+            background: linear-gradient(180deg, var(--dark-navy) 0%, #050A15 100%);
+            border-top: 1px solid rgba(13, 115, 119, 0.2);
+            padding: 4rem 0 2rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .footer-section h4 {
+            color: var(--gold);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-section a {
+            color: #B0B8C8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--teal);
+        }
+
+        .footer-about {
+            color: #B0B8C8;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .footer-contact {
+            background: rgba(13, 115, 119, 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--teal);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-contact p {
+            color: #B0B8C8;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-contact strong {
+            color: var(--gold);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(13, 115, 119, 0.2);
+            border: 1px solid rgba(13, 115, 119, 0.3);
+            border-radius: 50%;
+            color: var(--teal);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .social-link:hover {
+            background: var(--teal);
+            color: var(--navy);
+            border-color: var(--teal);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(13, 115, 119, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: #8A92A2;
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* ANIMATIONS & UTILITIES */
+        .fade-in {
+            opacity: 0;
+            animation: fadeInAnimation 0.8s ease forwards;
+        }
+
+        @keyframes fadeInAnimation {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease forwards;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .slide-in-right {
+            animation: slideInRight 0.8s ease forwards;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .bounce-in {
+            animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+        }
+
+        @keyframes bounceIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem;
+            }
+
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero-content {
+                margin: 0 1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .cta-button {
+                width: 100%;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+
+            .problem-grid,
+            .ecosystem-grid,
+            .partners-grid,
+            .cert-levels,
+            .leadership-grid,
+            .news-grid,
+            .numbers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .charter-content {
+                padding: 0 1rem;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                width: 100%;
+                margin-left: 0;
+                padding-left: 60px;
+                padding-right: 0;
+                text-align: left;
+            }
+
+            .timeline-dot {
+                left: -7px !important;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* SCROLL-TRIGGER ANIMATIONS */
+        .scroll-hidden {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .scroll-visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header id="header">
+        <div class="header-container">
+            <a href="#" class="logo">CSO<span>AI</span></a>
+            <nav>
+                <a href="/about">About</a>
+                <a href="/mcp-infrastructure">MCP Infrastructure</a>
+                <a href="#ecosystem">Ecosystem</a>
+                <a href="#casa">CASA</a>
+                <a href="#leadership">Leadership</a>
+                <a href="/contact" class="cta-button">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero">
+        <div class="hero-bg-animated"></div>
+        <div class="hero-content">
+            <h1>The Governance Infrastructure for the <span>Global AI Economy</span></h1>
+            <p class="subtitle">Standards, certification, and trust infrastructure for artificial intelligence. Establishing the frameworks that enable responsible AI innovation at scale.</p>
+            <div class="hero-buttons">
+                <a href="#ecosystem" class="cta-button">Explore Infrastructure</a>
+                <a href="/mcp-infrastructure" class="cta-button secondary">MCP Fleet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE PROBLEM SECTION -->
+    <section id="problem">
+        <div class="container">
+            <h2>The <span>Critical Problem</span></h2>
+            <p class="section-subtitle">Three converging crises demand immediate governance infrastructure for artificial intelligence</p>
+
+            <div class="problem-grid">
+                <div class="problem-card scroll-hidden">
+                    <div class="problem-icon">⚖️</div>
+                    <h3>Regulatory Vacuum</h3>
+                    <p>The EU AI Act enters enforcement in August 2026, but no global governance framework exists. Nations lack the technical standards and certification systems needed to verify AI safety claims.</p>
+                </div>
+
+                <div class="problem-card scroll-hidden">
+                    <div class="problem-icon">🔒</div>
+                    <h3>Defence Crisis</h3>
+                    <p>Pentagon-backed initiatives and commercial AI companies operate in parallel universes. No shared standards for testing, transparency, or accountability create security vulnerabilities.</p>
+                </div>
+
+                <div class="problem-card scroll-hidden">
+                    <div class="problem-icon">🏛️</div>
+                    <h3>Trust Gap</h3>
+                    <p>The emerging AI agent economy requires cryptographic credentials and mutual recognition frameworks. Without institutional trust infrastructure, the ecosystem cannot scale beyond closed networks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE 8-LAYER ECOSYSTEM SECTION -->
+    <section id="ecosystem">
+        <div class="container">
+            <h2>The <span>8-Layer Ecosystem</span></h2>
+            <p class="section-subtitle">A complete infrastructure for AI governance, from standards-setting to frontline deployment</p>
+
+            <div class="ecosystem-grid">
+                <div class="layer-card scroll-hidden">
+                    <div class="layer-number">L1</div>
+                    <h3>Standards & Governance</h3>
+                    <p>CSOAI Charter with 52 articles establishing baseline standards, safety requirements, and governance principles for all AI systems operating in the network.</p>
+                    <div class="layer-details">
+                        • CSOAI Charter: 52 articles<br>
+                        • Baseline safety standards<br>
+                        • Governance framework<br>
+                        • Regulatory harmonization
+                    </div>
+                </div>
+
+                <div class="layer-card scroll-hidden">
+                    <div class="layer-number">L2</div>
+                    <h3>Security Testing Lab</h3>
+                    <p>AIdome provides defence-grade security testing and validation. Israeli cybersecurity expertise ensures frontier AI systems meet military and intelligence standards.</p>
+                    <div class="layer-details">
+                        • Defence-grade testing<br>
+                        • Israeli cybersecurity expertise<br>
+                        • Adversarial validation<br>
+                        • Certification protocols
+                    </div>
+                </div>
+
+                <div class="layer-card scroll-hidden">
+                    <div class="layer-number">L3</div>
+                    <h3>Classified Infrastructure</h3>
+                    <p>Palantir partnership enables secure handling of classified AI systems. Pathway to defence and intelligence agency integration while maintaining operational security.</p>
+                    <div class="layer-details">
+                        • Classified systems pathway<br>
+                        • Defence integration<br>
+                        • Intelligence agency support<br>
+                        • Operational security protocols
+                    </div>
+                </div>
+
+                <div class="layer-card scroll-hidden">
+                    <div class="layer-number">L4</div>
+                    <h3>Frontier AI Technology</h3>
+                    <p>Anthropic alignment research and constitutional AI methodologies. Leading-edge safety techniques embedded into the certification and testing frameworks.</p>
+                    <div class="layer-details">
+                        • Constitutional AI alignment<br>
+                        • Safety research integration<br>
+                        • Frontier testing protocols<br>
+                        • Long-term AI safety focus
+                    </div>
+                </div>
+
+                <div class="layer-card scroll-hidden">
+                    <div class="layer-number">L5</div>
+                    <h3>40-Nation Distribution</h3>
+                    <p>DSRB and CSGA networks spanning 40+ countries enable global adoption and compliance. International recognition pathways for certified AI systems.</p>
+                    <div class="layer-details">
+                        • 40+ allied nations<br>
+                        • DSRB network integration<br>
+                        • CSGA distribution channels<br>
+                        • International recognition
+                    </div>
+                </div>
+
+                <div class="layer-card scroll-hidden">
+                    <div class="layer-number">L6</div>
+                    <h3>Financial Infrastructure</h3>
+                    <p>Proof of AI provides cryptographic verification and financial primitives. Enables trustless transactions and economic incentives for certified AI systems.</p>
+                    <div class="layer-details">
+                        • Proof of AI protocol<br>
+                        • Cryptographic verification<br>
+                        • Financial primitives<br>
+                        • Economic incentives
+                    </div>
+                </div>
+
+                <div class="layer-card scroll-hidden">
+                    <div class="layer-number">L7</div>
+                    <h3>Workforce Pipeline</h3>
+                    <p>CASA certification via BMCC-CUNY and Digital Human Library. 40,000+ trained safety auditors and AI governance professionals across 9 countries.</p>
+                    <div class="layer-details">
+                        • CASA certification program<br>
+                        • BMCC-CUNY partnership<br>
+                        • K-12 education pipeline<br>
+                        • 40,000+ trained auditors
+                    </div>
+                </div>
+
+                <div class="layer-card scroll-hidden">
+                    <div class="layer-number">L8</div>
+                    <h3>Mutual Recognition</h3>
+                    <p>BSI and international standards bodies recognize CSOAI certifications. Cross-border mutual recognition enables single certification for global compliance.</p>
+                    <div class="layer-details">
+                        • BSI recognition<br>
+                        • Standards body alignment<br>
+                        • Cross-border certification<br>
+                        • Global compliance pathways
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BY THE NUMBERS SECTION -->
+    <section id="numbers">
+        <div class="container">
+            <h2>By The <span>Numbers</span></h2>
+            <p class="section-subtitle">The scale and scope of CSOAI infrastructure</p>
+
+            <div class="numbers-grid">
+                <div class="number-card scroll-hidden">
+                    <div class="number" data-target="52">0</div>
+                    <div class="number-label">Charter Articles</div>
+                </div>
+
+                <div class="number-card scroll-hidden">
+                    <div class="number" data-target="40">0</div>
+                    <div class="number-label">Allied Nations</div>
+                </div>
+
+                <div class="number-card scroll-hidden">
+                    <div class="number" data-target="24">0</div>
+                    <div class="number-label">Council Members</div>
+                </div>
+
+                <div class="number-card scroll-hidden">
+                    <div class="number" data-target="9">0</div>
+                    <div class="number-label">Countries</div>
+                </div>
+
+                <div class="number-card scroll-hidden">
+                    <div class="number" data-target="33">0</div>
+                    <div class="number-label">Byzantine Agents</div>
+                </div>
+
+                <div class="number-card scroll-hidden">
+                    <div class="number" data-target="22">0</div>
+                    <div class="number-label">Sectors</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE CHARTER SECTION -->
+    <section id="charter">
+        <div class="container">
+            <h2>The <span>CSOAI Charter</span></h2>
+            <p class="section-subtitle">52 articles establishing the governance framework for the global AI economy</p>
+
+            <div class="charter-content">
+                <div class="charter-intro">
+                    The CSOAI Charter represents the foundational legal and technical framework enabling global AI governance. Structured across 6 implementation phases, it establishes baseline safety standards, certification requirements, and regulatory harmonization pathways across 40+ allied nations.
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>Phase 1: Foundation & Authority (Articles 1-8)</span>
+                            <span class="accordion-toggle">+</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-text">
+                                Establishes CSOAI as the international governance authority for artificial intelligence. Defines organizational structure, the Founding Council of 24 members across 9 countries, and basic principles for all subsequent governance. Creates the legal foundation for all member-state participation and mutual recognition frameworks.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>Phase 2: Safety & Standards (Articles 9-18)</span>
+                            <span class="accordion-toggle">+</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-text">
+                                Defines minimum safety standards for AI systems. Requires security testing through AIdome, alignment verification through Anthropic methodologies, and transparency requirements. Establishes baseline requirements that all AI systems must meet for network participation.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>Phase 3: Certification & Testing (Articles 19-28)</span>
+                            <span class="accordion-toggle">+</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-text">
+                                Establishes the CASA certification program with three levels: Commercial, Government, and Defence/NATO. Defines testing protocols, auditor qualifications, and certification renewal requirements. Creates economic incentives for certified systems through Proof of AI.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>Phase 4: Distribution & Network (Articles 29-38)</span>
+                            <span class="accordion-toggle">+</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-text">
+                                Operationalizes the 40-nation network through DSRB and CSGA distribution channels. Establishes mutual recognition protocols ensuring a single certification enables compliance across borders. Creates international arbitration mechanisms for disputes.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>Phase 5: Workforce & Intelligence (Articles 39-46)</span>
+                            <span class="accordion-toggle">+</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-text">
+                                Establishes the AI Safety Auditor certification pipeline through BMCC-CUNY and Digital Human Library. Targets 40,000+ trained professionals. Creates intelligence-sharing protocols between national security agencies. Integrates with defence and intelligence infrastructure.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>Phase 6: Compliance & Enforcement (Articles 47-52)</span>
+                            <span class="accordion-toggle">+</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-text">
+                                Establishes enforcement mechanisms, penalty structures, and compliance verification. Creates mechanisms for revoking certifications. Defines periodic reassessment requirements. Establishes grievance procedures and appeal pathways. Ensures global standards are maintained as AI capabilities advance.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POWERED BY CSOAI SECTION -->
+    <section id="powered-by" class="light-bg">
+        <div class="container">
+            <h2>Powered By <span>CSOAI</span></h2>
+            <p class="section-subtitle">The CSOAI infrastructure stack powers products, research, and certification programmes across the global AI economy</p>
+
+            <div class="partners-grid">
+                <div class="partner-card scroll-hidden">
+                    <div class="partner-icon">🧠</div>
+                    <h3>MEOK AI Labs</h3>
+                    <p>The sovereign AI OS and 255-node MCP marketplace. MEOK is CSOAI's living research lab — where governance frameworks are tested, hardened, and deployed at scale.</p>
+                    <a href="https://meok.ai" target="_blank" class="partner-link">Visit meok.ai →</a>
+                </div>
+
+                <div class="partner-card scroll-hidden">
+                    <div class="partner-icon">🛡️</div>
+                    <h3>AIdome</h3>
+                    <p>Defence-grade security testing and adversarial validation. Israeli cybersecurity expertise ensuring frontier AI systems meet military and intelligence standards.</p>
+                    <a href="#aidome" class="partner-link">Learn More →</a>
+                </div>
+
+                <div class="partner-card scroll-hidden">
+                    <div class="partner-icon">💰</div>
+                    <h3>Proof of AI</h3>
+                    <p>Cryptographic verification and financial primitives. Enables trustless transactions and economic incentives for certified AI systems across the global network.</p>
+                    <a href="#proofofai" class="partner-link">Learn More →</a>
+                </div>
+
+                <div class="partner-card scroll-hidden">
+                    <div class="partner-icon">🎓</div>
+                    <h3>CASA</h3>
+                    <p>Certified AI Safety Auditor programme with three tiers: Commercial, Government, and Defence/NATO. 40,000+ trained auditors across 9 countries.</p>
+                    <a href="#casa" class="partner-link">Get Certified →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTNERS & ECOSYSTEM SECTION -->
+    <section id="partners">
+        <div class="container">
+            <h2>The <span>Ecosystem</span></h2>
+            <p class="section-subtitle">Strategic partners building the infrastructure for global AI governance</p>
+
+            <div class="partners-grid">
+                <div class="partner-card scroll-hidden">
+                    <div class="partner-icon">🛡️</div>
+                    <h3>AIdome</h3>
+                    <p>Defence-grade security testing and validation. Israeli cybersecurity expertise providing adversarial testing for frontier AI systems to meet military and intelligence standards.</p>
+                    <a href="#aidome" class="partner-link">Learn More →</a>
+                </div>
+
+                <div class="partner-card scroll-hidden">
+                    <div class="partner-icon">🎓</div>
+                    <h3>BMCC-CUNY</h3>
+                    <p>Educational partnership for workforce development. CASA certification pipeline creating auditors and governance professionals across multiple countries and sectors.</p>
+                    <a href="#bmcc" class="partner-link">Learn More →</a>
+                </div>
+
+                <div class="partner-card scroll-hidden">
+                    <div class="partner-icon">📚</div>
+                    <h3>Digital Human Library</h3>
+                    <p>K-12 education and foundational AI literacy. Building the next generation of AI safety professionals and informed citizens who understand governance frameworks.</p>
+                    <a href="#dhl" class="partner-link">Learn More →</a>
+                </div>
+
+                <div class="partner-card scroll-hidden">
+                    <div class="partner-icon">💰</div>
+                    <h3>Proof of AI</h3>
+                    <p>Cryptographic verification and financial infrastructure. Enables trustless transactions and economic incentives for certified AI systems across the global network.</p>
+                    <a href="#proofofai" class="partner-link">Learn More →</a>
+                </div>
+
+                <div class="partner-card scroll-hidden">
+                    <div class="partner-icon">📊</div>
+                    <h3>Security Bulldog</h3>
+                    <p>Media, research, and public communication. Translates technical governance frameworks into accessible analysis for policymakers, media, and the informed public.</p>
+                    <a href="#securitybulldog" class="partner-link">Learn More →</a>
+                </div>
+
+                <div class="partner-card scroll-hidden">
+                    <div class="partner-icon">🌐</div>
+                    <h3>CSGA & DSRB</h3>
+                    <p>40-nation distribution and international recognition. Global network enabling cross-border certification and mutual recognition across allied nations.</p>
+                    <a href="#csga" class="partner-link">Learn More →</a>
+                </div>
+
+                <div class="partner-card scroll-hidden">
+                    <div class="partner-icon">🧠</div>
+                    <h3>Anthropic</h3>
+                    <p>Frontier AI alignment and safety research. Constitutional AI methodologies and long-term AI safety expertise embedded into testing and certification frameworks.</p>
+                    <a href="https://www.anthropic.com" target="_blank" class="partner-link">Visit Site →</a>
+                </div>
+
+                <div class="partner-card scroll-hidden">
+                    <div class="partner-icon">🔐</div>
+                    <h3>Palantir</h3>
+                    <p>Classified infrastructure and defence integration. Secure handling of classified AI systems with pathways to defence and intelligence agency operations.</p>
+                    <a href="https://www.palantir.com" target="_blank" class="partner-link">Visit Site →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASA CERTIFICATION SECTION -->
+    <section id="casa">
+        <div class="container">
+            <h2>CASA <span>Certification Program</span></h2>
+            <p class="section-subtitle">Three-tier certification for AI systems from commercial to defence-critical applications</p>
+
+            <div class="casa-intro">
+                The Certified AI Safety Auditor (CASA) program establishes rigorous, three-tier certification levels for AI systems. Each level includes comprehensive security testing, alignment verification, and ongoing compliance monitoring tailored to the operational context and risk profile.
+            </div>
+
+            <div class="cert-levels">
+                <div class="cert-card scroll-hidden">
+                    <div class="cert-level">Level 1</div>
+                    <div class="cert-title">Commercial</div>
+                    <div class="cert-price">$5K - $25K</div>
+                    <ul class="cert-features">
+                        <li>AIdome basic testing</li>
+                        <li>Safety alignment verification</li>
+                        <li>Transparency compliance</li>
+                        <li>Annual reassessment</li>
+                        <li>Standard incident reporting</li>
+                        <li>Public certification</li>
+                    </ul>
+                    <button class="cta-button">Get Certified</button>
+                </div>
+
+                <div class="cert-card scroll-hidden">
+                    <div class="cert-level">Level 2</div>
+                    <div class="cert-title">Government</div>
+                    <div class="cert-price">$25K - $100K</div>
+                    <ul class="cert-features">
+                        <li>Advanced AIdome testing</li>
+                        <li>Government compliance</li>
+                        <li>Classified data handling</li>
+                        <li>Biannual assessments</li>
+                        <li>Expedited incident response</li>
+                        <li>Government-only access</li>
+                        <li>Intelligence integration</li>
+                    </ul>
+                    <button class="cta-button">Get Certified</button>
+                </div>
+
+                <div class="cert-card scroll-hidden">
+                    <div class="cert-level">Level 3</div>
+                    <div class="cert-title">Defence/NATO</div>
+                    <div class="cert-price">$100K - $500K</div>
+                    <ul class="cert-features">
+                        <li>Military-grade testing</li>
+                        <li>Palantir pathway</li>
+                        <li>Classified operations</li>
+                        <li>Quarterly verification</li>
+                        <li>Real-time monitoring</li>
+                        <li>NATO interoperability</li>
+                        <li>Dedicated security team</li>
+                    </ul>
+                    <button class="cta-button">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEADERSHIP SECTION -->
+    <section id="leadership">
+        <div class="container">
+            <h2>Founding <span>Leadership Council</span></h2>
+            <p class="section-subtitle">Visionary leaders building the governance infrastructure for the global AI economy</p>
+
+            <div class="leadership-grid">
+                <div class="leader-card scroll-hidden">
+                    <div class="leader-name">Nicholas Templeman</div>
+                    <div class="leader-title">President & COO</div>
+                    <div class="leader-bio">
+                        Charter architect and institutional designer. Leading the technical and operational implementation of the 52-article CSOAI Charter across all 8 governance layers.
+                    </div>
+                </div>
+
+                <div class="leader-card scroll-hidden">
+                    <div class="leader-name">James Castle</div>
+                    <div class="leader-title">Global Chairperson</div>
+                    <div class="leader-bio">
+                        International governance expert architecting the 40-nation network. Leading DSRB/CSGA integration and cross-border mutual recognition frameworks.
+                    </div>
+                </div>
+
+                <div class="leader-card scroll-hidden">
+                    <div class="leader-name">Dr. Cari Miller</div>
+                    <div class="leader-title">IEEE Vice-Chair</div>
+                    <div class="leader-bio">
+                        Standards body integration and international alignment. Ensuring CSOAI frameworks harmonize with IEEE, BSI, and global standards organizations.
+                    </div>
+                </div>
+
+                <div class="leader-card scroll-hidden">
+                    <div class="leader-name">Jeremy G. Mallory</div>
+                    <div class="leader-title">Constitutional Law Scholar</div>
+                    <div class="leader-bio">
+                        Supreme Court expertise and legal architecture. Designing enforcement mechanisms and constitutional principles for global AI governance.
+                    </div>
+                </div>
+
+                <div class="leader-card scroll-hidden">
+                    <div class="leader-name">George Joseph</div>
+                    <div class="leader-title">VP Risk Management, Bank of America</div>
+                    <div class="leader-bio">
+                        Financial infrastructure and risk frameworks. Integrating Proof of AI financial primitives with traditional financial system compliance.
+                    </div>
+                </div>
+
+                <div class="leader-card scroll-hidden">
+                    <div class="leader-name">Additional Members</div>
+                    <div class="leader-title">18 More Leaders</div>
+                    <div class="leader-bio">
+                        Defence, intelligence, technology, education, and standards experts across 9 countries. Combined institutional expertise spanning government, academia, and industry.
+                    </div>
+                </div>
+            </div>
+
+            <div class="leadership-stats">
+                <p><strong>24 Founding Council Members</strong> representing expertise across 9 countries and major sectors including defence, intelligence, finance, education, and technology.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE/ROADMAP SECTION -->
+    <section id="timeline">
+        <div class="container">
+            <h2>Strategic <span>Timeline</span></h2>
+            <p class="section-subtitle">Execution roadmap for global AI governance infrastructure</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Q1 2026</div>
+                        <div class="timeline-title">Foundation Establishment</div>
+                        <div class="timeline-desc">CSOAI formally established with Founding Council of 24 members. Charter ratified by initial member states. Infrastructure deployment begins.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">March 2026</div>
+                        <div class="timeline-title">Toronto Summit</div>
+                        <div class="timeline-desc">Global governance summit convening 40+ nations. Launch of DSRB/CSGA distribution network. Initial certification pilot program begins.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Q2 2026</div>
+                        <div class="timeline-title">First Certifications</div>
+                        <div class="timeline-desc">First AI systems receive CASA Level 1-3 certifications. AIdome security testing at full operational capacity. Proof of AI network goes live.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">August 2026</div>
+                        <div class="timeline-title">EU AI Act Alignment</div>
+                        <div class="timeline-desc">CSOAI certifications accepted as evidence of EU AI Act compliance. European member states formally integrate with global network.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Q3 2026</div>
+                        <div class="timeline-title">Government Recognition</div>
+                        <div class="timeline-desc">US, UK, EU, and allied governments formally recognize CSOAI authority. Defence integration with Palantir pathway operational. Intelligence-sharing protocols active.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2027+</div>
+                        <div class="timeline-title">Global Scale</div>
+                        <div class="timeline-desc">CSOAI becomes the de facto global governance infrastructure for AI. 40,000+ trained safety auditors. 1000s of certified AI systems across 40+ nations.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWS/BLOG SECTION -->
+    <section id="news">
+        <div class="container">
+            <h2>Latest <span>Updates</span></h2>
+            <p class="section-subtitle">News, insights, and announcements from the CSOAI ecosystem</p>
+
+            <div class="news-grid">
+                <div class="news-card scroll-hidden">
+                    <div class="news-image">📋</div>
+                    <div class="news-content">
+                        <div class="news-date">February 2026</div>
+                        <div class="news-title">CSOAI Charter Ratified by Founding Council</div>
+                        <div class="news-desc">The 52-article CSOAI Charter establishing global AI governance framework has been formally ratified by all 24 Founding Council members across 9 countries.</div>
+                        <a href="#" class="news-link">Read More →</a>
+                    </div>
+                </div>
+
+                <div class="news-card scroll-hidden">
+                    <div class="news-image">🛡️</div>
+                    <div class="news-content">
+                        <div class="news-date">January 2026</div>
+                        <div class="news-title">AIdome Testing Protocol Certification</div>
+                        <div class="news-desc">AIdome security testing framework receives international certification. Defence-grade testing protocols now available for commercial and government AI systems.</div>
+                        <a href="#" class="news-link">Read More →</a>
+                    </div>
+                </div>
+
+                <div class="news-card scroll-hidden">
+                    <div class="news-image">🌐</div>
+                    <div class="news-content">
+                        <div class="news-date">December 2025</div>
+                        <div class="news-title">40-Nation Network Expansion</div>
+                        <div class="news-desc">DSRB/CSGA distribution network expands to include allied nations across Europe, Asia-Pacific, and Americas. Global governance infrastructure takes shape.</div>
+                        <a href="#" class="news-link">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About CSOAI</h4>
+                    <div class="footer-about">
+                        <p>The Chief Standards Office for Artificial Intelligence is the global governance infrastructure for the AI economy. We establish standards, certifications, and trust mechanisms enabling responsible AI innovation at scale.</p>
+                        <div class="footer-contact">
+                            <p><strong>President & COO</strong></p>
+                            <p>Nicholas Templeman</p>
+                            <p><strong>Contact:</strong> <a href="mailto:contact@csoai.org" style="color:var(--teal-light);">contact@csoai.org</a></p>
+                        </div>
+                        <div class="footer-social">
+                            <a href="#" class="social-link">𝕏</a>
+                            <a href="#" class="social-link">in</a>
+                            <a href="#" class="social-link">f</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/mcp-infrastructure">MCP Infrastructure</a></li>
+                        <li><a href="#leadership">Leadership Council</a></li>
+                        <li><a href="#timeline">Roadmap</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>CASA Certification</h4>
+                    <ul>
+                        <li><a href="#casa">Get Certified</a></li>
+                        <li><a href="#casa">Certification Levels</a></li>
+                        <li><a href="#">Testing Protocols</a></li>
+                        <li><a href="#">Auditor Directory</a></li>
+                        <li><a href="#">Renewal Requirements</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Ecosystem</h4>
+                    <ul>
+                        <li><a href="https://meok.ai" target="_blank">MEOK AI Labs</a></li>
+                        <li><a href="#aidome">AIdome</a></li>
+                        <li><a href="#proofofai">Proof of AI</a></li>
+                        <li><a href="#bmcc">BMCC-CUNY</a></li>
+                        <li><a href="#csga">CSGA & DSRB</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#charter">The Charter</a></li>
+                        <li><a href="#ecosystem">8-Layer Ecosystem</a></li>
+                        <li><a href="#">Research Papers</a></li>
+                        <li><a href="#news">News & Updates</a></li>
+                        <li><a href="/legal">Privacy & Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 CSOAI - Chief Standards Office for Artificial Intelligence</p>
+                <p>A Terranova CSOAI Corp / CSGA Initiative | www.csoai.org</p>
+                <p style="margin-top: 1rem; font-size: 0.85rem;">
+                    <a href="#" style="color: #8A92A2; text-decoration: none;">Privacy Policy</a> |
+                    <a href="#" style="color: #8A92A2; text-decoration: none;">Terms of Service</a> |
+                    <a href="#" style="color: #8A92A2; text-decoration: none;">Security</a> |
+                    <a href="#" style="color: #8A92A2; text-decoration: none;">Accessibility</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // SCROLL ANIMATIONS
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('scroll-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-hidden').forEach(el => {
+            observer.observe(el);
+        });
+
+        // STICKY HEADER ON SCROLL
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // NUMBER COUNTERS
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 30);
+        }
+
+        const numberObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const numberElement = entry.target.querySelector('.number');
+                    if (numberElement && !numberElement.classList.contains('animated')) {
+                        numberElement.classList.add('animated');
+                        animateCounter(numberElement);
+                    }
+                    numberObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.number-card').forEach(el => {
+            numberObserver.observe(el);
+        });
+
+        // ACCORDION FUNCTIONALITY
+        function toggleAccordion(header) {
+            const item = header.parentElement;
+            const content = item.querySelector('.accordion-content');
+            const isActive = item.classList.contains('active');
+
+            // Close all other accordion items
+            document.querySelectorAll('.accordion-item').forEach(el => {
+                if (el !== item && el.classList.contains('active')) {
+                    el.classList.remove('active');
+                    el.querySelector('.accordion-header').classList.remove('active');
+                    el.querySelector('.accordion-content').classList.remove('active');
+                }
+            });
+
+            // Toggle current item
+            if (isActive) {
+                item.classList.remove('active');
+                header.classList.remove('active');
+                content.classList.remove('active');
+            } else {
+                item.classList.add('active');
+                header.classList.add('active');
+                content.classList.add('active');
+            }
+        }
+
+        // SMOOTH SCROLL NAVIGATION
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // CTA BUTTON CLICK HANDLERS
+        document.querySelectorAll('.cta-button').forEach(button => {
+            if (!button.hasAttribute('onclick')) {
+                button.addEventListener('click', function() {
+                    alert('Contact our team to learn more about partnership opportunities with CSOAI.');
+                });
+            }
+        });
+
+        // MOBILE MENU (simple implementation)
+        const nav = document.querySelector('nav');
+        const isMobile = window.innerWidth <= 768;
+
+        if (isMobile) {
+            // Mobile optimizations already handled by CSS
+        }
+
+        // INITIAL ANIMATIONS
+        window.addEventListener('load', () => {
+            document.querySelectorAll('[class*="fade-in"], [class*="slide-in"]').forEach(el => {
+                el.classList.add('scroll-visible');
+            });
+        });
+    </script>
+</body>
+</html>

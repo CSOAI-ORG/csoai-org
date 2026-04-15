@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /internal/
+
+Sitemap: https://csoai.org/sitemap.xml

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCP Infrastructure — CSOAI</title>
+    <meta name="description" content="CSOAI operates the world's largest production-grade MCP server fleet. 202 validated services providing secure, standardised AI tool access for enterprise and research.">
+    <link rel="canonical" href="https://csoai.org/mcp-infrastructure">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --navy: #1B2A4A; --dark-navy: #0F1A2E; --teal: #0D7377; --teal-light: #14919B; --gold: #D4A843; --white: #FFFFFF; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--navy); color: var(--white); line-height: 1.6; }
+        header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1.5rem 2rem; background: rgba(27,42,74,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(13,115,119,0.2); }
+        .header-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: 800; color: var(--gold); letter-spacing: 2px; text-decoration: none; }
+        .logo span { color: var(--teal); }
+        nav { display: flex; gap: 2rem; align-items: center; }
+        nav a { color: var(--white); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.3s ease; position: relative; }
+        nav a:hover { color: var(--teal); }
+        .cta-button { background: linear-gradient(135deg, var(--teal), var(--teal-light)); color: var(--white); padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+        .page-hero { min-height: 50vh; display: flex; align-items: center; justify-content: center; padding-top: 100px; background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 50%, #0A1428 100%); text-align: center; }
+        .page-hero h1 { font-size: clamp(2rem, 6vw, 3.5rem); font-weight: 800; margin-bottom: 1rem; }
+        .page-hero h1 span { color: var(--gold); }
+        .page-hero p { color: #B0B8C8; font-size: 1.1rem; max-width: 700px; margin: 0 auto; }
+        section { padding: 4rem 0; }
+        section.light-bg { background-color: #273548; }
+        h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); font-weight: 800; margin-bottom: 1rem; }
+        h2 span { color: var(--gold); }
+        p.lead { color: #B0B8C8; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.2rem; }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .stat { background: rgba(13,115,119,0.1); border: 1px solid rgba(13,115,119,0.2); padding: 1.5rem; border-radius: 8px; text-align: center; }
+        .stat .number { font-size: 2.2rem; font-weight: 800; color: var(--gold); }
+        .stat .label { color: #B0B8C8; font-size: 0.9rem; }
+        .card { background: linear-gradient(135deg, #273548 0%, #2A4A6A 100%); border: 1px solid rgba(13,115,119,0.3); padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; }
+        .card h3 { color: var(--gold); margin-bottom: 0.4rem; font-size: 1.1rem; }
+        .card p { color: #B0B8C8; font-size: 0.95rem; }
+        footer { background: linear-gradient(180deg, var(--dark-navy) 0%, #050A15 100%); border-top: 1px solid rgba(13,115,119,0.2); padding: 3rem 0 2rem; margin-top: 3rem; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h4 { color: var(--gold); font-size: 1rem; font-weight: 700; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 0.5rem; }
+        .footer-section a { color: #B0B8C8; text-decoration: none; font-size: 0.9rem; }
+        .footer-bottom { border-top: 1px solid rgba(13,115,119,0.1); padding-top: 1.5rem; text-align: center; color: #8A92A2; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo">CS<span>AI</span></a>
+            <nav>
+                <a href="/about">About</a>
+                <a href="/mcp-infrastructure">MCP Infrastructure</a>
+                <a href="/">Ecosystem</a>
+                <a href="/">CASA</a>
+                <a href="/contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>MCP <span>Infrastructure</span></h1>
+            <p>The world's largest production-grade MCP server fleet — 202 validated services providing secure, standardised AI tool access for enterprise, research, and sovereign deployments.</p>
+        </div>
+    </section>
+
+    <section class="light-bg">
+        <div class="container">
+            <div class="stats">
+                <div class="stat"><div class="number">202</div><div class="label">Validated MCP Services</div></div>
+                <div class="stat"><div class="number">100%</div><div class="label">Build & Health Success</div></div>
+                <div class="stat"><div class="number">Docker</div><div class="label">Containerised Runtime</div></div>
+                <div class="stat"><div class="number">Streamable</div><div class="label">HTTP Transport</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>What is the <span>MCP Fleet?</span></h2>
+            <p class="lead">Model Context Protocol (MCP) is the emerging standard for connecting AI systems to external tools, data sources, and services. CSOAI operates a fleet of 202 production-ready MCP servers spanning governance, safety, productivity, research, and infrastructure domains.</p>
+            <p class="lead">Each server is containerised with Docker, health-checked end-to-end, and exposed via streamable HTTP with unified authentication middleware. This is not a prototype — it is live infrastructure.</p>
+
+            <div style="margin-top:2rem;">
+                <div class="card"><h3>Governance & Compliance</h3><p>EU AI Act, NIST RMF, ISO 42001, HIPAA, GDPR, SOX, and sector-specific compliance auditors.</p></div>
+                <div class="card"><h3>Security & Safety</h3><p>Threat detection, vulnerability scanning, scam prevention, social guardian, and risk assessment tools.</p></div>
+                <div class="card"><h3>Productivity & Work</h3><p>Document analysis, code review, SQL building, API testing, email automation, and research assistants.</p></div>
+                <div class="card"><h3>Research & Intelligence</h3><p>Web research, citation finding, competitor monitoring, market intelligence, and semantic knowledge graphs.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="light-bg">
+        <div class="container">
+            <h2>Technical <span>Architecture</span></h2>
+            <p class="lead">The fleet runs on a unified multi-stage Docker build with Python 3.14, Astral uv, and BuildKit cache mounts. Every service shares:</p>
+            <ul style="color:#B0B8C8;line-height:2;">
+                <li><strong>Standardised auth middleware</strong> — tiered API key access with Stripe-linked subscription validation</li>
+                <li><strong>Health endpoints</strong> — <code>/.well-known/mcp</code> and <code>/health</code> on every container</li>
+                <li><strong>Streamable HTTP transport</strong> — via <code>mcp-wrapper.py</code> with consistent routing</li>
+                <li><strong>Fleet-wide test coverage</strong> — auth contract, smoke, and endpoint tests distributed across all 202 repos</li>
+            </ul>
+            <p class="lead" style="margin-top:1.5rem;">Explore the registry on <a href="https://meok.ai/marketplace" style="color:var(--gold);text-decoration:none;">MEOK Marketplace</a> or browse the open-source repositories on <a href="https://github.com/CSOAI-ORG" style="color:var(--gold);text-decoration:none;">GitHub</a>.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section"><h4>CSOAI</h4><p style="color:#B0B8C8;font-size:0.9rem;">Governance infrastructure for the global AI economy.</p></div>
+                <div class="footer-section"><h4>Explore</h4><ul><li><a href="/about">About</a></li><li><a href="/mcp-infrastructure">MCP Infrastructure</a></li><li><a href="/">Ecosystem</a></li><li><a href="/contact">Contact</a></li></ul></div>
+                <div class="footer-section"><h4>Legal</h4><ul><li><a href="/legal">Privacy & Terms</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 CSOAI - Chief Standards Office for Artificial Intelligence</p></div>
+        </div>
+    </footer>
+</body>
+</html>
