@@ -1020,7 +1020,7 @@ document.addEventListener('click',e=>{if(!e.target.closest('.mega-wrap'))documen
             <div class="newsletter">
                 <h3>Stay Updated on AI Governance</h3>
                 <p>Get weekly articles on certification, regulation, and AI safety best practices delivered to your inbox.</p>
-                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                <form action="https://formspree.io/f/xjkyvepk" method="POST" class="newsletter-form csoai-form" data-form-type="newsletter">
                     <input type="email" placeholder="your@email.com" required>
                     <button type="submit" class="btn">Subscribe</button>
                 </form>
@@ -1151,6 +1151,40 @@ document.addEventListener('click',e=>{if(!e.target.closest('.mega-wrap'))documen
         const banner = document.getElementById('cookieBanner');
         if (banner) banner.style.display = 'none';
     }
+</script>
+
+<script>
+/* CSOAI Form Handler — intercepts Formspree submissions for smoother UX */
+document.querySelectorAll('.csoai-form').forEach(function(form){
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    var originalText = btn ? btn.textContent : 'Submit';
+    if(btn){ btn.disabled = true; btn.textContent = 'Sending…'; }
+    var formType = form.dataset.formType || 'contact';
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(r){ return r.json(); }).then(function(data){
+      if(data && data.ok){
+        form.innerHTML = '<div style="padding:1.5rem;background:rgba(212,168,67,0.08);border:1px solid rgba(212,168,67,0.2);border-radius:12px;text-align:center;"><p style="color:#D4A843;font-weight:600;margin-bottom:0.5rem;">' + (formType === 'newsletter' ? 'You're subscribed!' : 'Message sent!') + '</p><p style="color:rgba(232,228,240,0.7);font-size:0.9rem;">' + (formType === 'newsletter' ? 'Thanks for joining the CSOAI community.' : 'We'll be in touch within 24 hours.') + '</p></div>';
+      } else {
+        throw new Error('Formspree error');
+      }
+    }).catch(function(){
+      if(btn){ btn.disabled = false; btn.textContent = originalText; }
+      var err = form.querySelector('.form-error');
+      if(!err){
+        err = document.createElement('p');
+        err.className = 'form-error';
+        err.style.cssText = 'color:#ff6b6b;margin-top:0.75rem;font-size:0.9rem;';
+        err.textContent = 'Something went wrong. Please try again or email us directly at support@csoai.org';
+        form.appendChild(err);
+      }
+    });
+  });
+});
 </script>
 </body>
 </html>
