@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>API Documentation — CSOAI</title>
+<meta name="description" content="CSOAI Platform API Reference">
+<meta name="theme-color" content="#0D0B21">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--dark:#0D0B21;--dark-light:#1A1145;--accent:#D4A843;--accent-bright:#E8B76D;--text:#E8E4F0;--glass-bg:rgba(255,255,255,0.03);--glass-border:rgba(255,255,255,0.08);--code-bg:#12102a}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--dark);color:var(--text);line-height:1.7}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-bright)}
+.container{max-width:1200px;margin:0 auto;padding:0 2rem}
+.section{padding:4rem 0}
+.section-title{font-size:2.5rem;margin-bottom:1rem}
+.section-subtitle{color:rgba(232,228,240,.7);max-width:600px}
+.card{background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:12px;padding:1.5rem;margin-bottom:1rem}
+.endpoint{margin-bottom:2rem}
+.endpoint h3{font-size:1.1rem;margin-bottom:.5rem;display:flex;align-items:center;gap:.75rem}
+.method{display:inline-block;padding:.25rem .75rem;border-radius:6px;font-size:.75rem;font-weight:700;font-family:'Fira Code',monospace}
+.method-get{background:#22C55E20;color:#22C55E}
+.method-post{background:#3B82F620;color:#3B82F6}
+.method-put{background:#F59E0B20;color:#F59E0B}
+.method-delete{background:#EF444420;color:#EF4444}
+.path{font-family:'Fira Code',monospace;font-size:.9rem;color:rgba(232,228,240,.7)}
+.code-block{background:var(--code-bg);border-radius:8px;padding:1rem;overflow-x:auto;margin:.5rem 0}
+.code-block code{font-family:'Fira Code',monospace;font-size:.85rem;color:#a5b3ce;white-space:pre}
+.comment{color:#6b7280}
+.string{color:#22C55E}
+.number{color:#F59E0B}
+.boolean{color:#3B82F6}
+.param{color:#D4A843}
+.nav{display:flex;gap:2rem;padding:1.5rem 0;border-bottom:1px solid var(--glass-border);margin-bottom:2rem}
+.nav a{font-weight:500}
+pre{white-space:pre-wrap}
+</style>
+</head>
+<body>
+<div class="container">
+<nav class="nav"><a href="index.html">← Home</a><a href="dashboard.html">Dashboard</a><a href="verify.html">Verify Certificate</a></nav>
+
+<section class="section">
+<h1 class="section-title">API Documentation</h1>
+<p class="section-subtitle">RESTful API reference for CSOAI Platform integration</p>
+
+<h2 style="margin:2rem 0 1rem;font-size:1.5rem">Authentication</h2>
+<div class="card">All API requests require a Bearer token in the Authorization header:</div>
+<div class="code-block"><code>Authorization: Bearer &lt;your-jwt-token&gt;</code></div>
+
+<h2 style="margin:2rem 0 1rem;font-size:1.5rem">Base URLs</h2>
+<div class="code-block"><code>Production: https://api.csoai.org/api
+Sandbox: https://api-sandbox.csoai.org/api</code></div>
+
+<h2 style="margin:2rem 0 1rem;font-size:1.5rem">Endpoints</h2>
+
+<div class="endpoint">
+<h3><span class="method method-get">GET</span> <span class="path">/certificates</span></h3>
+<p style="color:rgba(232,228,240,.6);margin-bottom:1rem">List user's certificates</p>
+<div class="code-block"><code><span class="param">Headers:</span> Authorization: Bearer &lt;token&gt;
+
+<span class="comment">// Response</span>
+{
+  <span class="string">"success"</span>: true,
+  <span class="string">"data"</span>: [
+    {
+      <span class="string">"certificateNumber"</span>: <span class="string">"CERT-ABC123..."</span>,
+      <span class="string">"courseId"</span>: { <span class="string">"title"</span>: <span class="string">"CASA Professional"</span> },
+      <span class="string">"issuedAt"</span>: <span class="string">"2026-02-01T00:00:00Z"</span>,
+      <span class="string">"expiresAt"</span>: <span class="string">"2027-02-01T00:00:00Z"</span>
+    }
+  ]
+}</code></div>
+</div>
+
+<div class="endpoint">
+<h3><span class="method method-get">GET</span> <span class="path">/certificates/verify/:certificateNumber</span></h3>
+<p style="color:rgba(232,228,240,.6);margin-bottom:1rem">Public endpoint - verify certificate (no auth required)</p>
+<div class="code-block"><code><span class="comment">// Example: GET /api/certificates/verify/CERT-ABC123DEF456</span>
+
+<span class="comment">// Response</span>
+{
+  <span class="string">"success"</span>: true,
+  <span class="string">"data"</span>: {
+    <span class="string">"isValid"</span>: <span class="boolean">true</span>,
+    <span class="string">"certificate"</span>: {
+      <span class="string">"certificateNumber"</span>: <span class="string">"CERT-ABC123DEF456"</span>,
+      <span class="string">"recipientName"</span>: <span class="string">"John Doe"</span>,
+      <span class="string">"courseName"</span>: <span class="string">"CASA Professional"</span>,
+      <span class="string">"issuedAt"</span>: <span class="string">"2026-02-01"</span>,
+      <span class="string">"expiresAt"</span>: <span class="string">"2027-02-01"</span>
+    }
+  }
+}</code></div>
+</div>
+
+<div class="endpoint">
+<h3><span class="method method-get">GET</span> <span class="path">/profile</span></h3>
+<p style="color:rgba(232,228,240,.6);margin-bottom:1rem">Get current user profile</p>
+<div class="code-block"><code><span class="param">Headers:</span> Authorization: Bearer &lt;token&gt;
+
+<span class="comment">// Response</span>
+{
+  <span class="string">"success"</span>: true,
+  <span class="string">"data"</span>: {
+    <span class="string">"firstName"</span>: <span class="string">"Nick"</span>,
+    <span class="string">"lastName"</span>: <span class="string">"Templeman"</span>,
+    <span class="string">"email"</span>: <span class="string">"nick@csoai.org"</span>,
+    <span class="string">"role"</span>: <span class="string">"admin"</span>
+  }
+}</code></div>
+</div>
+
+<div class="endpoint">
+<h3><span class="method method-post">POST</span> <span class="path">/auth/login</span></h3>
+<p style="color:rgba(232,228,240,.6);margin-bottom:1rem">Authenticate user</p>
+<div class="code-block"><code><span class="comment">// Request</span>
+{
+  <span class="string">"email"</span>: <span class="string">"user@example.com"</span>,
+  <span class="string">"password"</span>: <span class="string">"********"</span>
+}
+
+<span class="comment">// Response</span>
+{
+  <span class="string">"success"</span>: true,
+  <span class="string">"data"</span>: {
+    <span class="string">"token"</span>: <span class="string">"eyJhbGciOiJIUzI1NiIs..."</span>,
+    <span class="string">"user"</span>: { <span class="string">"id"</span>: <span class="string">"..."</span>, <span class="string">"email"</span>: <span class="string">"..."</span> }
+  }
+}</code></div>
+</div>
+
+<div class="endpoint">
+<h3><span class="method method-get">GET</span> <span class="path">/compliance</span></h3>
+<p style="color:rgba(232,228,240,.6);margin-bottom:1rem">Get compliance status across frameworks</p>
+<div class="code-block"><code><span class="comment">// Response</span>
+{
+  <span class="string">"success"</span>: true,
+  <span class="string">"data"</span>: {
+    <span class="string">"complianceScore"</span>: <span class="number">87</span>,
+    <span class="string">"frameworks"</span>: [
+      { <span class="string">"name"</span>: <span class="string">"ISO 42001"</span>, <span class="string">"score"</span>: <span class="number">92</span> },
+      { <span class="string">"name"</span>: <span class="string">"NIST AI RMF"</span>, <span class="string">"score"</span>: <span class="number">88</span> },
+      { <span class="string">"name"</span>: <span class="string">"EU AI Act"</span>, <span class="string">"score"</span>: <span class="number">74</span> }
+    ]
+  }
+}</code></div>
+</div>
+
+<div class="endpoint">
+<h3><span class="method method-get">GET</span> <span class="path">/courses</span></h3>
+<p style="color:rgba(232,228,240,.6);margin-bottom:1rem">List available courses</p>
+<div class="code-block"><code><span class="comment">// Response</span>
+{
+  <span class="string">"success"</span>: true,
+  <span class="string">"data"</span>: [
+    {
+      <span class="string">"_id"</span>: <span class="string">"..."</span>,
+      <span class="string">"title"</span>: <span class="string">"CASA Professional"</span>,
+      <span class="string">"description"</span>: <span class="string">"Chief AI Security Officer certification"</span>,
+      <span class="string">"duration"</span>: <span class="string">"40 hours"</span>,
+      <span class="string">"price"</span>: <span class="number">1999</span>
+    }
+  ]
+}</code></div>
+</div>
+
+<h2 style="margin:2rem 0 1rem;font-size:1.5rem">Error Codes</h2>
+<div class="card"><table style="width:100%;font-size:.9rem">
+<tr><td style="padding:.5rem 0;color:var(--accent)">400</td><td>Bad Request - Invalid parameters</td></tr>
+<tr><td style="padding:.5rem 0;color:var(--accent)">401</td><td>Unauthorized - Invalid or missing token</td></tr>
+<tr><td style="padding:.5rem 0;color:var(--accent)">403</td><td>Forbidden - Insufficient permissions</td></tr>
+<tr><td style="padding:.5rem 0;color:var(--accent)">404</td><td>Not Found - Resource doesn't exist</td></tr>
+<tr><td style="padding:.5rem 0;color:var(--accent)">429</td><td>Too Many Requests - Rate limit exceeded</td></tr>
+<tr><td style="padding:.5rem 0;color:var(--accent)">500</td><td>Internal Server Error</td></tr>
+</table></div>
+
+</section>
+</div>
+</body>
+</html>

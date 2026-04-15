@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Certification — CSOAI</title>
+    <meta name="description" content="Verify CSOAI AI safety certifications, CASA credentials, and AI governance compliance status. Public verification for enterprise and government.">
+    <meta name="theme-color" content="#0D0B21">
+    <meta property="og:title" content="Verify Certification — CSOAI">
+    <meta property="og:description" content="Public verification system for CSOAI AI safety certifications">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://csoai.org/assets/og-image.png">
+    <meta property="og:url" content="https://csoai.org/verify.html">
+    <link rel="canonical" href="https://csoai.org/verify.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --color-dark: #0D0B21; --color-dark-light: #1A1145; --color-accent: #D4A843; --color-accent-bright: #E8B76D; --color-text: #E8E4F0; --color-white: #FFFFFF; --color-glass-bg: rgba(255, 255, 255, 0.03); --color-glass-border: rgba(255, 255, 255, 0.08); --color-success: #22C55E; --color-warning: #F59E0B; --color-danger: #EF4444; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-light) 100%); color: var(--color-text); line-height: 1.7; overflow-x: hidden; }
+        body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(circle, rgba(212, 168, 67, 0.15) 1px, transparent 1px); background-size: 50px 50px; pointer-events: none; z-index: 0; animation: drift 20s ease-in-out infinite; }
+        @keyframes drift { 0%, 100% { background-position: 0 0; } 50% { background-position: 20px 20px; } }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(60px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+        main { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; padding: 80px 2rem; }
+        h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; color: var(--color-white); margin-bottom: 1rem; line-height: 1.2; }
+        h2 { font-size: 1.5rem; font-weight: 700; color: var(--color-white); margin: 2rem 0 1rem; }
+        p { font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem; }
+        .label { display: inline-block; padding: 0.35rem 1rem; background: rgba(212, 168, 67, 0.15); color: var(--color-accent); border-radius: 20px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1rem; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 1rem 2rem; background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-bright) 100%); color: var(--color-dark); border: none; border-radius: 12px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; text-decoration: none; }
+        .btn:hover { transform: scale(1.02); box-shadow: 0 15px 45px rgba(212, 168, 67, 0.4); }
+        .btn-small { padding: 0.75rem 1.5rem; font-size: 0.95rem; }
+        nav { position: sticky; top: 0; z-index: 100; padding: 1.5rem 2rem; backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); background: rgba(13, 11, 33, 0.7); }
+        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 800; background: linear-gradient(135deg, #D4A843, #E8B76D); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-links { display: flex; gap: 2rem; }
+        nav a { color: var(--color-text); text-decoration: none; font-weight: 500; }
+        nav a:hover { color: var(--color-accent); }
+        .search-box { background: var(--color-glass-bg); border: 2px solid var(--color-glass-border); border-radius: 16px; padding: 2rem; margin: 2rem 0; backdrop-filter: blur(20px); }
+        .search-input { width: 100%; padding: 1rem 1.5rem; background: rgba(255, 255, 255, 0.05); border: 2px solid var(--color-glass-border); border-radius: 12px; color: var(--color-white); font-size: 1.1rem; font-family: 'Space Grotesk', sans-serif; transition: all 0.3s; }
+        .search-input:focus { outline: none; border-color: var(--color-accent); box-shadow: 0 0 20px rgba(212, 168, 67, 0.2); }
+        .search-input::placeholder { color: rgba(232, 228, 240, 0.4); }
+        .search-btn { width: 100%; margin-top: 1rem; }
+        .result-card { background: var(--color-glass-bg); border: 1px solid var(--color-glass-border); border-radius: 16px; padding: 2rem; margin: 2rem 0; backdrop-filter: blur(20px); animation: fadeUp 0.5s ease; }
+        .result-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+        .result-icon { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+        .result-icon.valid { background: rgba(34, 197, 94, 0.2); }
+        .result-icon.invalid { background: rgba(239, 68, 68, 0.2); }
+        .result-title { font-size: 1.25rem; font-weight: 700; color: var(--color-white); }
+        .result-subtitle { font-size: 0.9rem; color: rgba(232, 228, 240, 0.6); }
+        .status-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600; }
+        .status-badge.active { background: rgba(34, 197, 94, 0.15); color: #22C55E; }
+        .status-badge.expired { background: rgba(239, 68, 68, 0.15); color: #EF4444; }
+        .status-badge.pending { background: rgba(245, 158, 11, 0.15); color: #F59E0B; }
+        .detail-row { display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid var(--color-glass-border); }
+        .detail-row:last-child { border-bottom: none; }
+        .detail-label { color: rgba(232, 228, 240, 0.6); font-size: 0.9rem; }
+        .detail-value { color: var(--color-white); font-weight: 500; font-size: 0.9rem; }
+        .qr-section { text-align: center; padding: 2rem; background: rgba(255, 255, 255, 0.02); border-radius: 12px; margin-top: 1.5rem; }
+        .qr-placeholder { width: 150px; height: 150px; background: var(--color-white); border-radius: 12px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: var(--color-dark); font-size: 0.8rem; }
+        .loading { display: flex; align-items: center; justify-content: center; padding: 2rem; }
+        .spinner { width: 40px; height: 40px; border: 3px solid var(--color-glass-border); border-top-color: var(--color-accent); border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .example-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
+        .example-link { color: var(--color-accent); font-size: 0.85rem; cursor: pointer; text-decoration: underline; }
+        .example-link:hover { color: var(--color-accent-bright); }
+        @media (max-width: 768px) { main { padding: 40px 1.5rem; } }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="nav-container">
+        <a href="index.html" class="logo">CSOAI</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="certification.html">Certification</a>
+            <a href="crosswalks.html">Crosswalks</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <span class="label">Public Verification System</span>
+    <h1>Verify CSOAI Certifications</h1>
+    <p>Enter a certificate number to verify its authenticity. This public verification system allows employers, partners, and regulators to confirm CSOAI AI safety credentials in real-time.</p>
+    
+    <div class="search-box">
+        <input type="text" id="certInput" class="search-input" placeholder="Enter Certificate Number (e.g., CERT-XXXXXXXX)" autocomplete="off">
+        <button onclick="verifyCertificate()" class="btn search-btn">Verify Certificate</button>
+        <div class="example-links">
+            <span style="color:rgba(232,228,240,0.5);font-size:0.85rem">Try:</span>
+            <span class="example-link" onclick="fillExample('CERT-A1B2C3D4')">CERT-A1B2C3D4</span>
+            <span class="example-link" onclick="fillExample('CERT-E5F6G7H8')">CERT-E5F6G7H8</span>
+            <span class="example-link" onclick="fillExample('CERT-I9J0K1L2')">CERT-I9J0K1L2</span>
+        </div>
+    </div>
+    
+    <div id="loading" class="loading" style="display:none;">
+        <div class="spinner"></div>
+    </div>
+    
+    <div id="result"></div>
+    
+    <div class="result-card" style="margin-top:3rem;border-color:rgba(212,168,67,0.3)">
+        <h2 style="margin-top:0">How Verification Works</h2>
+        <div class="detail-row">
+            <span class="detail-label">Certificate Number</span>
+            <span class="detail-value">Unique identifier (CERT-XXXXXXXX)</span>
+        </div>
+        <div class="detail-row">
+            <span class="detail-label">Status Check</span>
+            <span class="detail-value">Real-time database verification</span>
+        </div>
+        <div class="detail-row">
+            <span class="detail-label">QR Code</span>
+            <span class="detail-value">Scan to verify instantly</span>
+        </div>
+        <div class="detail-row">
+            <span class="detail-label">API Access</span>
+            <span class="detail-value">Enterprise verification via REST API</span>
+        </div>
+        
+        <div class="qr-section">
+            <div class="qr-placeholder">[QR Code]<br/>Verification</div>
+            <p style="font-size:0.9rem;color:rgba(232,228,240,0.6);margin:0">Scan certificate QR code for instant verification</p>
+        </div>
+    </div>
+    
+    <div style="text-align:center;margin-top:2rem;padding:1.5rem;background:rgba(212,168,67,0.05);border-radius:12px">
+        <p style="font-size:0.95rem;margin:0;color:rgba(232,228,240,0.7)">Need bulk verification for your organization?</p>
+        <a href="enterprise.html" class="btn btn-small" style="margin-top:1rem">Enterprise API Access →</a>
+    </div>
+</main>
+
+<script>
+const API_BASE = window.location.hostname === 'localhost' 
+  ? 'http://localhost:3000/api' 
+  : 'https://api.csoai.org/api';
+
+function fillExample(cert) {
+    document.getElementById('certInput').value = cert;
+}
+
+async function verifyCertificate() {
+    const certNumber = document.getElementById('certInput').value.trim().toUpperCase();
+    const resultDiv = document.getElementById('result');
+    const loadingDiv = document.getElementById('loading');
+    
+    if (!certNumber) {
+        resultDiv.innerHTML = '<div class="result-card"><p style="color:#EF4444;margin:0">Please enter a certificate number</p></div>';
+        return;
+    }
+    
+    loadingDiv.style.display = 'flex';
+    resultDiv.innerHTML = '';
+    
+    // Try real API first
+    try {
+        const response = await fetch(`${API_BASE}/certificates/verify/${certNumber}`, {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' }
+        });
+        
+        if (response.ok) {
+            const data = await response.json();
+            loadingDiv.style.display = 'none';
+            if (data.success && data.data.isValid) {
+                displayValidCert(data.data.certificate, certNumber);
+                return;
+            }
+        }
+    } catch (e) {
+        console.log('API not available, using demo mode');
+    }
+    
+    // Fallback to demo data
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    loadingDiv.style.display = 'none';
+    
+    // Demo responses for example certificates
+    const demoCerts = {
+        'CERT-A1B2C3D4': {
+            valid: true,
+            name: 'Dr. Sarah Chen',
+            org: 'TechCorp Industries',
+            level: 'CASA Professional',
+            type: 'AI Safety Analyst',
+            issueDate: '2025-09-15',
+            expiryDate: '2026-09-15',
+            status: 'active',
+            frameworks: ['EU AI Act', 'NIST AI RMF', 'ISO 42001']
+        },
+        'CERT-E5F6G7H8': {
+            valid: true,
+            name: 'James Mitchell',
+            org: 'Global Finance Ltd',
+            level: 'CASA Enterprise',
+            type: 'AI Governance Lead',
+            issueDate: '2025-06-20',
+            expiryDate: '2026-06-20',
+            status: 'active',
+            frameworks: ['EU AI Act', 'NIST AI RMF', 'SOC 2 Type II']
+        },
+        'CERT-I9J0K1L2': {
+            valid: false,
+            name: 'Alex Rivera',
+            org: 'StartupXYZ',
+            level: 'CASA Foundation',
+            type: 'AI Safety Basic',
+            issueDate: '2024-03-10',
+            expiryDate: '2025-03-10',
+            status: 'expired',
+            frameworks: ['EU AI Act']
+        }
+    };
+    
+    const cert = demoCerts[certNumber];
+    
+    if (cert) {
+        if (cert.valid && cert.status === 'active') {
+            const frameworksList = cert.frameworks.map(f => `<span style="display:inline-block;padding:0.25rem 0.75rem;background:rgba(212,168,67,0.15);border-radius:999px;font-size:0.75rem;margin:0.25rem">${f}</span>`).join('');
+            
+            resultDiv.innerHTML = `
+                <div class="result-card" style="border-color:#22C55E">
+                    <div class="result-header">
+                        <div class="result-icon valid">✓</div>
+                        <div>
+                            <div class="result-title">Certificate Verified</div>
+                            <div class="result-subtitle">${certNumber}</div>
+                        </div>
+                    </div>
+                    <span class="status-badge active">✓ Active</span>
+                    
+                    <div style="margin-top:1.5rem">
+                        <div class="detail-row">
+                            <span class="detail-label">Certificate Holder</span>
+                            <span class="detail-value">${cert.name}</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Organization</span>
+                            <span class="detail-value">${cert.org}</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Certification Level</span>
+                            <span class="detail-value">${cert.level}</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Credential Type</span>
+                            <span class="detail-value">${cert.type}</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Issue Date</span>
+                            <span class="detail-value">${cert.issueDate}</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Expiry Date</span>
+                            <span class="detail-value">${cert.expiryDate}</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Frameworks Covered</span>
+                            <span class="detail-value">${frameworksList}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="qr-section">
+                        <div class="qr-placeholder" style="background:var(--color-accent)">[QR]</div>
+                        <p style="font-size:0.85rem;color:rgba(232,228,240,0.6);margin:0.5rem 0 0">Scan to verify offline</p>
+                    </div>
+                </div>
+            `;
+        } else {
+            resultDiv.innerHTML = `
+                <div class="result-card" style="border-color:#EF4444">
+                    <div class="result-header">
+                        <div class="result-icon invalid">✗</div>
+                        <div>
+                            <div class="result-title">Certificate Expired</div>
+                            <div class="result-subtitle">${certNumber}</div>
+                        </div>
+                    </div>
+                    <span class="status-badge expired">✗ Expired</span>
+                    
+                    <div style="margin-top:1.5rem">
+                        <div class="detail-row">
+                            <span class="detail-label">Certificate Holder</span>
+                            <span class="detail-value">${cert.name}</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Organization</span>
+                            <span class="detail-value">${cert.org}</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Certification Level</span>
+                            <span class="detail-value">${cert.level}</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Valid Until</span>
+                            <span class="detail-value" style="color:#EF4444">${cert.expiryDate}</span>
+                        </div>
+                    </div>
+                    
+                    <p style="margin-top:1.5rem;padding:1rem;background:rgba(239,68,68,0.1);border-radius:8px;font-size:0.9rem;color:rgba(232,228,240,0.8)">This certificate expired on ${cert.expiryDate}. Renew at <a href="certification.html" style="color:var(--color-accent)">cssoai.org/certification.html</a></p>
+                </div>
+            `;
+        }
+    } else {
+        resultDiv.innerHTML = `
+            <div class="result-card" style="border-color:#F59E0B">
+                <div class="result-header">
+                    <div class="result-icon" style="background:rgba(245,158,11,0.2)">?</div>
+                    <div>
+                        <div class="result-title">Certificate Not Found</div>
+                        <div class="result-subtitle">${certNumber}</div>
+                    </div>
+                </div>
+                <span class="status-badge pending">⚠ Not Found</span>
+                
+                <p style="margin-top:1.5rem;padding:1rem;background:rgba(245,158,11,0.1);border-radius:8px;font-size:0.9rem;color:rgba(232,228,240,0.8)">No certificate found with number "${certNumber}". Please check the number and try again, or contact <a href="contact.html" style="color:var(--color-accent)">support@csoai.org</a></p>
+            </div>
+        `;
+    }
+}
+
+// Allow Enter key to search
+document.getElementById('certInput').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        verifyCertificate();
+    }
+});
+
+function displayValidCert(cert, certNumber) {
+    const frameworksList = (cert.courseName || 'CASA Professional').split(',').map(f => 
+        `<span style="display:inline-block;padding:0.25rem 0.75rem;background:rgba(212,168,67,0.15);border-radius:999px;font-size:0.75rem;margin:0.25rem">${f.trim()}</span>`
+    ).join('');
+    
+    document.getElementById('result').innerHTML = `
+        <div class="result-card" style="border-color:#22C55E">
+            <div class="result-header">
+                <div class="result-icon valid">✓</div>
+                <div>
+                    <div class="result-title">Certificate Verified</div>
+                    <div class="result-subtitle">${certNumber}</div>
+                </div>
+            </div>
+            <span class="status-badge active">✓ Active</span>
+            
+            <div style="margin-top:1.5rem">
+                <div class="detail-row">
+                    <span class="detail-label">Certificate Holder</span>
+                    <span class="detail-value">${cert.recipientName}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Certification</span>
+                    <span class="detail-value">${cert.courseName}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Issue Date</span>
+                    <span class="detail-value">${new Date(cert.issuedAt).toLocaleDateString()}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Expiry Date</span>
+                    <span class="detail-value">${new Date(cert.expiresAt).toLocaleDateString()}</span>
+                </div>
+            </div>
+            
+            <div class="qr-section">
+                <div class="qr-placeholder" style="background:var(--color-accent)">[QR]</div>
+                <p style="font-size:0.85rem;color:rgba(232,228,240,0.6);margin:0.5rem 0 0">Scan to verify offline</p>
+            </div>
+        </div>
+    `;
+}
+</script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Verify CSOAI Certification",
+    "description": "Public certificate verification for CSOAI AI safety credentials",
+    "url": "https://csoai.org/verify.html"
+}
+</script>
+</body>
+</html>

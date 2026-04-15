@@ -2,27 +2,36 @@
 """Update all fake alert() forms to use Formspree endpoints."""
 import re, glob, os
 
-# Placeholder endpoints - replace with real ones from forms-config.js or directly
-CONTACT_ENDPOINT = "https://formspree.io/f/xjkyvepj"  # placeholder
-NEWSLETTER_ENDPOINT = "https://formspree.io/f/xjkyvepk"  # placeholder
+# Local Vercel API endpoints
+CONTACT_ENDPOINT = "/api/contact"
+NEWSLETTER_ENDPOINT = "/api/newsletter"
 
 def replace_contact_form(text):
     """Replace contact form with Formspree POST form."""
-    old = r'<form onsubmit="event\.preventDefault\(\); alert\(\'Thank you for your inquiry\. We will be in touch shortly\.\'\);">'
+    old = r'<form action="https://formspree\.io/f/xjkyvepj" method="POST" class="csoai-form" data-form-type="contact">'
     new = f'<form action="{CONTACT_ENDPOINT}" method="POST" class="csoai-form" data-form-type="contact">'
+    text = re.sub(old, new, text)
+    # Also catch any remaining alert-based contact forms
+    old_alert = r'<form onsubmit="event\.preventDefault\(\); alert\(\'Thank you for your inquiry\. We will be in touch shortly\.\'\);">'
+    new_alert = f'<form action="{CONTACT_ENDPOINT}" method="POST" class="csoai-form" data-form-type="contact">'
+    text = re.sub(old_alert, new_alert, text)
     text = re.sub(old, new, text)
     return text
 
 def replace_newsletter_form(text):
     """Replace newsletter forms with Formspree POST forms."""
     # Match various newsletter form patterns
-    old1 = r'<form class="newsletter-form" onsubmit="event\.preventDefault\(\); alert\(\'Thank you for subscribing!\'\);">'
+    old1 = r'<form action="https://formspree\.io/f/xjkyvepk" method="POST" class="newsletter-form csoai-form" data-form-type="newsletter">'
     new1 = f'<form action="{NEWSLETTER_ENDPOINT}" method="POST" class="newsletter-form csoai-form" data-form-type="newsletter">'
     text = re.sub(old1, new1, text)
-    
-    old2 = r'<form onsubmit="event\.preventDefault\(\); alert\(\'Thank you for subscribing!\'\);">'
-    new2 = f'<form action="{NEWSLETTER_ENDPOINT}" method="POST" class="csoai-form" data-form-type="newsletter">'
+
+    old2 = r'<form class="newsletter-form" onsubmit="event\.preventDefault\(\); alert\(\'Thank you for subscribing!\'\);">'
+    new2 = f'<form action="{NEWSLETTER_ENDPOINT}" method="POST" class="newsletter-form csoai-form" data-form-type="newsletter">'
     text = re.sub(old2, new2, text)
+    
+    old3 = r'<form onsubmit="event\.preventDefault\(\); alert\(\'Thank you for subscribing!\'\);">'
+    new3 = f'<form action="{NEWSLETTER_ENDPOINT}" method="POST" class="csoai-form" data-form-type="newsletter">'
+    text = re.sub(old3, new3, text)
     
     return text
 

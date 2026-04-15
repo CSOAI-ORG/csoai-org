@@ -16,7 +16,7 @@ articles = [
         <p>Organizations should begin their compliance journey immediately. Key steps include conducting an AI inventory, classifying each system by risk level, implementing governance frameworks, and pursuing third-party certification. The CSOAI CASA certification aligns directly with EU AI Act requirements, providing a streamlined path to compliance.</p>
         <h2>Penalties and Enforcement</h2>
         <p>Non-compliance carries severe penalties: up to €35 million or 7% of global annual turnover, whichever is higher. National supervisory authorities will have powers to conduct audits, issue fines, and mandate corrective actions. Early preparation is not just advisable—it is essential.</p>
-        <p>For organizations seeking a structured compliance pathway, CSOAI offers implementation guides, audit checklists, and CASA certification services designed specifically for EU AI Act readiness.</p>"""
+        <p>For organizations seeking a structured compliance pathway, CSOAI offers implementation guides, audit checklists, and CASA certification services designed specifically for EU AI Act readiness.</p>""",
     ),
     (
         "blog-casa-certification-levels",
@@ -32,7 +32,7 @@ articles = [
         <p>Level 2 addresses the needs of public sector organizations and government contractors. It incorporates additional requirements for algorithmic accountability, bias auditing, and citizen rights protection. Organizations achieving Level 2 certification demonstrate compliance with public procurement standards and international governance frameworks.</p>
         <h2>Level 3: Defense Certification</h2>
         <p>The most rigorous tier, CASA Level 3, is reserved for defense, national security, and critical infrastructure applications. It includes adversarial testing, red teaming, supply chain verification, and continuous monitoring. Level 3 certification is often a prerequisite for defense contracts and strategic AI partnerships.</p>
-        <p>Each level builds upon the previous, creating a scalable governance maturity model. CSOAI's certification process includes documentation review, system testing, and ongoing surveillance to ensure maintained compliance.</p>"""
+        <p>Each level builds upon the previous, creating a scalable governance maturity model. CSOAI's certification process includes documentation review, system testing, and ongoing surveillance to ensure maintained compliance.</p>""",
     ),
     (
         "blog-byzantine-consensus",
@@ -48,7 +48,7 @@ articles = [
         <p>CSOAI deploys a council of 33 distributed AI agents, each trained on different governance frameworks, regional regulations, and ethical principles. Decisions require a 22-of-33 supermajority, making it computationally infeasible for adversaries to corrupt the consensus process. This threshold is derived from rigorous cryptographic analysis of fault tolerance bounds.</p>
         <h2>Real-World Applications</h2>
         <p>Byzantine consensus governs critical CSOAI functions: charter amendments, certification appeals, cross-border reciprocity agreements, and emergency safety protocols. Every vote is recorded on an immutable ledger, providing full auditability for regulators and stakeholders.</p>
-        <p>By combining classical distributed systems theory with modern AI, CSOAI creates a governance infrastructure that is both autonomous and accountable—a critical requirement for the next generation of artificial intelligence.</p>"""
+        <p>By combining classical distributed systems theory with modern AI, CSOAI creates a governance infrastructure that is both autonomous and accountable—a critical requirement for the next generation of artificial intelligence.</p>""",
     ),
     (
         "blog-iso-42001-nist-ai-rmf",
@@ -64,7 +64,7 @@ articles = [
         <p>The NIST AI RMF offers a voluntary, risk-based framework organized around four functions: Govern, Map, Measure, and Manage. It is particularly valuable for U.S. organizations and those seeking to align with federal procurement guidelines. Unlike ISO 42001, NIST AI RMF is not a certifiable standard but a practical methodology.</p>
         <h2>CSOAI: Certification and Implementation</h2>
         <p>CSOAI's standards and CASA certification program integrate both ISO 42001 and NIST AI RMF requirements. Our crosswalk documentation maps each CSOAI charter article to corresponding ISO and NIST controls, enabling organizations to achieve multiple alignments through a single certification process.</p>
-        <p>For organizations operating globally, a unified approach to ISO 42001, NIST AI RMF, and CSOAI certification provides the strongest foundation for trustworthy, compliant AI deployment.</p>"""
+        <p>For organizations operating globally, a unified approach to ISO 42001, NIST AI RMF, and CSOAI certification provides the strongest foundation for trustworthy, compliant AI deployment.</p>""",
     ),
     (
         "blog-ai-governance-trends-2026",
@@ -82,7 +82,7 @@ articles = [
         <p>2026 brings expanded liability for AI supply chains. Organizations using third-party models, APIs, or training data must verify the governance practices of their vendors. Contractual AI safety clauses and vendor certification requirements are becoming standard.</p>
         <h2>Global Harmonization Efforts</h2>
         <p>While regional regulations differ, there is growing momentum toward mutual recognition of AI governance standards. Initiatives led by BSI, ISO, and CSOAI are creating pathways for certified systems to operate across jurisdictions with reduced friction.</p>
-        <p>Organizations that stay ahead of these trends will not only avoid penalties but also gain competitive advantage through demonstrated trustworthiness.</p>"""
+        <p>Organizations that stay ahead of these trends will not only avoid penalties but also gain competitive advantage through demonstrated trustworthiness.</p>""",
     ),
     (
         "blog-casa-certification-launch",
@@ -98,7 +98,7 @@ articles = [
         <p>Organizations that achieved certification most efficiently had three characteristics in common: executive sponsorship for AI governance, documented risk management processes, and cross-functional teams involving legal, technical, and operational stakeholders.</p>
         <h2>Lessons Learned</h2>
         <p>Early adopters reported that the most challenging aspects of certification were not technical but organizational: establishing clear accountability chains, maintaining documentation across iterative development, and aligning internal teams with external standards.</p>
-        <p>CSOAI has incorporated these insights into updated implementation guides and streamlined audit protocols. For organizations considering CASA certification, the path is now clearer than ever.</p>"""
+        <p>CSOAI has incorporated these insights into updated implementation guides and streamlined audit protocols. For organizations considering CASA certification, the path is now clearer than ever.</p>""",
     ),
     (
         "blog-cmmc-for-ai",
@@ -114,7 +114,7 @@ articles = [
         <p>Beyond standard cybersecurity practices, AI systems require specialized controls: protection of training datasets from poisoning, defense against model extraction attacks, monitoring for anomalous inference requests, and secure model deployment pipelines. CSOAI's CASA Level 3 certification explicitly addresses these requirements.</p>
         <h2>Integrated Compliance Strategy</h2>
         <p>Organizations pursuing both CMMC and CASA certification can benefit from significant overlap in documentation, risk assessment, and auditing processes. CSOAI offers integrated assessment pathways that reduce duplication and accelerate time-to-certification.</p>
-        <p>For defense contractors and their AI vendors, the message is clear: cybersecurity and AI governance are no longer separate domains. Integrated compliance is the new standard.</p>"""
+        <p>For defense contractors and their AI vendors, the message is clear: cybersecurity and AI governance are no longer separate domains. Integrated compliance is the new standard.</p>""",
     ),
     (
         "blog-red-teaming-adversarial-testing",
@@ -130,7 +130,7 @@ articles = [
         <p>Adversarial testing includes prompt injection attacks, jailbreak attempts, data poisoning simulations, model inversion probes, and bias amplification tests. Each technique seeks to push the model outside its intended operating envelope and document the consequences.</p>
         <h2>The AIdome Assessment Framework</h2>
         <p>CSOAI's AIdome laboratory conducts standardized adversarial assessments as part of CASA certification. Tests are tailored to the system's deployment context: a customer service chatbot faces different threats than a medical diagnosis assistant. Results feed directly into risk registers and remediation plans.</p>
-        <p>For organizations seeking CASA Level 2 or 3 certification, red teaming is not optional—it is a core requirement. The investment pays dividends in reduced liability, improved system robustness, and stakeholder confidence.</p>"""
+        <p>For organizations seeking CASA Level 2 or 3 certification, red teaming is not optional—it is a core requirement. The investment pays dividends in reduced liability, improved system robustness, and stakeholder confidence.</p>""",
     ),
     (
         "blog-ai-audit-best-practices",
@@ -148,7 +148,7 @@ articles = [
         <p>Successful audits require coordination across legal, engineering, product, security, and executive teams. Designate a single point of contact for the audit, brief all interviewees on the scope and objectives, and ensure that answers are consistent across departments.</p>
         <h2>Common Pitfalls</h2>
         <p>The most common audit failures stem from gaps between stated policies and actual practices, incomplete risk assessments, and inability to explain model behavior. Addressing these gaps before the auditor arrives is far more cost-effective than remediating findings afterward.</p>
-        <p>CSOAI provides pre-audit readiness assessments to help organizations identify and close gaps before formal certification audits begin.</p>"""
+        <p>CSOAI provides pre-audit readiness assessments to help organizations identify and close gaps before formal certification audits begin.</p>""",
     ),
     (
         "blog-algorithmic-accountability",
@@ -164,7 +164,7 @@ articles = [
         <p>Every significant AI decision should be traceable to the version of the model, the input data, the environmental conditions, and the human oversight applied. Immutable audit trails provide the foundation for post-incident analysis, regulatory inquiries, and continuous improvement.</p>
         <h2>Accountability Mechanisms</h2>
         <p>Accountability requires more than documentation. It requires clear ownership: a designated individual or team responsible for AI system performance and compliance. It requires escalation paths for anomalies and harms. And it requires consequences for failures, just as there are for other operational risks.</p>
-        <p>CSOAI's charter devotes multiple articles to algorithmic accountability, and CASA certification verifies that certified organizations have implemented robust transparency and accountability frameworks.</p>"""
+        <p>CSOAI's charter devotes multiple articles to algorithmic accountability, and CASA certification verifies that certified organizations have implemented robust transparency and accountability frameworks.</p>""",
     ),
     (
         "blog-proof-of-ai",
@@ -180,7 +180,7 @@ articles = [
         <p>When an organization achieves CASA certification, CSOAI mints a unique Proof of AI token containing a cryptographic hash of the certification record. This token is stored on a public blockchain, while sensitive details remain off-chain. Anyone can verify the certification status by checking the token against CSOAI's registry.</p>
         <h2>Benefits for Organizations</h2>
         <p>Proof of AI enables instant verification by customers, regulators, and partners. It supports automated compliance checking in procurement systems. And it creates a transparent history of an organization's governance journey, including renewals, upgrades, and scope expansions.</p>
-        <p>As AI supply chains become more complex, the ability to instantly verify a vendor's certification status will be a critical enabler of trust and efficiency.</p>"""
+        <p>As AI supply chains become more complex, the ability to instantly verify a vendor's certification status will be a critical enabler of trust and efficiency.</p>""",
     ),
     (
         "blog-global-ai-governance-harmonization",
@@ -196,7 +196,7 @@ articles = [
         <p>The British Standards Institution (BSI) plays a leading role in coordinating mutual recognition agreements for AI governance standards. Through BSI-facilitated reciprocity, CASA-certified organizations can more easily demonstrate compliance with UK, Commonwealth, and aligned international requirements.</p>
         <h2>CSOAI's Cross-Border Framework</h2>
         <p>CSOAI actively participates in harmonization initiatives, mapping CASA requirements to the EU AI Act, NIST AI RMF, ISO 42001, and emerging standards in the Asia-Pacific region. Our crosswalks and joint audit programs help organizations achieve multi-jurisdictional compliance efficiently.</p>
-        <p>For globally operating organizations, investing in harmonized certification is not just a compliance strategy—it is a competitive advantage.</p>"""
+        <p>For globally operating organizations, investing in harmonized certification is not just a compliance strategy—it is a competitive advantage.</p>""",
     ),
     (
         "blog-ai-risk-register",
@@ -214,28 +214,41 @@ articles = [
         <p>For each significant risk, define mitigation controls and assign clear ownership. Controls should be specific, measurable, and time-bound. Owners should have the authority and resources to implement and maintain the controls.</p>
         <h2>Step 4: Review and Update</h2>
         <p>A risk register is a living document. Schedule regular reviews—at least quarterly—and update the register whenever systems change, incidents occur, or regulations evolve. Auditors will expect to see evidence of ongoing maintenance.</p>
-        <p>CSOAI provides a free AI risk register template and detailed guidance to help organizations get started.</p>"""
+        <p>CSOAI provides a free AI risk register template and detailed guidance to help organizations get started.</p>""",
     ),
 ]
 
 # We use string.Template-style replacement for footer to avoid brace conflicts
 from string import Template
 
-TEMPLATE_HEAD = '''<!DOCTYPE html>
+TEMPLATE_HEAD = (
+    """<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>''' + html.escape("{title}") + ''' | CSOAI Blog</title>
-    <meta name="description" content="''' + html.escape("{description}") + '''">
+    <title>"""
+    + html.escape("{title}")
+    + ''' | CSOAI Blog</title>
+    <meta name="description" content="'''
+    + html.escape("{description}")
+    + '''">
     <meta name="theme-color" content="#0D0B21">
-    <meta property="og:title" content="''' + html.escape("{title}") + '''">
-    <meta property="og:description" content="''' + html.escape("{description}") + '''">
+    <meta property="og:title" content="'''
+    + html.escape("{title}")
+    + '''">
+    <meta property="og:description" content="'''
+    + html.escape("{description}")
+    + """">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://csoai.org/''' + "{slug}" + '''.html">
+    <meta property="og:url" content="https://csoai.org/"""
+    + "{slug}"
+    + """.html">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:image" content="https://csoai.org/assets/og-image.png">
-    <link rel="canonical" href="https://csoai.org/''' + "{slug}" + '''.html">
+    <link rel="canonical" href="https://csoai.org/"""
+    + "{slug}"
+    + """.html">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -373,9 +386,10 @@ TEMPLATE_HEAD = '''<!DOCTYPE html>
 </head>
 <body>
     <main>
-'''
+"""
+)
 
-TEMPLATE_NAV = '''
+TEMPLATE_NAV = """
 <!-- ═══ MEGA NAV ═══ -->
 <header style="position:sticky;top:0;z-index:1000;background:rgba(13,11,33,.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(212,168,67,.15);padding:.75rem 2rem;display:flex;justify-content:space-between;align-items:center">
   <a href="index.html" style="font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,#D4A843,#E8B76D);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none">CSOAI</a>
@@ -405,11 +419,7 @@ TEMPLATE_NAV = '''
       <div class="mega-panel" style="display:none;position:absolute;top:100%;right:0;width:520px;background:rgba(13,11,33,.98);border:1px solid rgba(212,168,67,.2);border-radius:12px;padding:1.5rem;margin-top:.5rem;box-shadow:0 20px 60px rgba(0,0,0,.5);backdrop-filter:blur(20px);z-index:999">
         <div style="color:var(--accent);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:.75rem">CSOAI Group Network</div>
         <a href="https://meok.ai" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">🧠</span><span><strong style="display:block;font-size:.9rem">MEOK.AI</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">Sovereign AI OS &amp; agent marketplace</small></span></a>
-        <a href="https://csga-global.vercel.app" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">🌐</span><span><strong style="display:block;font-size:.9rem">CSGA Global</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">Education & workforce development</small></span></a>
-        <a href="https://csga-ai.vercel.app" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">🔬</span><span><strong style="display:block;font-size:.9rem">CSGA AI Research</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">150+ peer-reviewed publications</small></span></a>
-        <a href="https://bmcc-cyber.vercel.app" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">🎓</span><span><strong style="display:block;font-size:.9rem">BMCC Cybersecurity</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">US education partner</small></span></a>
-        <a href="https://terranova-secdef.vercel.app" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">🛡️</span><span><strong style="display:block;font-size:.9rem">Terranova SecDef</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">Defence & government AI safety</small></span></a>
-        <a href="https://orbit-q.vercel.app" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">🔮</span><span><strong style="display:block;font-size:.9rem">Orbit-Q</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">QA testing & red team ops</small></span></a>
+        <a href="https://github.com/csoai-org" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">🐙</span><span><strong style="display:block;font-size:.9rem">GitHub</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">305+ open source repositories</small></span></a>
       </div>
     </div>
     <a href="about.html" style="color:var(--text);padding:.5rem 1rem;font-size:.9rem;font-weight:500;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='var(--text)'">About</a>
@@ -428,10 +438,10 @@ function toggleMega(btn){
 }
 document.addEventListener('click',e=>{if(!e.target.closest('.mega-wrap'))document.querySelectorAll('.mega-panel').forEach(p=>p.style.display='none')});
 </script>
-'''
+"""
 
 # Use simple string replacement for footer
-FOOTER_BEFORE_JSON = '''
+FOOTER_BEFORE_JSON = """
         <div class="newsletter">
             <h3>Stay Updated on AI Governance</h3>
             <p>Get weekly articles on certification, regulation, and AI safety best practices delivered to your inbox.</p>
@@ -466,7 +476,7 @@ FOOTER_BEFORE_JSON = '''
     </div>
     <div><h4 style="color:var(--accent);font-size:.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem;font-family:'Space Grotesk',sans-serif">Standards</h4><a href="charter.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Charter</a><a href="crosswalks.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Crosswalks</a><a href="guides.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Guides</a><a href="glossary.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Glossary</a></div>
     <div><h4 style="color:var(--accent);font-size:.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem;font-family:'Space Grotesk',sans-serif">Products</h4><a href="certification.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Certification</a><a href="enterprise.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Enterprise</a><a href="advisory.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Advisory</a><a href="pricing.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Pricing</a></div>
-    <div><h4 style="color:var(--accent);font-size:.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem;font-family:'Space Grotesk',sans-serif">Ecosystem</h4><a href="https://meok.ai" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">MEOK.AI</a><a href="https://csga-global.vercel.app" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">CSGA Global</a><a href="https://csga-ai.vercel.app" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">CSGA AI Research</a><a href="https://bmcc-cyber.vercel.app" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">BMCC Cyber</a><a href="https://terranova-secdef.vercel.app" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Terranova SecDef</a></div>
+    <div><h4 style="color:var(--accent);font-size:.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem;font-family:'Space Grotesk',sans-serif">Ecosystem</h4><a href="https://meok.ai" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">MEOK.AI</a><a href="https://github.com/csoai-org" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">GitHub</a></div>
     <div><h4 style="color:var(--accent);font-size:.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem;font-family:'Space Grotesk',sans-serif">Company</h4><a href="about.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">About</a><a href="case-studies.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Case Studies</a><a href="blog.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Blog</a><a href="contact.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Contact</a></div>
     <div><h4 style="color:var(--accent);font-size:.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem;font-family:'Space Grotesk',sans-serif">Account</h4><a href="dashboard.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Dashboard</a><a href="faq.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">FAQ</a><a href="resources.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Resources</a></div>
   </div>
@@ -491,26 +501,41 @@ if (localStorage.getItem('csoai-cookie-consent') === 'true') {
 </script>
 
 <script type="application/ld+json">
-'''
+"""
+
 
 def iso_date(date_str):
     months = {
-        'January': '01', 'February': '02', 'March': '03', 'April': '04',
-        'May': '05', 'June': '06', 'July': '07', 'August': '08',
-        'September': '09', 'October': '10', 'November': '11', 'December': '12'
+        "January": "01",
+        "February": "02",
+        "March": "03",
+        "April": "04",
+        "May": "05",
+        "June": "06",
+        "July": "07",
+        "August": "08",
+        "September": "09",
+        "October": "10",
+        "November": "11",
+        "December": "12",
     }
-    parts = date_str.replace(',', '').split()
+    parts = date_str.replace(",", "").split()
     return f"{parts[2]}-{months[parts[0]]}-{int(parts[1]):02d}"
 
+
 def generate():
-    base = '/Users/nicholas/CSOAI-CORP/vercel-sites/csoai-org/'
-    
+    base = "/Users/nicholas/CSOAI-CORP/vercel-sites/csoai-org/"
+
     for slug, title, category, date, read_time, excerpt, content in articles:
         desc = html.escape(excerpt)
         date_iso = iso_date(date)
-        
-        head = TEMPLATE_HEAD.replace("{title}", html.escape(title)).replace("{description}", desc).replace("{slug}", slug)
-        body = f'''
+
+        head = (
+            TEMPLATE_HEAD.replace("{title}", html.escape(title))
+            .replace("{description}", desc)
+            .replace("{slug}", slug)
+        )
+        body = f"""
 {TEMPLATE_NAV}
 <section style="animation:fadeUp 0.8s var(--easing) backwards;">
     <div class="article-content">
@@ -522,7 +547,7 @@ def generate():
         </div>
         {content}
     </div>
-'''
+"""
         json_ld = f'''{{
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -547,32 +572,37 @@ def generate():
 </body>
 </html>
 '''
-        
-        with open(base + slug + '.html', 'w', encoding='utf-8') as f:
+
+        with open(base + slug + ".html", "w", encoding="utf-8") as f:
             f.write(head + body + FOOTER_BEFORE_JSON + json_ld)
         print(f"Created {slug}.html")
-    
+
     # Update blog.html
-    with open(base + 'blog.html', 'r', encoding='utf-8') as f:
+    with open(base + "blog.html", "r", encoding="utf-8") as f:
         blog_html = f.read()
-    
+
     for slug, title, category, date, read_time, excerpt, content in articles:
-        old_href = 'contact.html?inquiry=blog-subscribe'
+        old_href = "contact.html?inquiry=blog-subscribe"
         escaped_title = re.escape(title)
         pattern = re.compile(
-            r'(<h3 class="article-title">' + escaped_title + r'</h3>.*?<a href=")' + re.escape(old_href) + r'(" class="read-more">Read More →</a>)',
-            re.DOTALL
+            r'(<h3 class="article-title">'
+            + escaped_title
+            + r'</h3>.*?<a href=")'
+            + re.escape(old_href)
+            + r'(" class="read-more">Read More →</a>)',
+            re.DOTALL,
         )
-        replacement = r'\1' + slug + '.html' + r'\2'
+        replacement = r"\1" + slug + ".html" + r"\2"
         blog_html, count = pattern.subn(replacement, blog_html)
         if count == 0:
             print(f"WARNING: Could not find link for {title}")
         else:
             print(f"Updated blog.html link for {title}")
-    
-    with open(base + 'blog.html', 'w', encoding='utf-8') as f:
+
+    with open(base + "blog.html", "w", encoding="utf-8") as f:
         f.write(blog_html)
     print("Updated blog.html")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     generate()
