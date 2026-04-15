@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Governance Glossary - Key Terms & Definitions</title>
+    <meta name="description" content="Comprehensive AI governance glossary with 40+ definitions: AI Governance, AI Safety, Byzantine Consensus, CASA Certification, EU AI Act, NIST AI RMF, ISO 42001, and more.">
+    <meta name="theme-color" content="#0D0B21">
+    <meta property="og:title" content="AI Governance Glossary">
+    <meta property="og:description" content="40+ AI safety and governance terms defined for featured snippets and comprehensive learning.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://csoai.org/assets/og-image.png">
+    <meta property="og:url" content="https://csoai.org/glossary.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://csoai.org/glossary.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-dark: #0D0B21;
+            --color-dark-light: #1A1145;
+            --color-accent: #D4A843;
+            --color-accent-bright: #E8B76D;
+            --color-text: #E8E4F0;
+            --color-white: #FFFFFF;
+            --color-glass-bg: rgba(255, 255, 255, 0.03);
+            --color-glass-border: rgba(255, 255, 255, 0.08);
+            --easing: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-light) 100%);
+            color: var(--color-text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, rgba(212, 168, 67, 0.15) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: 0;
+            animation: drift 20s ease-in-out infinite;
+        }
+
+        @keyframes drift {
+            0%, 100% { background-position: 0 0; }
+            50% { background-position: 20px 20px; }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        main {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            color: var(--color-white);
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+            color: var(--color-white);
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--color-white);
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--color-text);
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-bright) 100%);
+            color: var(--color-dark);
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(212, 168, 67, 0.25);
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 45px rgba(212, 168, 67, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-accent);
+            border: 2px solid var(--color-accent);
+            box-shadow: none;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(212, 168, 67, 0.1);
+        }
+
+        .btn-small {
+            padding: 0.75rem 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1.5rem 2rem;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(13, 11, 33, 0.7);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--color-white);
+        }
+
+        .logo-dot {
+            width: 12px;
+            height: 12px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 1; }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--color-accent);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-accent);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-label {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(212, 168, 67, 0.15);
+            border: 1px solid rgba(212, 168, 67, 0.3);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-accent);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .search-container {
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+            padding: 1rem 1.5rem;
+            background: var(--color-glass-bg);
+            border: 1px solid var(--color-glass-border);
+            border-radius: 12px;
+            color: var(--color-white);
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .search-box::placeholder {
+            color: rgba(232, 228, 240, 0.5);
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            box-shadow: 0 0 20px rgba(212, 168, 67, 0.2);
+        }
+
+        .alphabet-nav {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            padding: 1.5rem;
+            background: var(--color-glass-bg);
+            border: 1px solid var(--color-glass-border);
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+
+        .alphabet-nav a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(212, 168, 67, 0.1);
+            border: 1px solid var(--color-glass-border);
+            border-radius: 8px;
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .alphabet-nav a:hover {
+            background: var(--color-accent);
+            color: var(--color-dark);
+            border-color: var(--color-accent);
+        }
+
+        .glossary-container {
+            display: grid;
+            gap: 2.5rem;
+        }
+
+        .glossary-letter {
+            animation: fadeUp 0.8s var(--easing) backwards;
+        }
+
+        .letter-header {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--color-accent);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--color-glass-border);
+        }
+
+        .glossary-term {
+            background: var(--color-glass-bg);
+            border: 1px solid var(--color-glass-border);
+            border-radius: 12px;
+            padding: 1.75rem;
+            margin-bottom: 1.25rem;
+            transition: all 0.3s ease;
+        }
+
+        .glossary-term:hover {
+            box-shadow: 0 0 30px rgba(212, 168, 67, 0.2);
+            border-color: var(--color-accent);
+            transform: translateX(5px);
+        }
+
+        .term-name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--color-white);
+            margin-bottom: 0.5rem;
+        }
+
+        .term-definition {
+            color: var(--color-text);
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .term-related {
+            font-size: 0.85rem;
+            color: rgba(232, 228, 240, 0.7);
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--color-glass-border);
+            margin-top: 0.75rem;
+        }
+
+        .term-related strong {
+            color: var(--color-accent);
+        }
+
+        .term-related a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .term-related a:hover {
+            color: var(--color-accent-bright);
+        }
+
+        .sticky-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            padding: 1.5rem 2rem;
+            background: rgba(13, 11, 33, 0.8);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .sticky-message {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--color-text);
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .cookie-banner {
+            position: fixed;
+            bottom: 80px;
+            left: 2rem;
+            z-index: 98;
+            background: var(--color-glass-bg);
+            border: 1px solid var(--color-glass-border);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            padding: 1.5rem;
+            max-width: 300px;
+            animation: slideUp 0.5s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .cookie-text {
+            font-size: 0.85rem;
+            color: var(--color-text);
+            margin-bottom: 1rem;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-direction: column;
+        }
+
+        .cookie-buttons button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cookie-accept {
+            background: var(--color-accent);
+            color: var(--color-dark);
+        }
+
+        .cookie-decline {
+            background: transparent;
+            color: var(--color-accent);
+            border: 1px solid var(--color-accent);
+        }
+
+        footer {
+            background: linear-gradient(135deg, #0A0820 0%, #0D0B21 100%);
+            padding: 4rem 2rem 2rem;
+            margin-top: 6rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h4 {
+            color: var(--color-accent);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: var(--color-text);
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 0.75rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--color-accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.9rem;
+            color: var(--color-text);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            color: var(--color-text);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--color-accent);
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 1.5rem;
+            }
+
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .alphabet-nav {
+                gap: 0.25rem;
+            }
+
+            .alphabet-nav a {
+                width: 32px;
+                height: 32px;
+                font-size: 0.75rem;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .sticky-bar {
+                bottom: 60px;
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .sticky-bar .btn {
+                width: 100%;
+            }
+
+            .cookie-banner {
+                left: 1rem;
+                right: 1rem;
+                max-width: none;
+                bottom: 70px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            section {
+                padding: 50px 1rem;
+            }
+
+            .search-box {
+                width: 100%;
+            }
+
+            .glossary-term {
+                padding: 1.25rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .sticky-bar {
+                bottom: 50px;
+                padding: 0.75rem;
+            }
+
+            .sticky-message {
+                text-align: center;
+                font-size: 0.9rem;
+            }
+
+            .cookie-banner {
+                left: 0.5rem;
+                right: 0.5rem;
+                bottom: 60px;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        
+<!-- ═══ MEGA NAV ═══ -->
+<header style="position:sticky;top:0;z-index:1000;background:rgba(13,11,33,.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(212,168,67,.15);padding:.75rem 2rem;display:flex;justify-content:space-between;align-items:center">
+  <a href="index.html" style="font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,#D4A843,#E8B76D);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none">CSOAI</a>
+  <div style="display:flex;align-items:center;gap:.25rem" class="nav-links">
+    <!-- Standards -->
+    <div class="mega-wrap" style="position:relative">
+      <button onclick="toggleMega(this)" style="background:none;border:none;color:var(--text);padding:.5rem 1rem;font-size:.9rem;font-weight:500;cursor:pointer;font-family:inherit">Standards ▾</button>
+      <div class="mega-panel" style="display:none;position:absolute;top:100%;left:-100px;width:520px;background:rgba(13,11,33,.98);border:1px solid rgba(212,168,67,.2);border-radius:12px;padding:1.5rem;margin-top:.5rem;box-shadow:0 20px 60px rgba(0,0,0,.5);backdrop-filter:blur(20px);z-index:999">
+        <div style="color:var(--accent);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:.75rem">Governance Frameworks</div>
+        <a href="charter.html" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">📜</span><span><strong style="display:block;font-size:.9rem">52-Article Charter</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">Complete governance framework</small></span></a>
+        <a href="crosswalks.html" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">🔄</span><span><strong style="display:block;font-size:.9rem">Framework Crosswalks</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">ISO 42001, NIST, EU AI Act, IEEE</small></span></a>
+        <a href="guides.html" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">📖</span><span><strong style="display:block;font-size:.9rem">Implementation Guides</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">8 step-by-step modules</small></span></a>
+        <a href="glossary.html" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">📚</span><span><strong style="display:block;font-size:.9rem">AI Safety Glossary</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">250+ terms defined</small></span></a>
+      </div>
+    </div>
+    <!-- Products -->
+    <div class="mega-wrap" style="position:relative">
+      <button onclick="toggleMega(this)" style="background:none;border:none;color:var(--text);padding:.5rem 1rem;font-size:.9rem;font-weight:500;cursor:pointer;font-family:inherit">Products ▾</button>
+      <div class="mega-panel" style="display:none;position:absolute;top:100%;left:-100px;width:520px;background:rgba(13,11,33,.98);border:1px solid rgba(212,168,67,.2);border-radius:12px;padding:1.5rem;margin-top:.5rem;box-shadow:0 20px 60px rgba(0,0,0,.5);backdrop-filter:blur(20px);z-index:999">
+        <div style="color:var(--accent);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:.75rem">CSOAI Products & Services</div>
+        <a href="certification.html" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">🏅</span><span><strong style="display:block;font-size:.9rem">CASA Certification</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">Industry-standard AI safety certification</small></span></a>
+        <a href="enterprise.html" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">🏢</span><span><strong style="display:block;font-size:.9rem">Enterprise Governance</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">Turnkey compliance for organisations</small></span></a>
+        <a href="advisory.html" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">🎯</span><span><strong style="display:block;font-size:.9rem">Advisory Services</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">Expert AI governance consultancy</small></span></a>
+        <a href="pricing.html" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">💰</span><span><strong style="display:block;font-size:.9rem">Pricing & Plans</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">From startup to government scale</small></span></a>
+      </div>
+    </div>
+    <!-- Ecosystem -->
+    <div class="mega-wrap" style="position:relative">
+      <button onclick="toggleMega(this)" style="background:none;border:none;color:var(--text);padding:.5rem 1rem;font-size:.9rem;font-weight:500;cursor:pointer;font-family:inherit">Ecosystem ▾</button>
+      <div class="mega-panel" style="display:none;position:absolute;top:100%;right:0;width:520px;background:rgba(13,11,33,.98);border:1px solid rgba(212,168,67,.2);border-radius:12px;padding:1.5rem;margin-top:.5rem;box-shadow:0 20px 60px rgba(0,0,0,.5);backdrop-filter:blur(20px);z-index:999">
+        <div style="color:var(--accent);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:.75rem">CSOAI Group Network</div>
+        <a href="https://csga-global.vercel.app" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">🌐</span><span><strong style="display:block;font-size:.9rem">CSGA Global</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">Education & workforce development</small></span></a>
+        <a href="https://csga-ai.vercel.app" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">🔬</span><span><strong style="display:block;font-size:.9rem">CSGA AI Research</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">150+ peer-reviewed publications</small></span></a>
+        <a href="https://bmcc-cyber.vercel.app" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">🎓</span><span><strong style="display:block;font-size:.9rem">BMCC Cybersecurity</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">US education partner</small></span></a>
+        <a href="https://terranova-secdef.vercel.app" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">🛡️</span><span><strong style="display:block;font-size:.9rem">Terranova SecDef</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">Defence & government AI safety</small></span></a>
+        <a href="https://orbit-q.vercel.app" style="display:flex;align-items:flex-start;gap:.75rem;padding:.6rem;border-radius:8px;text-decoration:none;color:var(--text);transition:background .2s" onmouseover="this.style.background='rgba(212,168,67,.1)'" onmouseout="this.style.background='transparent'"><span style="font-size:1.2rem">🔮</span><span><strong style="display:block;font-size:.9rem">Orbit-Q</strong><small style="color:rgba(232,228,240,.5);font-size:.8rem">QA testing & red team ops</small></span></a>
+      </div>
+    </div>
+    <a href="about.html" style="color:var(--text);padding:.5rem 1rem;font-size:.9rem;font-weight:500;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='var(--text)'">About</a>
+    <a href="blog.html" style="color:var(--text);padding:.5rem 1rem;font-size:.9rem;font-weight:500;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='var(--text)'">Blog</a>
+    <a href="contact.html" style="color:var(--text);padding:.5rem 1rem;font-size:.9rem;font-weight:500;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='var(--text)'">Contact</a>
+    <a href="dashboard.html" style="background:linear-gradient(135deg,#D4A843,#E8B76D);color:#0D0B21;padding:.5rem 1.25rem;border-radius:8px;font-size:.85rem;font-weight:700;text-decoration:none;margin-left:.5rem;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 15px rgba(212,168,67,.3)" onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 6px 20px rgba(212,168,67,.5)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 15px rgba(212,168,67,.3)'">Dashboard</a>
+  </div>
+  <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('mobile-open');this.classList.toggle('active')" style="display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:1001"><span style="width:24px;height:2px;background:var(--accent);border-radius:2px;transition:all .3s"></span><span style="width:24px;height:2px;background:var(--accent);border-radius:2px;transition:all .3s"></span><span style="width:24px;height:2px;background:var(--accent);border-radius:2px;transition:all .3s"></span></button>
+</header>
+<script>
+function toggleMega(btn){
+  const panel=btn.nextElementSibling;
+  const wasOpen=panel.style.display==='block';
+  document.querySelectorAll('.mega-panel').forEach(p=>p.style.display='none');
+  if(!wasOpen)panel.style.display='block';
+}
+document.addEventListener('click',e=>{if(!e.target.closest('.mega-wrap'))document.querySelectorAll('.mega-panel').forEach(p=>p.style.display='none')});
+</script>
+
+
+        <section>
+            <span class="section-label">Reference</span>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 3rem;">
+                <div style="animation: fadeUp 0.8s var(--easing) backwards;">
+                    <h1>AI Governance Glossary</h1>
+                    <p style="font-size: 1.15rem;">40+ essential terms in AI safety, governance, certification, and compliance. Optimized for featured snippets and comprehensive learning.</p>
+                </div>
+                <div style="animation: float 6s ease-in-out infinite; filter: drop-shadow(0 0 30px rgba(212, 168, 67, 0.3)); display: flex; justify-content: center;">
+                    <svg width="350" height="350" viewBox="0 0 350 350" fill="none">
+                        <!-- Open book pages -->
+                        <path d="M 120 80 L 100 180 L 120 280 L 175 260 L 175 100 Z" fill="none" stroke="#D4A843" stroke-width="2" opacity="0.7" />
+                        <path d="M 230 80 L 250 180 L 230 280 L 175 260 L 175 100 Z" fill="none" stroke="#D4A843" stroke-width="2" opacity="0.7" />
+
+                        <!-- Book spine/binding -->
+                        <line x1="175" y1="100" x2="175" y2="260" stroke="#D4A843" stroke-width="2.5" opacity="0.8" />
+
+                        <!-- Text lines on pages -->
+                        <g opacity="0.5">
+                            <!-- Left page lines -->
+                            <line x1="110" y1="120" x2="160" y2="120" stroke="#D4A843" stroke-width="1" />
+                            <line x1="110" y1="135" x2="165" y2="135" stroke="#D4A843" stroke-width="1" />
+                            <line x1="110" y1="150" x2="160" y2="150" stroke="#D4A843" stroke-width="1" />
+                            <line x1="110" y1="165" x2="155" y2="165" stroke="#D4A843" stroke-width="1" />
+                            <line x1="110" y1="180" x2="162" y2="180" stroke="#D4A843" stroke-width="1" />
+                            <line x1="110" y1="195" x2="158" y2="195" stroke="#D4A843" stroke-width="1" />
+                            <line x1="110" y1="210" x2="160" y2="210" stroke="#D4A843" stroke-width="1" />
+                            <line x1="110" y1="225" x2="155" y2="225" stroke="#D4A843" stroke-width="1" />
+
+                            <!-- Right page lines -->
+                            <line x1="185" y1="120" x2="240" y2="120" stroke="#D4A843" stroke-width="1" />
+                            <line x1="185" y1="135" x2="245" y2="135" stroke="#D4A843" stroke-width="1" />
+                            <line x1="185" y1="150" x2="240" y2="150" stroke="#D4A843" stroke-width="1" />
+                            <line x1="185" y1="165" x2="235" y2="165" stroke="#D4A843" stroke-width="1" />
+                            <line x1="185" y1="180" x2="242" y2="180" stroke="#D4A843" stroke-width="1" />
+                            <line x1="185" y1="195" x2="238" y2="195" stroke="#D4A843" stroke-width="1" />
+                            <line x1="185" y1="210" x2="240" y2="210" stroke="#D4A843" stroke-width="1" />
+                            <line x1="185" y1="225" x2="235" y2="225" stroke="#D4A843" stroke-width="1" />
+                        </g>
+
+                        <!-- Floating letters around the book -->
+                        <g opacity="0.6" style="animation: float 4s ease-in-out infinite;">
+                            <text x="80" y="140" font-size="18" font-weight="bold" fill="#D4A843">A</text>
+                            <text x="275" y="160" font-size="18" font-weight="bold" fill="#D4A843">Z</text>
+                            <text x="85" y="250" font-size="18" font-weight="bold" fill="#D4A843">G</text>
+                            <text x="270" y="240" font-size="18" font-weight="bold" fill="#D4A843">L</text>
+                        </g>
+
+                        <!-- Bookmark ribbon -->
+                        <path d="M 220 80 L 225 120 L 220 150 L 225 180" fill="none" stroke="#D4A843" stroke-width="2" opacity="0.6" stroke-linecap="round" />
+
+                        <!-- Highlight glow on book -->
+                        <ellipse cx="175" cy="170" rx="70" ry="90" fill="#D4A843" opacity="0.05" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="search-container">
+                <input type="text" class="search-box" id="searchInput" placeholder="Search terms...">
+            </div>
+
+            <div class="alphabet-nav">
+                <a href="#letter-a">A</a>
+                <a href="#letter-b">B</a>
+                <a href="#letter-c">C</a>
+                <a href="#letter-d">D</a>
+                <a href="#letter-e">E</a>
+                <a href="#letter-f">F</a>
+                <a href="#letter-g">G</a>
+                <a href="#letter-h">H</a>
+                <a href="#letter-i">I</a>
+                <a href="#letter-n">N</a>
+                <a href="#letter-p">P</a>
+                <a href="#letter-r">R</a>
+                <a href="#letter-s">S</a>
+                <a href="#letter-t">T</a>
+                <a href="#letter-v">V</a>
+            </div>
+
+            <div class="glossary-container">
+                <!-- A -->
+                <div class="glossary-letter" id="letter-a">
+                    <h2 class="letter-header">A</h2>
+
+                    <div class="glossary-term">
+                        <div class="term-name">AI Governance</div>
+                        <div class="term-definition">The institutional frameworks, policies, and processes that guide the safe development, deployment, and oversight of artificial intelligence systems. CSOAI provides a comprehensive 52-article charter for global AI governance aligned with institutional oversight principles.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-responsible-ai">Responsible AI</a>, <a href="#term-compliance">Compliance Framework</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">AI Safety</div>
+                        <div class="term-definition">The discipline of ensuring artificial intelligence systems operate reliably, securely, and in alignment with intended objectives. Encompasses technical safety, alignment testing, robustness evaluation, and governance structures.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-ai-alignment">AI Alignment</a>, <a href="#term-red-teaming">Red Teaming</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">AI Alignment</div>
+                        <div class="term-definition">The process of ensuring AI system objectives and behaviors align with human values, intentions, and ethical principles. A critical component of AI safety that addresses reward misalignment and specification gaming.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-ai-safety">AI Safety</a>, <a href="#term-responsible-ai">Responsible AI</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">AI Agent</div>
+                        <div class="term-definition">An autonomous software system that perceives its environment, makes decisions, and takes actions to achieve specified goals. In CSOAI Byzantine governance, 33 AI agents reach consensus using fault-tolerant voting mechanisms.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-byzantine-consensus">Byzantine Consensus</a>, <a href="#term-autonomous-weapons">Autonomous Weapons</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">AI Audit</div>
+                        <div class="term-definition">A comprehensive assessment of AI systems for compliance with governance standards, safety requirements, and regulatory frameworks. Essential for CASA certification across all three levels.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-compliance">Compliance Framework</a>, <a href="#term-verification">Verification</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Adversarial Testing</div>
+                        <div class="term-definition">Deliberate attempts to find vulnerabilities and weaknesses in AI systems through generated adversarial examples and attack scenarios. A key component of security assessment and red teaming.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-red-teaming">Red Teaming</a>, <a href="#term-bias-testing">Bias Testing</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Autonomous Weapons</div>
+                        <div class="term-definition">AI-driven military systems capable of engaging targets without direct human intervention. Subject to heightened governance requirements and CSOAI Level 3 Defense certification protocols.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-defense">Defense Certification</a>, <a href="#term-ai-agent">AI Agent</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Algorithmic Accountability</div>
+                        <div class="term-definition">The responsibility of organizations to explain, justify, and be accountable for algorithmic decisions affecting users. Requires transparent audit trails, decision logging, and human oversight mechanisms.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-transparency">Transparency</a>, <a href="#term-explainability">Explainability</a></div>
+                    </div>
+                </div>
+
+                <!-- B -->
+                <div class="glossary-letter" id="letter-b">
+                    <h2 class="letter-header">B</h2>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Byzantine Consensus</div>
+                        <div class="term-definition">A distributed consensus mechanism where 33 AI agents reach agreement on decisions using Byzantine Fault Tolerance principles. Requires 22/33 (67%+) majority for approval, mathematically resistant to 33% malicious actors.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-governance">Governance</a>, <a href="#term-ai-agent">AI Agent</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Bias Testing</div>
+                        <div class="term-definition">Systematic evaluation of AI systems for fairness issues, discriminatory outcomes, and representation imbalances across demographic groups. Critical for ensuring equitable AI deployment.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-fairness-testing">Fairness Testing</a>, <a href="#term-adversarial-testing">Adversarial Testing</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">BMCC</div>
+                        <div class="term-definition">Byzantine Management and Consensus Coordination—a member organization of the CSOAI ecosystem responsible for training, certification, and workforce development in Byzantine governance principles.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-casa">CASA</a>, <a href="#term-byzantine-consensus">Byzantine Consensus</a></div>
+                    </div>
+                </div>
+
+                <!-- C -->
+                <div class="glossary-letter" id="letter-c">
+                    <h2 class="letter-header">C</h2>
+
+                    <div class="glossary-term">
+                        <div class="term-name">CASA Certification</div>
+                        <div class="term-definition">The Coordinated Security for AI Certification offered at three levels: Level 1 (Commercial, $5-25K), Level 2 (Government, $25-100K), Level 3 (Defense, $100-500K). Provides global recognition of AI safety and governance compliance.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-compliance">Compliance Framework</a>, <a href="#term-ai-governance">AI Governance</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">CSOAI</div>
+                        <div class="term-definition">Coordinated Security for Artificial Intelligence—the global institutional governance standard and ecosystem providing Byzantine consensus-based oversight, 52-article charter, and comprehensive AI safety framework.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-ai-governance">AI Governance</a>, <a href="#term-casa">CASA Certification</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">CMMC</div>
+                        <div class="term-definition">Cybersecurity Maturity Model Certification—a compliance framework increasingly applied to AI systems requiring enhanced security assessments, threat resilience, and security posture maturity across five levels.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-compliance">Compliance Framework</a>, <a href="#term-ai-audit">AI Audit</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">CA3O</div>
+                        <div class="term-definition">Coordinated AI Accountability and Oversight Organization—an oversight body within the CSOAI ecosystem ensuring institutional accountability and cross-jurisdictional governance alignment.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-algorithmic-accountability">Algorithmic Accountability</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Compliance Framework</div>
+                        <div class="term-definition">A structured approach to governance, policies, and processes ensuring AI systems meet regulatory requirements and institutional standards. Includes documentation, auditing, monitoring, and corrective action procedures.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-ai-governance">AI Governance</a>, <a href="#term-risk-management">Risk Management</a></div>
+                    </div>
+                </div>
+
+                <!-- D -->
+                <div class="glossary-letter" id="letter-d">
+                    <h2 class="letter-header">D</h2>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Data Governance</div>
+                        <div class="term-definition">The policies, procedures, and controls governing data collection, storage, processing, and use in AI systems. Ensures data quality, security, privacy, and compliance with regulations like GDPR.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-compliance">Compliance Framework</a>, <a href="#term-ai-governance">AI Governance</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Deepfake</div>
+                        <div class="term-definition">Synthetic media created using deep learning to realistically portray false scenarios, typically video or audio. A high-risk AI application requiring verification mechanisms and authentication protocols.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-verification">Verification</a>, <a href="#term-high-risk-ai">High-Risk AI</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Digital Twin</div>
+                        <div class="term-definition">A virtual representation of a physical system, process, or object used for simulation, testing, and monitoring. Enables safe testing of AI systems in controlled digital environments before real-world deployment.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-red-teaming">Red Teaming</a>, <a href="#term-validation">Validation</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">DSRB</div>
+                        <div class="term-definition">Defense Safety and Responsibility Board—a member organization of the CSOAI ecosystem responsible for oversight and distribution of certified AI systems in defense and critical infrastructure sectors.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-casa">CASA Certification</a>, <a href="#term-defense">Defense</a></div>
+                    </div>
+                </div>
+
+                <!-- E -->
+                <div class="glossary-letter" id="letter-e">
+                    <h2 class="letter-header">E</h2>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Ethical AI</div>
+                        <div class="term-definition">AI systems developed and deployed according to ethical principles including fairness, transparency, accountability, and respect for human autonomy. Core requirement for CSOAI certification.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-responsible-ai">Responsible AI</a>, <a href="#term-ai-alignment">AI Alignment</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">EU AI Act</div>
+                        <div class="term-definition">The European Union's comprehensive AI regulation taking effect August 2, 2026. Requires mandatory compliance for all AI systems in EU markets with penalties up to €30M or 6% of revenue. CSOAI certification directly supports EU AI Act compliance.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-compliance">Compliance Framework</a>, <a href="#term-high-risk-ai">High-Risk AI</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Explainability</div>
+                        <div class="term-definition">The ability to describe and justify AI system decisions in human-interpretable terms. Essential for accountability, debugging, and regulatory compliance. Requires transparent decision pathways and interpretable feature importance.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-transparency">Transparency</a>, <a href="#term-algorithmic-accountability">Algorithmic Accountability</a></div>
+                    </div>
+                </div>
+
+                <!-- F -->
+                <div class="glossary-letter" id="letter-f">
+                    <h2 class="letter-header">F</h2>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Fairness Testing</div>
+                        <div class="term-definition">Systematic evaluation of AI systems to ensure equitable treatment across protected characteristics including race, gender, age, and socioeconomic status. Measures disparate impact and algorithmic bias.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-bias-testing">Bias Testing</a>, <a href="#term-verification">Verification</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Foundation Model</div>
+                        <div class="term-definition">A large-scale AI model trained on diverse data that can be adapted for multiple downstream tasks. Examples include GPT-4, Claude, and other frontier AI models requiring governance oversight.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-frontier-ai">Frontier AI</a>, <a href="#term-generative-ai">Generative AI</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Frontier AI</div>
+                        <div class="term-definition">Advanced AI systems operating at the edge of current technological capabilities, including large language models and multimodal systems. Requires highest governance standards and red teaming protocols.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-ai-governance">AI Governance</a>, <a href="#term-red-teaming">Red Teaming</a></div>
+                    </div>
+                </div>
+
+                <!-- G -->
+                <div class="glossary-letter" id="letter-g">
+                    <h2 class="letter-header">G</h2>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Generative AI Governance</div>
+                        <div class="term-definition">Specialized governance frameworks for generative AI systems like language models, image generators, and content creation tools. Addresses hallucinations, bias, copyright, and misuse prevention.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-frontier-ai">Frontier AI</a>, <a href="#term-hallucination">Hallucination</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Guardrails</div>
+                        <div class="term-definition">Technical safeguards and constraints built into AI systems to prevent unsafe outputs, enforce compliance with policies, and maintain alignment with institutional guidelines during deployment.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-ai-safety">AI Safety</a>, <a href="#term-ai-alignment">AI Alignment</a></div>
+                    </div>
+                </div>
+
+                <!-- H -->
+                <div class="glossary-letter" id="letter-h">
+                    <h2 class="letter-header">H</h2>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Hallucination</div>
+                        <div class="term-definition">When AI systems, particularly language models, generate plausible-sounding but false or nonsensical information. A critical safety concern requiring verification and grounding mechanisms in governance frameworks.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-verification">Verification</a>, <a href="#term-generative-ai">Generative AI Governance</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">High-Risk AI</div>
+                        <div class="term-definition">AI systems with potential for significant harm, including those affecting legal rights, safety, employment, education, and critical infrastructure. Requires highest governance levels and intensive monitoring per EU AI Act.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-risk-management">Risk Management</a>, <a href="#term-eu-ai-act">EU AI Act</a></div>
+                    </div>
+                </div>
+
+                <!-- I -->
+                <div class="glossary-letter" id="letter-i">
+                    <h2 class="letter-header">I</h2>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Impact Assessment</div>
+                        <div class="term-definition">Comprehensive evaluation of AI system effects on individuals, organizations, and society. Includes legal, ethical, operational, and safety impacts. Required before deployment in high-risk contexts.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-risk-management">Risk Management</a>, <a href="#term-high-risk-ai">High-Risk AI</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">ISO 42001</div>
+                        <div class="term-definition">International standard for AI management systems providing framework for governance, risk management, and implementation. CSOAI standards align with and exceed ISO 42001 requirements.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-nist-ai-rmf">NIST AI RMF</a>, <a href="#term-compliance">Compliance Framework</a></div>
+                    </div>
+                </div>
+
+                <!-- N -->
+                <div class="glossary-letter" id="letter-n">
+                    <h2 class="letter-header">N</h2>
+
+                    <div class="glossary-term">
+                        <div class="term-name">NIST AI RMF</div>
+                        <div class="term-definition">National Institute of Standards and Technology AI Risk Management Framework—U.S. government standard for AI risk assessment, mitigation, and governance. CSOAI certification supports NIST AI RMF compliance.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-iso-42001">ISO 42001</a>, <a href="#term-risk-management">Risk Management</a></div>
+                    </div>
+                </div>
+
+                <!-- P -->
+                <div class="glossary-letter" id="letter-p">
+                    <h2 class="letter-header">P</h2>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Prompt Injection</div>
+                        <div class="term-definition">A security vulnerability where malicious instructions are inserted into AI system inputs to manipulate behavior. Requires input validation and safety filtering mechanisms in deployed systems.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-security-testing">Security Testing</a>, <a href="#term-guardrails">Guardrails</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Proof of AI</div>
+                        <div class="term-definition">A blockchain-based tokenization system providing cryptographic proof of CASA certification. Enables transparent, auditable verification of AI system governance compliance on public networks.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-casa">CASA Certification</a>, <a href="#term-verification">Verification</a></div>
+                    </div>
+                </div>
+
+                <!-- R -->
+                <div class="glossary-letter" id="letter-r">
+                    <h2 class="letter-header">R</h2>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Red Teaming</div>
+                        <div class="term-definition">Adversarial security testing where specialized teams systematically attempt to find vulnerabilities, exploits, and failure modes in AI systems. Essential for CASA certification and safety validation.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-adversarial-testing">Adversarial Testing</a>, <a href="#term-ai-safety">AI Safety</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Responsible AI</div>
+                        <div class="term-definition">An approach to developing and deploying AI emphasizing ethics, accountability, transparency, fairness, and safety. Encompasses governance, oversight, and continuous improvement throughout system lifecycle.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-ethical-ai">Ethical AI</a>, <a href="#term-ai-governance">AI Governance</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Risk Management</div>
+                        <div class="term-definition">Systematic identification, assessment, prioritization, and mitigation of risks in AI systems. Includes technical, organizational, and governance-level risk controls aligned with ISO 42001 and NIST frameworks.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-compliance">Compliance Framework</a>, <a href="#term-impact-assessment">Impact Assessment</a></div>
+                    </div>
+                </div>
+
+                <!-- S -->
+                <div class="glossary-letter" id="letter-s">
+                    <h2 class="letter-header">S</h2>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Shadow AI</div>
+                        <div class="term-definition">Unmanaged, undocumented AI systems and tools used within organizations without formal governance or oversight. Represents a significant compliance risk addressed through institutional AI governance frameworks.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-ai-governance">AI Governance</a>, <a href="#term-compliance">Compliance Framework</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Security Testing</div>
+                        <div class="term-definition">Comprehensive evaluation of AI system security including adversarial robustness, injection vulnerabilities, data security, and infrastructure hardening. Conducted by certified security teams like AIdome.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-red-teaming">Red Teaming</a>, <a href="#term-adversarial-testing">Adversarial Testing</a></div>
+                    </div>
+                </div>
+
+                <!-- T -->
+                <div class="glossary-letter" id="letter-t">
+                    <h2 class="letter-header">T</h2>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Transparency</div>
+                        <div class="term-definition">Making AI system operations, decisions, and capabilities openly visible and understandable to stakeholders. Enables accountability, builds trust, and supports informed decision-making about AI use.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-explainability">Explainability</a>, <a href="#term-algorithmic-accountability">Algorithmic Accountability</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Trust Score</div>
+                        <div class="term-definition">A quantified metric indicating the governance compliance and safety level of certified AI systems. Based on audit results, testing outcomes, and ongoing monitoring within CASA certification framework.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-casa">CASA Certification</a>, <a href="#term-verification">Verification</a></div>
+                    </div>
+                </div>
+
+                <!-- V -->
+                <div class="glossary-letter" id="letter-v">
+                    <h2 class="letter-header">V</h2>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Validation</div>
+                        <div class="term-definition">Process of confirming that AI systems meet intended specifications and perform effectively in real-world conditions. Includes testing, monitoring, and continuous evaluation throughout deployment lifecycle.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-verification">Verification</a>, <a href="#term-ai-audit">AI Audit</a></div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <div class="term-name">Verification</div>
+                        <div class="term-definition">Process of confirming that AI systems are built and operate according to specifications and governance requirements. Includes security assessment, compliance checking, and artifact validation.</div>
+                        <div class="term-related"><strong>Related:</strong> <a href="#term-validation">Validation</a>, <a href="#term-ai-audit">AI Audit</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="sticky-bar">
+        <span class="sticky-message">Understand AI governance terminology to prepare for certification.</span>
+        <a href="contact.html" class="btn">Get Certified →</a>
+    </div>
+
+    <div class="cookie-banner" id="cookieBanner">
+        <p class="cookie-text">We use cookies to enhance your experience and analyze site performance.</p>
+        <div class="cookie-buttons">
+            <button class="cookie-accept" onclick="closeCookieBanner()">Accept All</button>
+            <button class="cookie-decline" onclick="closeCookieBanner()">Decline</button>
+        </div>
+    </div>
+
+    
+<footer style="background:var(--dark);border-top:3px solid var(--accent);padding:4rem 0 2rem;margin-top:4rem;position:relative;z-index:1">
+<div class="container">
+  <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr 1fr;gap:2rem;margin-bottom:3rem">
+    <div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:1.4rem;font-weight:800;background:linear-gradient(135deg,#D4A843,#E8B76D);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:.75rem">CSOAI</div>
+      <p style="color:rgba(232,228,240,.6);font-size:.9rem;line-height:1.6;margin-bottom:1rem">The global standard for AI safety. Institutional governance through the 52-article charter and Byzantine consensus.</p>
+      <div style="display:flex;gap:.75rem"><a href="#" style="color:rgba(232,228,240,.5);font-size:1.2rem;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.5)'">𝕏</a><a href="#" style="color:rgba(232,228,240,.5);font-size:1.2rem;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.5)'">in</a><a href="#" style="color:rgba(232,228,240,.5);font-size:1.2rem;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.5)'">▶</a></div>
+    </div>
+    <div><h4 style="color:var(--accent);font-size:.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem;font-family:'Space Grotesk',sans-serif">Standards</h4><a href="charter.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Charter</a><a href="crosswalks.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Crosswalks</a><a href="guides.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Guides</a><a href="glossary.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Glossary</a></div>
+    <div><h4 style="color:var(--accent);font-size:.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem;font-family:'Space Grotesk',sans-serif">Products</h4><a href="certification.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Certification</a><a href="enterprise.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Enterprise</a><a href="advisory.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Advisory</a><a href="pricing.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Pricing</a></div>
+    <div><h4 style="color:var(--accent);font-size:.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem;font-family:'Space Grotesk',sans-serif">Ecosystem</h4><a href="https://csga-global.vercel.app" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">CSGA Global</a><a href="https://csga-ai.vercel.app" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">CSGA AI Research</a><a href="https://bmcc-cyber.vercel.app" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">BMCC Cyber</a><a href="https://terranova-secdef.vercel.app" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Terranova SecDef</a></div>
+    <div><h4 style="color:var(--accent);font-size:.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem;font-family:'Space Grotesk',sans-serif">Company</h4><a href="about.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">About</a><a href="case-studies.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Case Studies</a><a href="blog.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Blog</a><a href="contact.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Contact</a></div>
+    <div><h4 style="color:var(--accent);font-size:.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem;font-family:'Space Grotesk',sans-serif">Account</h4><a href="dashboard.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Dashboard</a><a href="faq.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">FAQ</a><a href="resources.html" style="display:block;color:rgba(232,228,240,.6);font-size:.85rem;padding:.3rem 0;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#D4A843'" onmouseout="this.style.color='rgba(232,228,240,.6)'">Resources</a></div>
+  </div>
+  <div style="border-top:1px solid rgba(212,168,67,.1);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
+    <p style="color:rgba(232,228,240,.4);font-size:.8rem">&copy; 2026 CSOAI — The Global Standard for AI Safety. All rights reserved.</p>
+    <div style="display:flex;gap:1.5rem"><a href="privacy.html" style="color:rgba(232,228,240,.4);font-size:.8rem;text-decoration:none">Privacy</a><a href="terms.html" style="color:rgba(232,228,240,.4);font-size:.8rem;text-decoration:none">Terms</a><a href="cookies.html" style="color:rgba(232,228,240,.4);font-size:.8rem;text-decoration:none">Cookies</a></div>
+  </div>
+</div>
+</footer>
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "DefinedTermSet",
+        "name": "AI Governance Glossary",
+        "description": "40+ essential terms in AI safety, governance, and compliance",
+        "url": "https://csoai.org/glossary.html",
+        "hasDefinedTerm": [
+            {
+                "@type": "DefinedTerm",
+                "name": "AI Governance",
+                "description": "Institutional frameworks for safe AI development and oversight"
+            },
+            {
+                "@type": "DefinedTerm",
+                "name": "Byzantine Consensus",
+                "description": "Distributed consensus using 22/33 majority from 33 AI agents"
+            },
+            {
+                "@type": "DefinedTerm",
+                "name": "CASA Certification",
+                "description": "Three-level certification for commercial, government, and defense AI"
+            }
+        ]
+    }
+    </script>
+
+    <script>
+        function closeCookieBanner() {
+            const banner = document.getElementById('cookieBanner');
+            banner.style.animation = 'slideUp 0.5s ease forwards';
+            setTimeout(() => banner.remove(), 500);
+        }
+
+        const searchInput = document.getElementById('searchInput');
+        const glossaryTerms = document.querySelectorAll('.glossary-term');
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+
+            glossaryTerms.forEach(term => {
+                const text = term.innerText.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    term.style.display = '';
+                    term.style.opacity = '1';
+                } else {
+                    term.style.display = 'none';
+                }
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
