@@ -219,18 +219,89 @@ document.addEventListener('click',e=>{if(!e.target.closest('.mega-wrap'))documen
         <h1>Building Your AI Risk Register: A Step-by-Step Framework</h1>
         <div class="article-meta-bar">
             <span class="article-date">January 14, 2026</span>
-            <span class="article-readtime">6 min read</span>
+            <span class="article-readtime">12 min read</span>
         </div>
-        <p>A well-maintained AI risk register is the cornerstone of effective AI governance. It provides a structured record of identified risks, their likelihood and impact, mitigation strategies, and accountability assignments. For organizations pursuing ISO 42001 or CASA certification, the risk register is a critical audit artifact.</p>
-        <h2>Step 1: Inventory Your AI Systems</h2>
-        <p>Before you can assess risks, you need to know what AI systems your organization operates. Create an inventory that includes internal tools, customer-facing applications, embedded AI in products, and third-party services. For each system, document its purpose, data inputs, decision authority, and stakeholders.</p>
-        <h2>Step 2: Identify and Assess Risks</h2>
-        <p>For each system, identify risks across categories: accuracy and performance, bias and fairness, security and privacy, transparency and explainability, and operational resilience. Assess each risk by likelihood and impact, using a consistent scoring methodology.</p>
-        <h2>Step 3: Define Controls and Owners</h2>
-        <p>For each significant risk, define mitigation controls and assign clear ownership. Controls should be specific, measurable, and time-bound. Owners should have the authority and resources to implement and maintain the controls.</p>
-        <h2>Step 4: Review and Update</h2>
-        <p>A risk register is a living document. Schedule regular reviews—at least quarterly—and update the register whenever systems change, incidents occur, or regulations evolve. Auditors will expect to see evidence of ongoing maintenance.</p>
-        <p>CSOAI provides a free AI risk register template and detailed guidance to help organizations get started.</p>
+        <p>A well-maintained AI risk register is the cornerstone of effective AI governance. It provides a structured, defensible record of identified risks, their likelihood and impact, mitigation strategies, accountability assignments, and residual risk post-controls. For organizations pursuing ISO 42001 or <a href="certification.html">CASA certification</a>, the risk register is not merely a spreadsheet—it is a critical audit artifact that demonstrates institutional maturity and regulatory readiness.</p>
+        <p>Yet many organizations struggle to build risk registers that are both comprehensive and actionable. Too often, risk registers become static documents filled with generic statements that fail to guide decision-making or satisfy auditors. This article presents a rigorous, step-by-step framework for developing an AI risk register that aligns with the <a href="charter.html">CSOAI 52-Article Charter</a>, integrates with enterprise governance workflows, and evolves alongside your AI portfolio.</p>
+
+        <h2>Why the AI Risk Register Matters Now</h2>
+        <p>The regulatory landscape for artificial intelligence has shifted dramatically. The EU AI Act mandates risk-based classification and documentation for high-risk systems. The NIST AI Risk Management Framework expects organizations to map, measure, and manage AI risks continuously. ISO 42001 explicitly requires documented information on risks and opportunities related to AI systems. In this environment, an AI risk register is no longer optional—it is a prerequisite for legal compliance, customer trust, and operational resilience.</p>
+        <p>Beyond compliance, a robust risk register drives better business outcomes. It forces cross-functional conversations between data scientists, legal counsel, product managers, and security engineers. It surfaces hidden dependencies, data lineage issues, and failure modes before they manifest in production. And it provides the board with a clear, aggregated view of AI-related exposure.</p>
+
+        <h2>Step 1: Build a Complete AI System Inventory</h2>
+        <p>Before you can assess risks, you must know what you are assessing. The first step is to create a comprehensive inventory of all AI systems in use, development, or procurement within your organization. This inventory should capture:</p>
+        <ul>
+            <li><strong>Internal tools:</strong> Employee-facing applications that use AI for decision support, scheduling, content generation, or analysis.</li>
+            <li><strong>Customer-facing applications:</strong> Products and services where AI directly interacts with end users, such as recommendation engines, chatbots, or credit scoring models.</li>
+            <li><strong>Embedded AI:</strong> Machine learning components integrated into hardware, software, or platforms where the AI functionality may not be immediately visible.</li>
+            <li><strong>Third-party services:</strong> External APIs, cloud-based models, or vendor platforms that process your data or influence your operations.</li>
+        </ul>
+        <p>For each system, document its purpose, data inputs, decision authority, stakeholders, deployment environment, and model version history. Many organizations are surprised to discover shadow AI—unauthorized use of generative AI tools by individual employees—during this inventory phase. Addressing shadow AI should be an explicit objective of your inventory process.</p>
+        <p>CSOAI’s <a href="enterprise.html">Enterprise Governance</a> offering includes automated discovery tools that help organizations map their AI landscape efficiently, including systems buried in vendor contracts or departmental budgets.</p>
+
+        <h2>Step 2: Identify and Categorize Risks</h2>
+        <p>With your inventory in place, the next step is systematic risk identification. Rather than treating each system in isolation, apply a consistent taxonomy of risk categories. CSOAI recommends the following framework, which maps directly to both the <a href="charter.html">52-Article Charter</a> and international standards:</p>
+        <ul>
+            <li><strong>Accuracy and performance risk:</strong> Model drift, data quality degradation, out-of-distribution inputs, and performance degradation over time.</li>
+            <li><strong>Bias and fairness risk:</strong> Disparate impact on protected groups, representation bias in training data, and fairness metric violations.</li>
+            <li><strong>Security and privacy risk:</strong> Adversarial attacks, prompt injection, data leakage, unauthorized access to training data, and privacy regulation breaches.</li>
+            <li><strong>Transparency and explainability risk:</strong> Inability to explain model decisions to affected individuals, regulators, or internal stakeholders.</li>
+            <li><strong>Operational resilience risk:</strong> Dependency on single vendors, lack of fallback procedures, and failure of AI-dependent business processes.</li>
+            <li><strong>Legal and regulatory risk:</strong> Non-compliance with sector-specific regulations, jurisdictional requirements, or contractual obligations.</li>
+        </ul>
+        <p>For each identified risk, describe the specific scenario, the system(s) affected, and the trigger events that would cause the risk to materialize. Vague statements such as “model may be biased” are insufficient. Instead, document precisely which protected attribute could be affected, in which decision context, and under what conditions.</p>
+
+        <h2>Step 3: Assess Likelihood and Impact</h2>
+        <p>Risk assessment requires a consistent scoring methodology. Most organizations use a 5x5 matrix evaluating likelihood and impact, but the critical factor is calibration. A risk that is “high impact” for a customer-facing credit decision may be “low impact” for an internal scheduling assistant. Your methodology should account for:</p>
+        <ul>
+            <li>The number of individuals or decisions affected.</li>
+            <li>The severity of harm, including financial, reputational, physical, and psychological dimensions.</li>
+            <li>The reversibility of the harm and the availability of recourse.</li>
+            <li>The organization’s risk appetite, as defined by the board or executive leadership.</li>
+        </ul>
+        <p>Document the rationale for each score. Auditors and regulators will challenge assessments that appear arbitrary or conveniently optimistic. Where quantitative data is available—such as model performance metrics or incident frequency—use it to justify your ratings.</p>
+
+        <h2>Step 4: Define Mitigation Controls and Assign Ownership</h2>
+        <p>For each significant risk, define specific, measurable, and time-bound controls. Controls should be categorized as preventive (reducing likelihood), detective (identifying occurrence), or corrective (limiting impact). Examples include:</p>
+        <ul>
+            <li>Implementing fairness testing in the CI/CD pipeline (preventive).</li>
+            <li>Deploying automated drift detection with alerting thresholds (detective).</li>
+            <li>Maintaining a human-in-the-loop override process for contested decisions (corrective).</li>
+        </ul>
+        <p>Every control must have an assigned owner with the authority and resources to implement and maintain it. The owner should be named individually, not assigned to a generic role. This personal accountability is essential for governance effectiveness and is a specific requirement under CASA certification.</p>
+        <p>For organizations seeking structured guidance, CSOAI’s <a href="guide-risk-register.html">AI Risk Register Guide</a> provides detailed control libraries mapped to common AI use cases and regulatory requirements.</p>
+
+        <h2>Step 5: Calculate Residual Risk and Prioritize</h2>
+        <p>After defining controls, reassess each risk to determine the residual risk—the exposure that remains after mitigation. Not all risks need to be reduced to zero; some may be accepted if the cost of further mitigation exceeds the benefit, or if the risk falls within the organization’s risk appetite. Document these acceptance decisions explicitly, including the approving authority and the review date.</p>
+        <p>Use residual risk scores to prioritize governance resources. High residual risks may require additional controls, architecture changes, or even discontinuation of the AI system. Low residual risks may need only periodic monitoring. This prioritization ensures that limited governance resources are directed where they matter most.</p>
+
+        <h2>Step 6: Establish Review Cadence and Change Triggers</h2>
+        <p>A risk register is a living document, not a one-time compliance exercise. Schedule formal reviews at least quarterly, and more frequently for high-risk or rapidly evolving systems. In addition to scheduled reviews, update the register whenever any of the following occur:</p>
+        <ul>
+            <li>A new AI system is deployed or a significant model update is released.</li>
+            <li>An incident, near-miss, or audit finding reveals a previously unidentified risk.</li>
+            <li>Regulations or industry standards affecting your AI systems change.</li>
+            <li>A third-party vendor modifies their terms, model architecture, or security posture.</li>
+        </ul>
+        <p>Maintain a change log that records what was modified, when, and why. This history is invaluable during audits and post-incident investigations. Auditors will expect to see evidence of ongoing maintenance, not a static snapshot created months or years ago.</p>
+
+        <h2>Step 7: Integrate with Broader Governance Frameworks</h2>
+        <p>The AI risk register should not exist in isolation. Integrate it with your enterprise risk management framework, your incident response plan, your vendor management program, and your AI ethics board or committee. This integration ensures that AI risks are treated with the same seriousness as financial, cyber, and operational risks.</p>
+        <p>CSOAI recommends aligning the risk register with the organization’s AI policy, which itself should be grounded in the <a href="charter.html">52-Article Charter</a>. Organizations pursuing <a href="certification.html">CASA certification</a> must demonstrate this alignment as part of their audit.</p>
+
+        <h2>Common Pitfalls to Avoid</h2>
+        <p>Even well-intentioned organizations make predictable mistakes when building AI risk registers. Avoid these common pitfalls:</p>
+        <ul>
+            <li><strong>Generic risk statements:</strong> Risks must be specific to the system, context, and stakeholder. Generic statements provide no actionable guidance.</li>
+            <li><strong>Unclear ownership:</strong> Assigning controls to “the data science team” without naming an individual undermines accountability.</li>
+            <li><strong>Ignoring third-party risks:</strong> Outsourcing AI development or using external APIs does not outsource risk. Vendor risks must be explicitly documented.</li>
+            <li><strong>Failure to update:</strong> A risk register that has not been reviewed in six months is a red flag for auditors and a liability for the organization.</li>
+            <li><strong>Disconnect from business impact:</strong> Risk assessments should be framed in business terms, not purely technical metrics. A model with 99% accuracy may still pose unacceptable reputational risk.</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>Building an effective AI risk register requires discipline, cross-functional collaboration, and ongoing commitment. It begins with a comprehensive inventory, proceeds through rigorous risk identification and assessment, and culminates in specific controls, clear ownership, and continuous review. When executed well, the risk register becomes a strategic asset that enables confident AI deployment, satisfies regulatory expectations, and protects organizational reputation.</p>
+        <p>CSOAI provides a free AI risk register template, detailed implementation guidance, and expert advisory services to help organizations at every stage of their governance journey. Whether you are just beginning to formalize your AI risk management or preparing for <a href="certification.html">CASA certification</a>, our resources are designed to make the process rigorous, practical, and aligned with the global standard for AI safety.</p>
     </div>
 
         <div class="newsletter">
