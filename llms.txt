@@ -1,0 +1,16 @@
+# CSOAI LTD
+
+> CSOAI LTD is the UK-registered company (Companies House 16939677) that owns and operates MEOK AI Labs. This domain exists only to surface the legal-entity disclosure. All products, documentation, and purchases live at meok.ai.
+
+## Legal entity
+- Legal name: CSOAI LTD
+- Trading name: MEOK AI Labs
+- Company number: 16939677
+- Jurisdiction: England & Wales
+- Director: Nicholas Templeman
+- Contact: hello@meok.ai
+
+## Where the actual content lives
+- Products & docs: https://meok.ai
+- GitHub organisation: https://github.com/CSOAI-ORG
+- Companies House record: https://find-and-update.company-information.service.gov.uk/company/16939677
