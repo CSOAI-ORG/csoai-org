@@ -47,7 +47,7 @@ PAGES = [
             ('"hmac_signature"', '"sha256:7f3a9b…"'),
             ('"verify_url"', '"https://proofof.ai/verify/dec_b39c2f8a"'),
         ],
-        "install_cmd": "pip install meok-accountability-mcp",
+        "install_cmd": "pip install agent-audit-logger-mcp",
         "tier_pro_features": [
             "Continuous signed-decision logging",
             "Public verify URL at proofof.ai",
@@ -159,7 +159,7 @@ PAGES = [
             ('"audit_readiness"', '"96%"'),
             ('"verify_url"', '"https://proofof.ai/verify/isms_b29c8a4f"'),
         ],
-        "install_cmd": "pip install meok-iso-42001-mcp",
+        "install_cmd": "pip install iso-42001-ai-mcp",
         "tier_pro_features": [
             "Full ISO 42001 + 42005 control library",
             "Auto-evidence pack for UKAS audit",
