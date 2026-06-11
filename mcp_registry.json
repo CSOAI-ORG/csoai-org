@@ -1,0 +1,128 @@
+{
+  "fleet_summary": {
+    "total_nodes": 202,
+    "last_updated": "2026-06-11",
+    "status": "Operational",
+    "protocol_landscape": "2026_COMPLIANT"
+  },
+  "sites": [
+    {
+      "domain": "meok.ai",
+      "purpose": "AI Research & Development Labs",
+      "layer": "L0-A: Identity",
+      "geo": ["London, UK", "Singapore"],
+      "aeo_keywords": ["MEOK AI", "Sovereign AI", "Model Context Protocol servers"],
+      "mcp_enabled": true
+    },
+    {
+      "domain": "accountabilityof.ai",
+      "purpose": "Algorithmic Accountability",
+      "layer": "L0-B: Certification",
+      "geo": ["Brussels, BE", "London, UK"],
+      "aeo_keywords": ["AI accountability", "Article 16 AI Act"],
+      "mcp_enabled": true
+    },
+    {
+      "domain": "csoai.org",
+      "purpose": "Primary Governance Institution",
+      "layer": "L0-C: Policy Engine",
+      "geo": ["London, UK", "Frankfurt, DE", "New York, US"],
+      "aeo_keywords": ["AI safety governance", "AI audit checklist", "EU AI Act compliance"],
+      "mcp_enabled": true
+    },
+    {
+      "domain": "agisafe.ai",
+      "purpose": "AGI Safety & Guardrails",
+      "layer": "L0-C: Policy Engine",
+      "geo": ["Zurich, CH", "London, UK"],
+      "aeo_keywords": ["AGI safety", "AI guardrails"],
+      "mcp_enabled": true
+    },
+    {
+      "domain": "asisecurity.ai",
+      "purpose": "ASI Security & Control",
+      "layer": "L0-C: Policy Engine",
+      "geo": ["San Francisco, US", "London, UK"],
+      "aeo_keywords": ["ASI security", "superintelligence control"],
+      "mcp_enabled": true
+    },
+    {
+      "domain": "ethicalgovernanceof.ai",
+      "purpose": "Ethics & Value Alignment",
+      "layer": "L0-C: Policy Engine",
+      "geo": ["Stockholm, SE", "Geneva, CH"],
+      "aeo_keywords": ["AI ethics framework", "ISO 42001 governance"],
+      "mcp_enabled": true
+    },
+    {
+      "domain": "dataprivacyof.ai",
+      "purpose": "AI Data Protection",
+      "layer": "L0-D: Cross-Regional",
+      "geo": ["Frankfurt, DE", "London, UK"],
+      "aeo_keywords": ["AI GDPR compliance", "DPIA for AI"],
+      "mcp_enabled": true
+    },
+    {
+      "domain": "biasdetectionof.ai",
+      "purpose": "Bias & Fairness Testing",
+      "layer": "L0-D: Cross-Regional",
+      "geo": ["Paris, FR", "Dublin, IE"],
+      "aeo_keywords": ["AI bias detection", "algorithmic fairness"],
+      "mcp_enabled": true
+    },
+    {
+      "domain": "checkoutof.ai",
+      "purpose": "Agentic Payment Compliance",
+      "layer": "L0-E: Payment",
+      "geo": ["London, UK", "New York, US"],
+      "aeo_keywords": ["ACP compliance", "x402 pre-check"],
+      "mcp_enabled": true
+    },
+    {
+      "domain": "proofof.ai",
+      "purpose": "On-chain Compliance Verification",
+      "layer": "L0-F: Audit",
+      "geo": ["London, UK", "Distributed Nodes"],
+      "aeo_keywords": ["proof of AI", "blockchain AI compliance"],
+      "mcp_enabled": true
+    },
+    {
+      "domain": "transparencyof.ai",
+      "purpose": "AI Transparency & Watermarking",
+      "layer": "L0-F: Audit",
+      "geo": ["Amsterdam, NL", "London, UK"],
+      "aeo_keywords": ["AI watermarking", "Article 50 AI Act"],
+      "mcp_enabled": true
+    },
+    {
+      "domain": "councilof.ai",
+      "purpose": "Global AI Governance Council",
+      "layer": "L0-G: Human-in-the-loop",
+      "geo": ["London, UK", "Tokyo, JP"],
+      "aeo_keywords": ["AI governance council", "global AI standards"],
+      "mcp_enabled": true
+    },
+    {
+      "domain": "safetyof.ai",
+      "purpose": "Real-time AI Safety Monitoring",
+      "layer": "L0-G: Human-in-the-loop",
+      "geo": ["London, UK", "Berlin, DE"],
+      "aeo_keywords": ["AI safety monitoring", "real-time AI audit"],
+      "mcp_enabled": true
+    },
+    {
+      "domain": "cobolbridge.ai",
+      "purpose": "Legacy Modernization Safety",
+      "layer": "L0-H: Legacy Bridge",
+      "geo": ["London, UK", "Charlotte, US"],
+      "aeo_keywords": ["COBOL to AI", "legacy system safety"],
+      "mcp_enabled": true
+    }
+  ],
+  "aeo_strategy": {
+    "schema_type": "Organization",
+    "markup_enabled": true,
+    "cross_linking": "Deep",
+    "layer_0_focus": true
+  }
+}

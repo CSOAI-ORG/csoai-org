@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>CSOAI Checkout</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a1628;color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.container{max-width:800px;width:100%}
+h1{font-size:2rem;text-align:center;margin-bottom:8px}
+.sub{text-align:center;color:rgba(255,255,255,0.6);margin-bottom:40px}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.plan{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:24px;transition:0.3s}
+.plan:hover{border-color:#c9a84c;transform:translateY(-2px)}
+.plan.popular{border-color:#c9a84c;background:rgba(201,168,76,0.06)}
+.tag{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:#c9a84c;margin-bottom:8px}
+.name{font-size:1.2rem;font-weight:700;margin-bottom:4px}
+.price{font-size:2rem;font-weight:800;color:#c9a84c;margin-bottom:4px}
+.price span{font-size:0.9rem;color:rgba(255,255,255,0.4);font-weight:400}
+.desc{font-size:0.85rem;color:rgba(255,255,255,0.5);margin-bottom:16px;line-height:1.5}
+.features{list-style:none;margin-bottom:20px}
+.features li{padding:4px 0;font-size:0.85rem;color:rgba(255,255,255,0.7)}
+.features li::before{content:"✓ ";color:#22c55e}
+.btn{display:block;width:100%;padding:12px;border-radius:10px;font-weight:600;font-size:15px;text-align:center;cursor:pointer;border:none;transition:0.2s;color:#000;text-decoration:none}
+.btn-primary{background:linear-gradient(135deg,#c9a84c,#8b6914)}
+.btn-secondary{background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15)}
+.btn:hover{opacity:0.9;transform:translateY(-1px)}
+.tagline{text-align:center;margin-top:32px;font-size:0.8rem;color:rgba(255,255,255,0.3)}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>⚡ CSOAI Enterprise</h1>
+  <p class="sub">AI governance & compliance. Instant access. No setup required.</p>
+  <div class="plans">
+    <div class="plan">
+      <div class="tag">Pro</div>
+      <div class="name">Compliance Suite</div>
+      <div class="price">£79 <span>/mo</span></div>
+      <div class="desc">For teams deploying governed AI agents with compliance verification.</div>
+      <ul class="features">
+        <li>10 licensed MCP servers</li>
+        <li>1,000 compliance checks/day</li>
+        <li>EU AI Act + NIST tracking</li>
+        <li>Signed attestations</li>
+        <li>Email support</li>
+      </ul>
+      <a href="https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t?prefilled_promo_code=LAUNCH50" class="btn btn-primary">Subscribe — 50% off 6mo →</a>
+    </div>
+    <div class="plan popular">
+      <div class="tag">Popular</div>
+      <div class="name">Enterprise Audit</div>
+      <div class="price">£299 <span>/mo</span></div>
+      <div class="desc">Full compliance audit with CSOAI certification and MCP access for regulated industries.</div>
+      <ul class="features">
+        <li>Everything in Pro</li>
+        <li>Unlimited MCP servers</li>
+        <li>Full compliance audit & report</li>
+        <li>CSOAI certification badge</li>
+        <li>Dedicated CSO support</li>
+      </ul>
+      <a href="https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t" class="btn btn-primary">Get Certified →</a>
+    </div>
+    <div class="plan">
+      <div class="tag">Enterprise</div>
+      <div class="name">Institutional</div>
+      <div class="price">£1,499 <span>/mo</span></div>
+      <div class="desc">For regulated institutions requiring BFT consensus governance and custom compliance frameworks.</div>
+      <ul class="features">
+        <li>Everything in Enterprise</li>
+        <li>Unlimited compliance checks</li>
+        <li>BFT council governance</li>
+        <li>White-label certification</li>
+        <li>Custom framework development</li>
+        <li>SLA guarantee</li>
+      </ul>
+      <a href="https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t" class="btn btn-secondary">Contact Sales →</a>
+    </div>
+  </div>
+  <p class="tagline">Secure payments via Stripe · All prices in GBP · 14-day money-back guarantee</p>
+</div>
+</body>
+</html>
