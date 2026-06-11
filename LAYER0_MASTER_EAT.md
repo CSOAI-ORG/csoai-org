@@ -5,6 +5,7 @@
 | Protocol | Layer | Backers | Status | What It Does |
 | :--- | :--- | :--- | :--- | :--- |
 | **MCP** | L1 Tool Integration | Anthropic, Linux Foundation | 97M SDK/mo, 10K+ servers | Agents call tools |
+| **Slim.tools** | L1-L2 Tool Orchestration | Slim | Production | MCP-native runtime, dynamic discovery |
 | **A2A** | L2 Agent Coordination | Google, 150+ orgs, LF | Production v1.0 stable | Agents discover/delegate |
 | **ACP** | L4 Merchant Checkout | Stripe, OpenAI, PayPal, Shopify | Live in ChatGPT | Agent-to-merchant purchasing |
 | **AP2** | L3 Authorization | Google Cloud, Mastercard | Enterprise focus | Spend policies, audit trails |
@@ -77,7 +78,7 @@
 │              └─────────────────────────────────────┘              │
 │  ┌─────────────────────────────────────────────────────────────┐   │
 │  │              EXTERNAL PROTOCOL INTEGRATIONS                  │   │
-│  │  MCP (L1) ←→ A2A (L2) ←→ AP2 (L3) ←→ ACP (L4) ←→ UCP (L4) │   │
+│  │  MCP (L1) ←→ Slim (L1.5) ←→ A2A (L2) ←→ AP2 (L3) ←→ ACP (L4) │   │
 │  │  x402 (L3) ←→ MPP (L3) ←→ W3C DID ←→ IETF AIP ←→ WIMSE    │   │
 │  └─────────────────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────────────────┘
