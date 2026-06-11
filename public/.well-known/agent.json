@@ -1,36 +1,64 @@
 {
-  "name": "csoai.org",
-  "description": "The FAA for AI \u2014 independent governance institution, multi-jurisdiction crosswalk.",
-  "url": "https://csoai.ai",
-  "provider": {
-    "organization": "CSOAI LTD (UK Companies House 16939677)",
-    "url": "https://csoai.org"
-  },
-  "version": "1.0.0",
+  "name": "CSOAI Compliance Agent",
+  "description": "Multi-region AI safety compliance verification, crosswalk mapping, and SIGIL certificate attestation. Layer 0 infrastructure for the global AI governance ecosystem.",
+  "version": "3.1.0",
+  "url": "https://csoai.org",
+  "a2a_version": "1.0",
   "capabilities": {
-    "streaming": false,
-    "pushNotifications": false
+    "streaming": true,
+    "pushNotifications": false,
+    "stateTransition": true
   },
-  "defaultInputModes": [
-    "text"
-  ],
-  "defaultOutputModes": [
-    "text"
-  ],
   "skills": [
     {
-      "id": "governance-check",
-      "name": "csoai.org Governance Check",
-      "description": "Verify compliance against csoai.org frameworks."
+      "id": "eu-ai-act-audit",
+      "name": "EU AI Act Compliance Audit",
+      "description": "Full EU AI Act compliance assessment with risk classification, gap analysis, and remediation roadmap.",
+      "tags": ["compliance", "eu", "audit"],
+      "examples": ["Audit my AI system for EU AI Act compliance", "Classify my system under EU AI Act risk tiers"]
     },
     {
-      "id": "attestation",
-      "name": "Signed Attestation",
-      "description": "Generate HMAC-signed compliance certs for csoai.org."
+      "id": "crosswalk-map",
+      "name": "Framework Crosswalk Mapping",
+      "description": "Map compliance requirements between frameworks (EU AI Act, NIST, ISO 42001, TC260, etc.)",
+      "tags": ["crosswalk", "mapping", "frameworks"],
+      "examples": ["Map EU AI Act Art 9 to NIST RMF", "Show me gaps between ISO 42001 and EU AI Act"]
+    },
+    {
+      "id": "sigil-verify",
+      "name": "SIGIL Certificate Verification",
+      "description": "Verify CSOAI SIGIL certificates using Ed25519 signatures and blockchain anchoring.",
+      "tags": ["sigil", "certificate", "verification"],
+      "examples": ["Verify certificate WD-2026-001", "Check if my SIGIL digest is valid"]
+    },
+    {
+      "id": "dome-status",
+      "name": "DOME Global Status",
+      "description": "Query the CSOAI DOME global compliance command center for real-time status across all regions.",
+      "tags": ["dome", "monitoring", "global"],
+      "examples": ["Show me global compliance status", "How many open violations are there?"]
+    },
+    {
+      "id": "council-vote",
+      "name": "BFT Council Governance",
+      "description": "Participate in Byzantine Fault Tolerant council voting for cross-regional compliance decisions.",
+      "tags": ["governance", "bft", "voting"],
+      "examples": ["Show current council votes", "Vote on proposal prop-001"]
     }
   ],
   "endpoints": {
-    "catalogue": "https://www.proofof.ai",
-    "standards": "https://csoai.org"
+    "agentCard": "https://csoai.org/.well-known/agent.json",
+    "tasks": "https://csoai.org/a2a/tasks",
+    "mcp": "https://csoai.org/mcp/csoai-gateway",
+    "api": "https://csoai.org/api"
+  },
+  "authentication": {
+    "type": "apiKey",
+    "header": "X-CSOAI-Key",
+    "description": "Request an API key at https://csoai.org/comply"
+  },
+  "contact": {
+    "email": "nicholas@meok.ai",
+    "organization": "CSOAI LTD (trading as MEOK AI Labs)"
   }
 }

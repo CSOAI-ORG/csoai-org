@@ -81,21 +81,22 @@ class CSOAIBrandGuidelines:
     VOICE = {
         "personality": ["Confident", "Technical", "Accessible", "Authentic", "Bold"],
         "tone_guidelines": {
-            "technical_content": "Precise, authoritative, evidence-based. Use data, frameworks, specifications.",
-            "founder_content": "Personal, vulnerable, inspiring. Share the journey. The koi becomes the dragon.",
-            "marketing_content": "Outcome-driven, urgent, competitive. Layer 0. The only one. The missing piece.",
+            "technical_content": "Precise, authoritative, evidence-based. CSOAI is Layer 0 trust infrastructure for AI agents. 369 repos, 200K downloads, runtime enforcement across 30 frameworks and 6 jurisdictions.",
+            "founder_content": "Authentic, vulnerable, persistent. Solo founder, 369 repos, 200K downloads. Distribution is harder than product. Persistence beats resources.",
+            "marketing_content": "Professional, urgent, competitive. EU AI Act: 52 days. Every AI system needs compliance. Current tools assess risk. CSOAI enforces it at runtime.",
             "community_content": "Helpful, collaborative, humble. Ask questions. Share knowledge. Build together.",
-            "press_content": "Factual, newsworthy, quotable. Lead with numbers. Back with evidence."
+            "press_content": "Factual, newsworthy, authoritative. Lead with Article 50 enforcement and runtime compliance gaps."
         },
         "forbidden_words": ["vaporware", "maybe", "possibly", "we think", "in the future", "coming soon", "eventually", "hopefully", "try to", "attempt to"],
         "required_words": ["Layer 0", "trust infrastructure", "runtime enforcement", "369 repos", "200K downloads", "30 frameworks", "6 jurisdictions", "BFT Council", "Watchdog Certificates", "PDCA engine", "cross-regional handoff"]
     }
 
     SOCIAL_TEMPLATES = {
-        "linkedin_post": {"dimensions": {"width": 1200, "height": 627}, "background": "gradient from #0A0A0F to #1A1A2E", "elements": ["logo top-left", "headline center", "data point large", "CTA bottom"], "font": "Inter Bold 48px headline, Inter Regular 24px body", "colors": ["#3B82F6", "#E2E8F0", "#10B981"]},
-        "twitter_card": {"dimensions": {"width": 1200, "height": 675}, "background": "solid #0A0A0F with subtle grid pattern", "elements": ["icon top-center", "stat large center", "label below", "hashtags bottom"], "font": "Space Grotesk Bold 72px stat, Inter Regular 24px label", "colors": ["#8B5CF6", "#E2E8F0", "#10B981"]},
+        "linkedin_post": {"dimensions": {"width": 1200, "height": 627}, "background": "gradient from #0A0A0F to #1A1A2E", "elements": ["logo top-left", "headline center", "data point large", "CTA bottom"], "font": "Inter Bold 48px headline, Inter Regular 24px body", "colors": ["#3B82F6", "#E2E8F0", "#10B981"], "narrative_rule": "Professional: Focus on 52-day deadline and runtime enforcement."},
+        "twitter_card": {"dimensions": {"width": 1200, "height": 675}, "background": "solid #0A0A0F with subtle grid pattern", "elements": ["icon top-center", "stat large center", "label below", "hashtags bottom"], "font": "Space Grotesk Bold 72px stat, Inter Regular 24px label", "colors": ["#8B5CF6", "#E2E8F0", "#10B981"], "narrative_rule": "Technical: Focus on the protocol pipes vs trust foundation."},
         "instagram_story": {"dimensions": {"width": 1080, "height": 1920}, "background": "animated gradient #3B82F6 to #8B5CF6", "elements": ["logo top", "headline middle", "swipe-up CTA bottom"], "font": "Inter Bold 56px headline, Inter Medium 32px CTA", "colors": ["#3B82F6", "#8B5CF6", "#10B981", "#E2E8F0"]}
     }
+
 
 @mcp.tool()
 def generate_brand_guidelines(property_name: str, property_type: str = "website") -> Dict[str, Any]:

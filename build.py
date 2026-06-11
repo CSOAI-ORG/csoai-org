@@ -21,6 +21,10 @@ for fname in sorted(set(files)):
     if new_text == text:
         # Try a simpler match if the first one fails
         new_text = re.sub(r'<!-- ═══ MEGA NAV ═══ -->.*?<\/script>', nav, text, count=1, flags=re.DOTALL)
+    
+    if new_text == text:
+        # Fallback for Next.js exported files: find the sticky nav or common header
+        new_text = re.sub(r'<nav class="sticky top-0.+?<\/nav>', nav, text, count=1, flags=re.DOTALL)
         
     if new_text == text:
         print(f'SKIPPED nav {fname} (no match)')
@@ -33,6 +37,7 @@ for fname in sorted(set(files)):
         
     if final_text == new_text:
         print(f'SKIPPED footer {fname} (no match)')
+
     
     with open(fname, 'w') as f:
         f.write(final_text)

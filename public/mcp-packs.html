@@ -1,4 +1,109 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/f0c5b490c33e44ba.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-c81f7fd28659d64f.js"/><script src="/_next/static/chunks/fd9d1056-b9e7f351611e1113.js" async=""></script><script src="/_next/static/chunks/117-86f5a65b8644401e.js" async=""></script><script src="/_next/static/chunks/main-app-4a5ea8cc8c123f8e.js" async=""></script><script src="/_next/static/chunks/555-7da102ab3e6fcfc8.js" async=""></script><script src="/_next/static/chunks/app/sigil/page-5880d8bdf1912a43.js" async=""></script><script src="/_next/static/chunks/app/layout-46f660c5c7f71692.js" async=""></script><link rel="apple-touch-icon" href="/apple-touch-icon.png"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="default"/><meta name="apple-mobile-web-app-title" content="CSOAI"/><meta name="mobile-web-app-capable" content="yes"/><meta name="theme-color" content="#2D8A4E"/><title>CSOAI — Layer 0 Trust Infrastructure for the Agentic Economy</title><meta name="description" content="The independent authority that certifies AI is safe. Cross-regional compliance across 30+ frameworks. Watchdog Certification, PDCA runtime enforcement, BFT Council governance."/><link rel="manifest" href="/manifest.json" crossorigin="use-credentials"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-title" content="CSOAI"/><meta name="apple-mobile-web-app-status-bar-style" content="default"/><link rel="icon" href="/icon-192.png"/><link rel="apple-touch-icon" href="/apple-touch-icon.png"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><div class="min-h-screen bg-white text-[#1E293B]"><!-- ═══ MEGA NAV ═══ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium MCP Server Packs — CSOAI</title>
+    <meta name="description" content="Accelerate AI agent deployment with curated MCP server packs. EU AI Act compliance, brand distribution, enterprise finance, and legacy bridges.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #c9a84c;
+            --bg: #0a0a0f;
+            --surface: #11111a;
+            --border: #1e293b;
+            --text: #f8fafc;
+            --muted: #94a3b8;
+            --accent: #3b82f6;
+            --green: #10B981;
+            --red: #EF4444;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
+        .header { text-align: center; margin-bottom: 5rem; }
+        .header h1 { font-family: 'Space Grotesk', sans-serif; font-size: 3.5rem; margin-bottom: 1rem; background: linear-gradient(to right, #fff, var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .header p { color: var(--muted); font-size: 1.25rem; max-width: 700px; margin: 0 auto; }
+
+        .packs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        .pack-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .pack-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+        .pack-card::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 100px; height: 100px;
+            background: radial-gradient(circle at top right, rgba(201, 168, 76, 0.1), transparent);
+            z-index: 0;
+        }
+        
+        .pack-name { font-size: 1.75rem; font-weight: 800; font-family: 'Space Grotesk', sans-serif; margin-bottom: 1rem; color: var(--primary); position: relative; }
+        .pack-desc { color: var(--muted); font-size: 1rem; margin-bottom: 2rem; min-height: 80px; position: relative; }
+        
+        .pack-price { font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem; display: flex; align-items: baseline; gap: 0.5rem; }
+        .pack-price span { font-size: 0.9rem; color: var(--muted); font-weight: 400; text-transform: uppercase; letter-spacing: 0.1em; }
+        
+        .includes-header { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); font-weight: 700; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+        .server-list { list-style: none; margin-bottom: 3rem; flex-grow: 1; }
+        .server-list li { font-size: 0.85rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem; color: #fff; font-family: 'JetBrains Mono', monospace; }
+        .server-list li::before { content: '>'; color: var(--primary); font-weight: bold; }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 1.25rem;
+            text-align: center;
+            border-radius: 10px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .btn-primary { background: var(--primary); color: #000; box-shadow: 0 4px 15px rgba(201, 168, 76, 0.3); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(201, 168, 76, 0.5); }
+        
+        .emergency-tag {
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: var(--red);
+            color: #fff;
+            padding: 0.5rem 3rem;
+            transform: rotate(45deg);
+            font-size: 0.7rem;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ═══ MEGA NAV ═══ -->
 <header style="position:sticky;top:0;z-index:1000;background:rgba(13,11,33,.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(212,168,67,.15);padding:.75rem 2rem;display:flex;justify-content:space-between;align-items:center">
   <a href="index.html" style="display:flex;align-items:center;gap:.625rem;text-decoration:none">
     <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="MEOK"><rect width="32" height="32" rx="7" fill="#0F172A"/><path d="M8 22V10h3l3.5 7.5L18 10h3v12h-2.2v-7.8L15.5 19h-1.8L10.2 14.2V22H8z" fill="#c9a84c"/></svg>
@@ -65,7 +170,86 @@ function toggleMega(btn){
   if(!wasOpen)panel.style.display='block';
 }
 document.addEventListener('click',e=>{if(!e.target.closest('.mega-wrap'))document.querySelectorAll('.mega-panel').forEach(p=>p.style.display='none')});
-</script><main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12"><div class="text-center mb-10"><div class="w-16 h-16 rounded-2xl bg-green-50 border border-green-200 flex items-center justify-center mx-auto mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-fingerprint w-8 h-8 text-[#2D8A4E]"><path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"></path><path d="M14 13.12c0 2.38 0 6.38-1 8.88"></path><path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"></path><path d="M2 12a10 10 0 0 1 18-6"></path><path d="M2 16h.01"></path><path d="M21.8 16c.2-2 .131-5.354 0-6"></path><path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2"></path><path d="M8.65 22c.21-.66.45-1.32.57-2"></path><path d="M9 6.8a6 6 0 0 1 9 5.2v2"></path></svg></div><h1 class="text-3xl sm:text-4xl font-bold text-[#1E293B] mb-2">Verify Watchdog Certificate</h1><p class="text-gray-600">Enter a certificate hash to verify its authenticity on the BFT ledger.</p></div><div class="flex flex-col sm:flex-row gap-3 mb-8"><div class="flex-1 relative"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg><input type="text" placeholder="Paste certificate hash (e.g. 0x7a3f...e9d2)" class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-300 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#2D8A4E] focus:border-transparent" value=""/></div><button disabled="" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-[#2D8A4E] hover:bg-[#1E5C34] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-4 h-4"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>Verify</button></div></main><footer style="background:var(--dark);border-top:3px solid var(--accent);padding:4rem 0 2rem;margin-top:4rem;position:relative;z-index:1">
+</script>
+    <div class="container">
+        <header class="header">
+            <h1>Premium MCP Server Packs</h1>
+            <p>Monetizing 290+ open-source assets into production-ready governance bundles. The missing software for the agentic economy.</p>
+        </header>
+
+        <div class="packs-grid">
+            <!-- EU AI Act Emergency Pack -->
+            <div class="pack-card">
+                <div class="emergency-tag">Urgent</div>
+                <h3 class="pack-name">EU AI Act Emergency Pack</h3>
+                <p class="pack-desc">7 MCP servers designed specifically to enforce EU AI Act Article 50 transparency and risk classification at runtime.</p>
+                <div class="pack-price">£999 <span>one-time</span></div>
+                <div class="includes-header">Servers Included</div>
+                <ul class="server-list">
+                    <li>csoai-layer0-compliance</li>
+                    <li>csoai-risk-classifier</li>
+                    <li>csoai-article50-watermark</li>
+                    <li>csoai-human-oversight-trigger</li>
+                    <li>csoai-post-market-monitor</li>
+                </ul>
+                <a href="checkout.html" class="btn btn-primary">Secure Compliance Now</a>
+            </div>
+
+            <!-- Brand Authority Pack -->
+            <div class="pack-card">
+                <h3 class="pack-name">Brand & Distribution Pack</h3>
+                <p class="pack-desc">Automate your entire Go-To-Market strategy. The exact MCP tools CSOAI uses to get 200,000 downloads.</p>
+                <div class="pack-price">£499 <span>one-time</span></div>
+                <div class="includes-header">Servers Included</div>
+                <ul class="server-list">
+                    <li>csoai-brand-authority</li>
+                    <li>csoai-aeo-geo-optimizer</li>
+                    <li>csoai-conversion-funnel</li>
+                    <li>csoai-social-automation</li>
+                    <li>csoai-launch-campaigner</li>
+                </ul>
+                <a href="checkout.html" class="btn btn-primary">Get the Growth Engine</a>
+            </div>
+
+            <!-- Agentic Finance Pack -->
+            <div class="pack-card">
+                <h3 class="pack-name">Agentic Finance Pack</h3>
+                <p class="pack-desc">Pre-check compliance before any agent executes a payment via Stripe ACP, x402, or Google AP2.</p>
+                <div class="pack-price">£1,499 <span>annually</span></div>
+                <div class="includes-header">Servers Included</div>
+                <ul class="server-list">
+                    <li>csoai-payment-precheck</li>
+                    <li>csoai-aml-kyc-validator</li>
+                    <li>csoai-x402-tunnel</li>
+                    <li>csoai-stripe-acp-tunnel</li>
+                    <li>csoai-google-ap2-tunnel</li>
+                </ul>
+                <a href="checkout.html" class="btn btn-primary">Secure Payments</a>
+            </div>
+
+            <!-- Legacy Bridge Pack -->
+            <div class="pack-card">
+                <h3 class="pack-name">Legacy COBOL Bridge Pack</h3>
+                <p class="pack-desc">Securely bridge Mainframe and COBOL systems to modern AI agents with strict governance.</p>
+                <div class="pack-price">£4,950 <span>one-time</span></div>
+                <div class="includes-header">Servers Included</div>
+                <ul class="server-list">
+                    <li>csoai-cobol-parser</li>
+                    <li>csoai-mainframe-wrapper</li>
+                    <li>csoai-sap-r3-connector</li>
+                    <li>csoai-oracle-forms-connector</li>
+                    <li>csoai-legacy-audit-trail</li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary" style="background:transparent; border: 1px solid var(--primary); color: var(--primary);">Contact Sales</a>
+            </div>
+        </div>
+
+        <div style="text-align:center; margin-top: 5rem; color: var(--muted); font-size: 0.9rem;">
+            <p>All packs include 1 year of updates and direct support from MEOK AI Labs developers.</p>
+        </div>
+    </div>
+
+    <footer style="background:var(--dark);border-top:3px solid var(--accent);padding:4rem 0 2rem;margin-top:4rem;position:relative;z-index:1">
 <div class="container">
   <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr 1fr;gap:2rem;margin-bottom:3rem">
     <div>
@@ -87,4 +271,6 @@ document.addEventListener('click',e=>{if(!e.target.closest('.mega-wrap'))documen
     <div style="display:flex;gap:1.5rem"><a href="privacy.html" style="color:rgba(232,228,240,.4);font-size:.8rem;text-decoration:none">Privacy</a><a href="terms.html" style="color:rgba(232,228,240,.4);font-size:.8rem;text-decoration:none">Terms</a><a href="cookies.html" style="color:rgba(232,228,240,.4);font-size:.8rem;text-decoration:none">Cookies</a></div>
   </div>
 </div>
-</footer></div><script src="/_next/static/chunks/webpack-c81f7fd28659d64f.js" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0]);self.__next_f.push([2,null])</script><script>self.__next_f.push([1,"1:HL[\"/_next/static/css/f0c5b490c33e44ba.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"2:I[2846,[],\"\"]\n4:I[9107,[],\"ClientPageRoot\"]\n5:I[1281,[\"555\",\"static/chunks/555-7da102ab3e6fcfc8.js\",\"770\",\"static/chunks/app/sigil/page-5880d8bdf1912a43.js\"],\"default\",1]\n6:I[4707,[],\"\"]\n7:I[6423,[],\"\"]\n8:I[7975,[\"185\",\"static/chunks/app/layout-46f660c5c7f71692.js\"],\"default\"]\na:I[1060,[],\"\"]\nb:[]\n"])</script><script>self.__next_f.push([1,"0:[\"$\",\"$L2\",null,{\"buildId\":\"NmT89OO_kpgdLpGGkYN_e\",\"assetPrefix\":\"\",\"urlParts\":[\"\",\"sigil\"],\"initialTree\":[\"\",{\"children\":[\"sigil\",{\"children\":[\"__PAGE__\",{}]}]},\"$undefined\",\"$undefined\",true],\"initialSeedData\":[\"\",{\"children\":[\"sigil\",{\"children\":[\"__PAGE__\",{},[[\"$L3\",[\"$\",\"$L4\",null,{\"props\":{\"params\":{},\"searchParams\":{}},\"Component\":\"$5\"}],null],null],null]},[null,[\"$\",\"$L6\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"sigil\",\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L7\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"notFoundStyles\":\"$undefined\"}]],null]},[[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/f0c5b490c33e44ba.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"apple-touch-icon\",\"href\":\"/apple-touch-icon.png\"}],[\"$\",\"meta\",null,{\"name\":\"apple-mobile-web-app-capable\",\"content\":\"yes\"}],[\"$\",\"meta\",null,{\"name\":\"apple-mobile-web-app-status-bar-style\",\"content\":\"default\"}],[\"$\",\"meta\",null,{\"name\":\"apple-mobile-web-app-title\",\"content\":\"CSOAI\"}],[\"$\",\"meta\",null,{\"name\":\"mobile-web-app-capable\",\"content\":\"yes\"}]]}],[\"$\",\"body\",null,{\"children\":[[\"$\",\"$L8\",null,{}],[\"$\",\"$L6\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L7\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":\"404\"}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],\"notFoundStyles\":[]}]]}]]}]],null],null],\"couldBeIntercepted\":false,\"initialHead\":[null,\"$L9\"],\"globalErrorComponent\":\"$a\",\"missingSlots\":\"$Wb\"}]\n"])</script><script>self.__next_f.push([1,"9:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"1\",{\"name\":\"theme-color\",\"content\":\"#2D8A4E\"}],[\"$\",\"meta\",\"2\",{\"charSet\":\"utf-8\"}],[\"$\",\"title\",\"3\",{\"children\":\"CSOAI — Layer 0 Trust Infrastructure for the Agentic Economy\"}],[\"$\",\"meta\",\"4\",{\"name\":\"description\",\"content\":\"The independent authority that certifies AI is safe. Cross-regional compliance across 30+ frameworks. Watchdog Certification, PDCA runtime enforcement, BFT Council governance.\"}],[\"$\",\"link\",\"5\",{\"rel\":\"manifest\",\"href\":\"/manifest.json\",\"crossOrigin\":\"use-credentials\"}],[\"$\",\"meta\",\"6\",{\"name\":\"apple-mobile-web-app-capable\",\"content\":\"yes\"}],[\"$\",\"meta\",\"7\",{\"name\":\"apple-mobile-web-app-title\",\"content\":\"CSOAI\"}],[\"$\",\"meta\",\"8\",{\"name\":\"apple-mobile-web-app-status-bar-style\",\"content\":\"default\"}],[\"$\",\"link\",\"9\",{\"rel\":\"icon\",\"href\":\"/icon-192.png\"}],[\"$\",\"link\",\"10\",{\"rel\":\"apple-touch-icon\",\"href\":\"/apple-touch-icon.png\"}]]\n3:null\n"])</script></body></html>
+</footer>
+</body>
+</html>

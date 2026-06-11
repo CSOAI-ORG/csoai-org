@@ -34,6 +34,28 @@ services:
     restart: unless-stopped
     command: ["fastmcp", "run", "layer0_compliance_mcp.py", "--host", "0.0.0.0", "--port", "8002"]
 
+  # The Finance MCP Server (Payments & Micropayment Pre-checks)
+  finance-mcp:
+    build: .
+    ports:
+      - "8003:8003"
+    environment:
+      - ENV=production
+      - MCP_PORT=8003
+    restart: unless-stopped
+    command: ["fastmcp", "run", "finance_mcp.py", "--host", "0.0.0.0", "--port", "8003"]
+
+  # The Legacy Bridge MCP Server (COBOL/Mainframe Bridge)
+  legacy-mcp:
+    build: .
+    ports:
+      - "8004:8004"
+    environment:
+      - ENV=production
+      - MCP_PORT=8004
+    restart: unless-stopped
+    command: ["fastmcp", "run", "legacy_bridge_mcp.py", "--host", "0.0.0.0", "--port", "8004"]
+
 networks:
   default:
     name: csoai-layer0-net

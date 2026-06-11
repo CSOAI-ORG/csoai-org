@@ -1,16 +1,20 @@
-# CSOAI LTD
+# CSOAI LTD (MEOK AI Labs)
 
-> CSOAI LTD is the UK-registered company (Companies House 16939677) that owns and operates MEOK AI Labs. This domain exists only to surface the legal-entity disclosure. All products, documentation, and purchases live at meok.ai.
+> The Layer 0 Trust Infrastructure for the Agentic Economy.
 
-## Legal entity
-- Legal name: CSOAI LTD
-- Trading name: MEOK AI Labs
-- Company number: 16939677
+## Technical Assets
+- **MCP Distribution Map** — https://csoai.org/mcp-distribution.html (GEO fleet registry, AEO-optimized)
+- **Premium MCP Packs** — https://csoai.org/mcp-packs.html (Curated server bundles for EU AI Act, Finance, and Legacy systems)
+- **MCP Registry** — `mcp_registry.json` (The sovereign data-source for the 202-node fleet)
+- **GitHub Organisation** — https://github.com/CSOAI-ORG (369+ open-source repositories)
+
+## Legal Entity
+- Legal Name: CSOAI LTD
+- Trading Name: MEOK AI Labs
+- Company Number: 16939677 (UK Companies House)
 - Jurisdiction: England & Wales
 - Director: Nicholas Templeman
 - Contact: hello@meok.ai
 
-## Where the actual content lives
-- Products & docs: https://meok.ai
-- GitHub organisation: https://github.com/CSOAI-ORG
-- Companies House record: https://find-and-update.company-information.service.gov.uk/company/16939677
+## Core Narrative
+"Google built A2A for agent coordination. Stripe built ACP for agent checkout. Coinbase built x402 for agent payments. Anthropic built MCP for agent tools. Microsoft built AGT for agent governance. But before any agent can pay, hire, or act — it needs to prove it's compliant. That's Layer 0. And CSOAI is the only company that built it."
