@@ -4,11 +4,11 @@
 from pathlib import Path
 
 INDUSTRIES = [
-    {"name": "Finance", "slug": "finance", "risk": "Algorithmic Trading & Credit Bias", "framework": "DORA & NIST AI RMF"},
-    {"name": "Healthcare", "slug": "healthcare", "risk": "Diagnostic Errors & PII Exposure", "framework": "HIPAA & EU AI Act Annex III"},
-    {"name": "Government", "slug": "government", "risk": "Public Service Automated Decisions", "framework": "Algorithmic Accountability Act"},
-    {"name": "Legal", "slug": "legal", "risk": "Privileged Data Leakage", "framework": "ISO 42001 & GDPR"},
-    {"name": "Media", "slug": "media", "risk": "Disinformation & Watermarking", "framework": "EU AI Act Article 50"}
+    {"name": "Finance", "slug": "finance", "risk": "Algorithmic Trading & Credit Bias", "framework": "DORA & NIST AI RMF", "btn_text": "FINANCE"},
+    {"name": "Healthcare", "slug": "healthcare", "risk": "Diagnostic Errors & PII Exposure", "framework": "HIPAA & EU AI Act Annex III", "btn_text": "HEALTHCARE"},
+    {"name": "Government", "slug": "government", "risk": "Public Service Automated Decisions", "framework": "Algorithmic Accountability Act", "btn_text": "GOVERNMENT"},
+    {"name": "Legal", "slug": "legal", "risk": "Privileged Data Leakage", "framework": "ISO 42001 & GDPR", "btn_text": "LEGAL"},
+    {"name": "Media", "slug": "media", "risk": "Disinformation & Watermarking", "framework": "EU AI Act Article 50", "btn_text": "MEDIA"}
 ]
 
 TEMPLATE = """<!DOCTYPE html>
@@ -29,7 +29,6 @@ TEMPLATE = """<!DOCTYPE html>
     </style>
 </head>
 <body>
-    <!-- ═══ MEGA NAV ═══ -->
     <div class="container">
         <span class="badge">INDUSTRY SOLUTIONS</span>
         <h1>Layer 0 for {name}</h1>
@@ -45,7 +44,7 @@ TEMPLATE = """<!DOCTYPE html>
             </ul>
         </section>
 
-        <a href="../checkout.html" class="btn">GET {name.upper()} COMPLIANCE PACK</a>
+        <a href="../checkout.html" class="btn">GET {btn_text} COMPLIANCE PACK</a>
     </div>
 </body>
 </html>

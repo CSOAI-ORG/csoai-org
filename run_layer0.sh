@@ -33,9 +33,20 @@ case "$1" in
     ;;
   tui)
     echo -e "${GOLD}Launching MEOK DOME TUI...${NC}"
-    # Ensure dependencies for TUI are installed locally if possible, 
-    # but we assume the user has a compatible python for 'rich'
     python3 meok_dome_tui.py
+    ;;
+  build)
+    echo -e "${BLUE}Regenerating Industry Pages & Fragments...${NC}"
+    cd ..
+    python3 generate_industry_pages.py
+    python3 build.py
+    cd layer0_tunnels
+    echo -e "${GREEN}Build Complete.${NC}"
+    ;;
+  distribute)
+    echo -e "${GOLD}--- CSOAI 7-DAY SOCIAL BLITZ (WEEK 1) ---${NC}"
+    cat ../SOCIAL_BLITZ.md
+    echo -e "\n${BLUE}Next Action: Copy post for current day and publish to LinkedIn/Twitter/Reddit.${NC}"
     ;;
   test)
     echo -e "${BLUE}Running E2E API Tests...${NC}"

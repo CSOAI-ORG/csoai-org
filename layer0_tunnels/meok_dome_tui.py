@@ -62,6 +62,21 @@ def generate_network_stats() -> Panel:
     
     return Panel(text, title="[bold]Fleet Telemetry[/]", border_style="blue")
 
+def generate_revenue_stats() -> Panel:
+    revenue = random.uniform(12000.0, 15000.0)
+    smoke_tests = random.randint(400, 600)
+    certs = random.randint(45, 60)
+    kits = random.randint(12, 18)
+
+    text = Text()
+    text.append(f"Total Pipeline:    £{revenue:,.2f}\n", style="bold gold3")
+    text.append(f"Smoke Tests (£1):  {smoke_tests}\n", style="white")
+    text.append(f"CASA Certs (£199): {certs}\n", style="green")
+    text.append(f"Art.50 Kits (£999): {kits}\n", style="bold red")
+    text.append(f"Conversion Rate:   {random.uniform(2.1, 4.5):.2f}%", style="cyan")
+
+    return Panel(text, title="[bold]Revenue & Conversion[/]", border_style="gold3")
+
 def generate_audit_log() -> Table:
     table = Table(show_header=True, header_style="bold grey74", border_style="grey37", expand=True)
     table.add_column("Time", style="cyan", width=10)
@@ -104,6 +119,7 @@ def make_layout() -> Layout:
     )
     layout["left"].split_column(
         Layout(name="telemetry", size=8),
+        Layout(name="revenue", size=8),
         Layout(name="jurisdictions")
     )
     return layout
@@ -119,6 +135,7 @@ def run_tui():
         while True:
             layout["header"].update(generate_header())
             layout["telemetry"].update(generate_network_stats())
+            layout["revenue"].update(generate_revenue_stats())
             layout["jurisdictions"].update(Panel(generate_jurisdiction_table(), title="[bold]Global Jurisdiction Mesh[/]", border_style="gold3"))
             layout["right"].update(Panel(generate_audit_log(), title="[bold]Live Blockchain Anchor Stream (Polygon PoA)[/]", border_style="cyan"))
             time.sleep(0.5)
