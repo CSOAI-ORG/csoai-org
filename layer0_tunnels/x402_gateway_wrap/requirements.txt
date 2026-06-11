@@ -1,0 +1,6 @@
+# x402 Gateway Wrap — requirements
+# Self-contained wrap of csoai-gateway-mcp with per-call USDC billing.
+
+mcp==1.27.2
+requests>=2.31.0
+x402[evm]==2.12.0
