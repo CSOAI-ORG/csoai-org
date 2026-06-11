@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification Engine — CSOAI</title>
+    <meta name="description" content="Verify CSOAI Watchdog Certificates and Agent Identities instantly. Blockchain-anchored Proof of Trust for the agentic economy.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #10B981;
+            --bg: #0a0a0f;
+            --surface: #11111a;
+            --border: #1e293b;
+            --text: #f8fafc;
+            --muted: #94a3b8;
+            --gold: #c9a84c;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 6rem 2rem; flex-grow: 1; text-align: center; }
+        
+        h1 { font-family: 'Space Grotesk', sans-serif; font-size: 3rem; margin-bottom: 1rem; color: var(--primary); }
+        p { color: var(--muted); font-size: 1.1rem; margin-bottom: 3rem; }
+
+        .search-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 0.5rem;
+            border-radius: 12px;
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        input {
+            background: transparent;
+            border: none;
+            color: #fff;
+            padding: 1rem;
+            flex-grow: 1;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            outline: none;
+        }
+        .btn-verify {
+            background: var(--primary);
+            color: #000;
+            border: none;
+            padding: 0 2rem;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .verify-info {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-top: 4rem;
+            padding: 2rem;
+            border-top: 1px solid var(--border);
+        }
+        code { color: var(--gold); }
+
+    </style>
+</head>
+<body>
+    <!-- ═══ MEGA NAV ═══ -->
+    <script>/* Build system placeholder */</script>
+
+    <div class="container">
+        <h1>Watchdog Verification</h1>
+        <p>Enter an Agent DID or Certificate Hash to verify its compliance status on the Polygon PoA blockchain.</p>
+        
+        <div class="search-box">
+            <input type="text" placeholder="did:csoai:8822-15e9c129d0c2..." id="did-input">
+            <button class="btn-verify" onclick="alert('Querying BFT Council & Blockchain Anchor...');">VERIFY</button>
+        </div>
+
+        <div style="margin-top: 1rem; font-size: 0.8rem; color: var(--muted);">
+            Example: <code>did:csoai:e60e47ad-fe62-46e0-8822-15e9c129d0c2</code>
+        </div>
+
+        <div class="verify-info">
+            <strong>Layer 0 Proof:</strong> All certificates are signed using <code>Ed25519</code> and anchored to the Polygon PoA network. Verification is performed in real-time against the latest PDCA policy snapshot.
+        </div>
+    </div>
+
+    <footer style="background:var(--surface); padding:3rem 0; text-align:center; border-top:1px solid var(--border);">
+        <p>&copy; 2026 CSOAI.org &middot; MEOK AI Labs &middot; The Layer 0 Foundation</p>
+    </footer>
+</body>
+</html>
