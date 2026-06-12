@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium MCP Server Packs — CSOAI</title>
-    <meta name="description" content="Accelerate AI agent deployment with curated MCP server packs. EU AI Act compliance, brand distribution, enterprise finance, and legacy bridges.">
+    <title>Legacy Modernization & COBOL Bridge — CSOAI</title>
+    <meta name="description" content="Securely bridge your Mainframe and COBOL systems to AI agents. CSOAI Layer 0-H provides governed tunnels for legacy modernization.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -12,88 +12,41 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --primary: #c9a84c;
-            --bg: #0a0a0f;
-            --surface: #11111a;
+            --bg: #050508;
+            --surface: #0e0e15;
             --border: #1e293b;
             --text: #f8fafc;
             --muted: #94a3b8;
             --accent: #3b82f6;
             --emerald: #10B981;
-            --red: #EF4444;
             --gold: #D4A843;
+            --code: #1e1e2e;
         }
         body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
         h1, h2, h3, .btn { font-family: 'Space Grotesk', sans-serif; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 
-        /* Header */
-        .header { padding: 8rem 0 4rem; text-align: center; }
-        .header h1 { font-size: clamp(3rem, 8vw, 5rem); font-weight: 800; letter-spacing: -0.04em; margin-bottom: 1.5rem; background: linear-gradient(to right, #fff, var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .header p { font-size: 1.25rem; color: var(--muted); max-width: 800px; margin: 0 auto 3rem; }
+        /* Hero */
+        .hero { padding: 10rem 0 6rem; }
+        .hero h1 { font-size: clamp(3rem, 8vw, 5.5rem); line-height: 0.9; font-weight: 800; margin-bottom: 2rem; background: linear-gradient(to right, #fff, var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.5rem; color: var(--muted); max-width: 800px; margin-bottom: 3rem; }
 
-        /* Packs Grid */
-        .packs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-bottom: 8rem;
-        }
-        .pack-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 3rem;
-            display: flex;
-            flex-direction: column;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-        .pack-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--primary);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-        }
-        
-        .pack-name { font-size: 1.75rem; font-weight: 800; color: var(--gold); margin-bottom: 1rem; }
-        .pack-desc { color: var(--muted); font-size: 1rem; margin-bottom: 2rem; min-height: 80px; }
-        
-        .pack-price { font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem; display: flex; align-items: baseline; gap: 0.5rem; }
-        .pack-price span { font-size: 0.8rem; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
-        
-        .includes-header { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--muted); font-weight: 800; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
-        .server-list { list-style: none; margin-bottom: 3rem; flex-grow: 1; }
-        .server-list li { font-size: 0.85rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem; color: #fff; font-family: 'JetBrains Mono', monospace; }
-        .server-list li::before { content: '/'; color: var(--primary); opacity: 0.5; }
-        
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 1.25rem;
-            text-align: center;
-            border-radius: 12px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.2s;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        .btn-primary { background: var(--primary); color: #000; box-shadow: 0 4px 15px rgba(201, 168, 76, 0.3); }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(201, 168, 76, 0.5); }
-        
-        .emergency-tag {
-            position: absolute;
-            top: 25px;
-            right: -35px;
-            background: var(--red);
-            color: #fff;
-            padding: 0.5rem 3rem;
-            transform: rotate(45deg);
-            font-size: 0.6rem;
-            font-weight: 900;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-        }
+        /* Code Block Mockup */
+        .code-block { background: var(--code); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; color: #a6accd; margin-bottom: 8rem; position: relative; overflow: hidden; }
+        .code-block::before { content: 'COBOL BRIDGE TUNNEL'; position: absolute; top: 0; right: 0; background: var(--primary); color: #000; padding: 0.2rem 1rem; font-size: 0.7rem; font-weight: 800; }
+        .keyword { color: #c792ea; }
+        .string { color: #c3e88d; }
+        .comment { color: #676e95; font-style: italic; }
+
+        /* Features */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 8rem; }
+        .feature-card { background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 3rem; }
+        .feature-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary); }
+        .feature-card p { color: var(--muted); }
+
+        /* CTA */
+        .btn { display: inline-block; padding: 1.5rem 3.5rem; background: var(--primary); color: #000; border-radius: 100px; font-weight: 800; text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.2s; }
+        .btn:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(201, 168, 76, 0.4); }
 
     </style>
 </head>
@@ -170,95 +123,46 @@ function toggleMega(btn){
 }
 document.addEventListener('click',e=>{if(!e.target.closest('.mega-wrap'))document.querySelectorAll('.mega-panel').forEach(p=>p.style.display='none')});
 </script>
-
+    
     <div class="container">
-        <header class="header">
-            <h1>PREMIUM MCP PACKS</h1>
-            <p>Monetizing 369 open-source assets into production-ready governance bundles. The missing software for the agentic economy.</p>
-        </header>
+        <section class="hero">
+            <div style="color:var(--primary); font-weight:800; text-transform:uppercase; letter-spacing:0.3em; margin-bottom:1rem;">Layer 0-H: Legacy Bridge</div>
+            <h1>Mainframe to Agent Tunnels</h1>
+            <p>Don't rewrite your legacy systems. Bridge them. CSOAI provides governed tunnels that allow AI agents to securely interact with COBOL and Mainframe environments.</p>
+            <a href="contact.html" class="btn">Talk to an Architect</a>
+        </section>
 
-        <div class="packs-grid">
-            <!-- EU AI Act Emergency Pack -->
-            <div class="pack-card">
-                <div class="emergency-tag">Urgent</div>
-                <h3 class="pack-name">EU AI Act Emergency Pack</h3>
-                <p class="pack-desc">7 MCP servers designed specifically to enforce EU AI Act Article 50 transparency and risk classification at runtime.</p>
-                <div class="pack-price">£999 <span>one-time</span></div>
-                <div class="includes-header">Servers Included</div>
-                <ul class="server-list">
-                    <li>csoai-layer0-compliance</li>
-                    <li>csoai-risk-classifier</li>
-                    <li>csoai-article50-watermark</li>
-                    <li>csoai-human-oversight-trigger</li>
-                    <li>csoai-post-market-monitor</li>
-                </ul>
-                <a href="article-50-kit.html" class="btn btn-primary">Secure Compliance Now</a>
-            </div>
+        <section class="code-block">
+            <div class="comment">* BRIDGE CONFIGURATION FOR SAP R/3 & MAINFRAME Z/OS</div>
+            <div class="keyword">IDENTIFICATION DIVISION.</div>
+            <div>PROGRAM-ID. CSOAI-TUNNEL.</div>
+            <br>
+            <div class="keyword">ENVIRONMENT DIVISION.</div>
+            <div>CONFIGURATION SECTION.</div>
+            <div>SPECIAL-NAMES.</div>
+            <div style="padding-left: 2rem;">AGENT-ID <span class="keyword">IS</span> <span class="string">"did:csoai:8f2a-91c1"</span></div>
+            <div style="padding-left: 2rem;">POLICY-SET <span class="keyword">IS</span> <span class="string">"PDCA-ENTERPRISE-v2"</span></div>
+            <br>
+            <div class="comment">* RUNTIME ENFORCEMENT ACTIVE</div>
+            <div class="keyword">IF</div> AGENT-NOT-CERTIFIED <span class="keyword">THEN</span>
+            <div style="padding-left: 2rem;"><span class="keyword">CALL</span> <span class="string">'BLOCK-ACCESS'</span> <span class="keyword">USING</span> CSOAI-WATCHDOG</div>
+            <div class="keyword">END-IF.</div>
+        </section>
 
-            <!-- Brand Authority Pack -->
-            <div class="pack-card">
-                <h3 class="pack-name">Brand & Distribution Pack</h3>
-                <p class="pack-desc">Automate your entire Go-To-Market strategy. The exact MCP tools CSOAI uses to get 200,000 downloads.</p>
-                <div class="pack-price">£499 <span>one-time</span></div>
-                <div class="includes-header">Servers Included</div>
-                <ul class="server-list">
-                    <li>csoai-brand-authority</li>
-                    <li>csoai-aeo-geo-optimizer</li>
-                    <li>csoai-conversion-funnel</li>
-                    <li>csoai-social-automation</li>
-                    <li>csoai-launch-campaigner</li>
-                </ul>
-                <a href="checkout.html" class="btn btn-primary">Get the Growth Engine</a>
+        <section class="features-grid">
+            <div class="feature-card">
+                <h3>COBOL Parser</h3>
+                <p>Convert complex legacy logic into agent-readable JSON schemas while maintaining strict data sovereignty and audit trails.</p>
             </div>
-
-            <!-- Agentic Finance Pack -->
-            <div class="pack-card">
-                <h3 class="pack-name">Agentic Finance Pack</h3>
-                <p class="pack-desc">Pre-check compliance before any agent executes a payment via Stripe ACP, x402, or Google AP2.</p>
-                <div class="pack-price">£1,499 <span>annually</span></div>
-                <div class="includes-header">Servers Included</div>
-                <ul class="server-list">
-                    <li>csoai-payment-precheck</li>
-                    <li>csoai-aml-kyc-validator</li>
-                    <li>csoai-x402-tunnel</li>
-                    <li>csoai-stripe-acp-tunnel</li>
-                    <li>csoai-google-ap2-tunnel</li>
-                </ul>
-                <a href="finance.html" class="btn btn-primary">Secure Payments</a>
+            <div class="feature-card">
+                <h3>Mainframe Wrapper</h3>
+                <p>Securely expose IBM z/OS and AS/400 resources to modern MCP-enabled agents without modifying core code.</p>
             </div>
-
-            <!-- Legacy Bridge Pack -->
-            <div class="pack-card">
-                <h3 class="pack-name">Legacy COBOL Bridge Pack</h3>
-                <p class="pack-desc">Securely bridge Mainframe and COBOL systems to modern AI agents with strict governance.</p>
-                <div class="pack-price">£4,950 <span>one-time</span></div>
-                <div class="includes-header">Servers Included</div>
-                <ul class="server-list">
-                    <li>csoai-cobol-parser</li>
-                    <li>csoai-mainframe-wrapper</li>
-                    <li>csoai-sap-r3-connector</li>
-                    <li>csoai-oracle-forms-connector</li>
-                    <li>csoai-legacy-audit-trail</li>
-                </ul>
-                <a href="legacy.html" class="btn btn-primary" style="background:transparent; border: 1px solid var(--primary); color: var(--primary);">Learn More</a>
+            <div class="feature-card">
+                <h3>Oracle Forms Bridge</h3>
+                <p>Automate interactions with legacy Oracle Forms applications using our governed robotic process automation (RPA) tunnels.</p>
             </div>
-
-            <!-- Global Governance Pack -->
-            <div class="pack-card">
-                <h3 class="pack-name">Global Governance Pack</h3>
-                <p class="pack-desc">Institutional cross-regional mesh. BFT council voting, TC260 validation, and Polygon PoA anchoring.</p>
-                <div class="pack-price">£2,999 <span>annually</span></div>
-                <div class="includes-header">Servers Included</div>
-                <ul class="server-list">
-                    <li>csoai-cross-regional-handoff</li>
-                    <li>csoai-bft-council-voter</li>
-                    <li>csoai-tc260-validator</li>
-                    <li>csoai-nist-rmf-mapper</li>
-                    <li>csoai-polygon-anchorer</li>
-                </ul>
-                <a href="governance.html" class="btn btn-primary">View Governance Mesh</a>
-            </div>
-        </div>
+        </section>
     </div>
 
     <footer style="background:var(--dark);border-top:3px solid var(--accent);padding:4rem 0 2rem;margin-top:4rem;position:relative;z-index:1">

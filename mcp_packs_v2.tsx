@@ -34,7 +34,7 @@ export default function McpPacks() {
         <div className="text-center mb-20">
           <h1 className="text-6xl font-black mb-6 tracking-tighter bg-gradient-to-r from-white to-emerald-500 bg-clip-text text-transparent">PREMIUM MCP PACKS</h1>
           <p className="text-slate-400 text-xl max-w-2xl mx-auto leading-relaxed">
-            Monetizing 290+ open-source assets into production-ready governance bundles. The missing software for the agentic economy.
+            Monetizing 369 open-source assets into production-ready governance bundles. The missing software for the agentic economy.
           </p>
         </div>
 

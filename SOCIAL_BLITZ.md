@@ -22,7 +22,7 @@ The missing piece is here.
 ### DAY 2: The Article 50 Deadline (Press/LinkedIn)
 **Narrative:** Institutional (Risk + Compliance)
 **Text:**
-52 Days. That is the time remaining until EU AI Act Article 50 enforcement begins.
+51 Days. That is the time remaining until EU AI Act Article 50 enforcement begins.
 
 Failing to meet transparency obligations can cost your organization up to €35,000,000. 
 

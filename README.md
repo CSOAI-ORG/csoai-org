@@ -58,7 +58,7 @@ Need custom development, SLA guarantees, or white-label deployment?
 
 ## 🤝 Part of the MEOK Ecosystem
 
-This server is part of the **[MEOK AI Labs](https://meok.ai)** ecosystem — 300+ MCP servers for sovereign AI governance.
+This server is part of the **[MEOK AI Labs](https://meok.ai)** ecosystem — 369 repos for sovereign AI governance.
 
 | Domain | Purpose |
 |--------|---------|

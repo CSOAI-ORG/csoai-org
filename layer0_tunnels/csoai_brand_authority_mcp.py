@@ -203,7 +203,7 @@ def generate_social_post(platform: str, post_type: str, topic: str, include_data
         "image_dimensions": constraint["image"],
         "optimal_posting_time": constraint["optimal_time"],
         "cta": "csoai.org" if include_cta else None,
-        "data_points": {"repos": 369, "downloads": 200000, "frameworks": 30, "jurisdictions": 6, "eu_ai_act_days": 52} if include_data else None,
+        "data_points": {"repos": 369, "downloads": 200000, "frameworks": 30, "jurisdictions": 6, "eu_ai_act_days": 51} if include_data else None,
         "engagement_prediction": {
             "linkedin": "500-2,000 views, 50-200 engagements" if post_type == "insight" else "1,000-5,000 views, 100-500 engagements",
             "twitter": "1,000-5,000 impressions, 50-200 engagements" if post_type == "insight" else "5,000-20,000 impressions, 200-1,000 engagements",
