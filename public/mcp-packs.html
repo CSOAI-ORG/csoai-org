@@ -77,9 +77,13 @@
             transition: all 0.2s;
             text-transform: uppercase;
             letter-spacing: 0.05em;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
         }
         .btn-primary { background: var(--primary); color: #000; box-shadow: 0 4px 15px rgba(201, 168, 76, 0.3); }
         .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(201, 168, 76, 0.5); }
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; }
         
         .emergency-tag {
             position: absolute;
@@ -192,7 +196,7 @@ document.addEventListener('click',e=>{if(!e.target.closest('.mega-wrap'))documen
                     <li>csoai-human-oversight-trigger</li>
                     <li>csoai-post-market-monitor</li>
                 </ul>
-                <a href="article-50-kit.html" class="btn btn-primary">Secure Compliance Now</a>
+                <button onclick="checkout('pack_eu_ai_act')" class="btn btn-primary">Secure Compliance Now</button>
             </div>
 
             <!-- Brand Authority Pack -->
@@ -208,7 +212,7 @@ document.addEventListener('click',e=>{if(!e.target.closest('.mega-wrap'))documen
                     <li>csoai-social-automation</li>
                     <li>csoai-launch-campaigner</li>
                 </ul>
-                <a href="checkout.html" class="btn btn-primary">Get the Growth Engine</a>
+                <button onclick="checkout('pack_brand')" class="btn btn-primary">Get the Growth Engine</button>
             </div>
 
             <!-- Agentic Finance Pack -->
@@ -224,7 +228,7 @@ document.addEventListener('click',e=>{if(!e.target.closest('.mega-wrap'))documen
                     <li>csoai-stripe-acp-tunnel</li>
                     <li>csoai-google-ap2-tunnel</li>
                 </ul>
-                <a href="finance.html" class="btn btn-primary">Secure Payments</a>
+                <button onclick="checkout('pack_finance')" class="btn btn-primary">Secure Payments</button>
             </div>
 
             <!-- Legacy Bridge Pack -->
@@ -240,7 +244,7 @@ document.addEventListener('click',e=>{if(!e.target.closest('.mega-wrap'))documen
                     <li>csoai-oracle-forms-connector</li>
                     <li>csoai-legacy-audit-trail</li>
                 </ul>
-                <a href="legacy.html" class="btn btn-primary" style="background:transparent; border: 1px solid var(--primary); color: var(--primary);">Learn More</a>
+                <button onclick="checkout('pack_legacy')" class="btn btn-primary" style="background:transparent; border: 1px solid var(--primary); color: var(--primary);">Learn More</button>
             </div>
 
             <!-- Global Governance Pack -->
@@ -256,7 +260,7 @@ document.addEventListener('click',e=>{if(!e.target.closest('.mega-wrap'))documen
                     <li>csoai-nist-rmf-mapper</li>
                     <li>csoai-polygon-anchorer</li>
                 </ul>
-                <a href="governance.html" class="btn btn-primary">View Governance Mesh</a>
+                <button onclick="checkout('pack_governance')" class="btn btn-primary">View Governance Mesh</button>
             </div>
         </div>
     </div>
@@ -290,5 +294,35 @@ document.addEventListener('click',e=>{if(!e.target.closest('.mega-wrap'))documen
   </div>
 </div>
 </footer>
+
+    <script>
+        async function checkout(tierId) {
+            const btn = event.target;
+            const originalText = btn.innerText;
+            btn.disabled = true;
+            btn.innerText = 'Initializing...';
+
+            try {
+                const response = await fetch('/api/checkout', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ tierId })
+                });
+                const data = await response.json();
+                if (data.url) {
+                    window.location.href = data.url;
+                } else {
+                    alert(data.error || 'Checkout failed');
+                    btn.disabled = false;
+                    btn.innerText = originalText;
+                }
+            } catch (e) {
+                console.error(e);
+                alert('Network error');
+                btn.disabled = false;
+                btn.innerText = originalText;
+            }
+        }
+    </script>
 </body>
 </html>
