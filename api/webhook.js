@@ -6,6 +6,7 @@
  */
 
 import Stripe from 'stripe';
+import { provisionCertification } from './provision.js';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
@@ -35,18 +36,20 @@ export default async function handler(req, res) {
 
       console.log(`[SaaS Provisioning] Tier: ${tierId}, Customer: ${customerEmail}`);
 
-      // TODO: Implement your provisioning logic here:
-      // 1. Generate did:csoai ID
-      // 2. Generate Watchdog Certificate
-      // 3. Save to database (Supabase/PostgreSQL)
-      // 4. Send "Success" email via Resend
+      // 1. Provision in Supabase
+      const provision = await provisionCertification(tierId, customerEmail);
       
+      if (!provision.ok) {
+        console.error("[Provisioning Failed]", provision.error);
+      }
+
+      // 2. Alert Discord
       if (process.env.DISCORD_WEBHOOK_URL) {
         await fetch(process.env.DISCORD_WEBHOOK_URL, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            content: `💰 **New CSOAI Sale!**\n**Tier:** ${tierId}\n**Customer:** ${customerEmail}\n**Amount:** £${session.amount_total / 100}`,
+            content: `💰 **New CSOAI Sale!**\n**Tier:** ${tierId}\n**Customer:** ${customerEmail}\n**Amount:** £${session.amount_total / 100}\n**DID:** ${provision.ok ? provision.certificate.did_id : 'Failed'}`,
           }),
         });
       }
