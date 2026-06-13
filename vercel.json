@@ -1,0 +1,72 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+<<<<<<< HEAD
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "geolocation=(), microphone=(), camera=()"
+        }
+=======
+  "redirects": [
+    { "source": "/how-it-works",   "destination": "/", "permanent": true },
+    { "source": "/help-center",    "destination": "/training", "permanent": true },
+    { "source": "/watchdog",       "destination": "/comply", "permanent": true },
+    { "source": "/how-it-works/",  "destination": "/", "permanent": true },
+    { "source": "/help-center/",   "destination": "/training", "permanent": true },
+    { "source": "/watchdog/",      "destination": "/comply", "permanent": true },
+    { "source": "/methodology",    "destination": "/crosswalk", "permanent": true },
+    { "source": "/certify",        "destination": "/comply", "permanent": true },
+    { "source": "/asti",           "destination": "/comply", "permanent": true },
+    { "source": "/methodology/",   "destination": "/crosswalk", "permanent": true },
+    { "source": "/certify/",       "destination": "/comply", "permanent": true },
+    { "source": "/asti/",          "destination": "/comply", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/api/map", "destination": "/api/map.json" },
+    { "source": "/api/crosswalk", "destination": "/api/crosswalk.json" },
+    { "source": "/api/dome/status", "destination": "/api/dome/status.json" },
+    { "source": "/api/council/votes", "destination": "/api/council/votes.json" },
+    { "source": "/api/sigil/verify/:id", "destination": "/api/sigil/verify.json" }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, POST, OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "X-CSOAI-Key, Content-Type" },
+        { "key": "Content-Type", "value": "application/json" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+>>>>>>> origin/main
+      ]
+    }
+  ]
+}

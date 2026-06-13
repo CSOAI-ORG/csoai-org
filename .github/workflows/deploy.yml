@@ -1,0 +1,20 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+
+      - name: Deploy Static Export to Production
+        run: vercel --prod --yes --token=${{ secrets.VERCEL_TOKEN }}
+        # Note: csoai-org is a static export (public/ folder).
+        # No build step needed — Vercel serves public/ directly.

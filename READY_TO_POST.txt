@@ -1,0 +1,21 @@
+📢 READY TO POST: DAY 1 — THE LAYER 0 MANIFESTO
+Platform: LinkedIn / Twitter
+Scheduled: TODAY
+
+TEXT:
+The AI agent economy is currently a "Wild West." 
+
+Google built A2A for coordination. Stripe built ACP for checkout. Coinbase built x402 for payments. Anthropic built MCP for tools. 
+
+But they all assume the agent is already trusted. They assume Layer 0 exists. It doesn't.
+
+CSOAI built Layer 0. We're the foundation that certifies identity and enforces policy BEFORE the agent acts. 
+
+369 repos. 200,000 downloads. 30 frameworks. 
+The missing piece is here.
+
+#AI #Layer0 #EUAIAct #AISafety #A2A #MCP
+
+---
+ACTION: Copy the text above and publish now.
+Next post (Article 50 Kit) ready in SOCIAL_BLITZ.md.

@@ -1,0 +1,27 @@
+{
+  "name": "CSOAI",
+  "short_name": "CSOAI",
+  "description": "Layer 0 Trust Infrastructure for the Agentic Economy",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2D8A4E",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/csoai-icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/csoai-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "security"],
+  "lang": "en",
+  "dir": "ltr"
+}
