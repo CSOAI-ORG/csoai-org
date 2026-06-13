@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://csoai.org/sitemap.xml
+
+# Core pages
+Allow: /$
+Allow: /map
+Allow: /crosswalk
+Allow: /dome
+Allow: /council
+Allow: /sigil
+Allow: /comply
+Allow: /charter
+Allow: /training
+Allow: /ecosystem
+Allow: /prosperity
+
+# API endpoints (don't index JSON)
+Disallow: /api/
+Disallow: /.well-known/
+Disallow: /a2a/
+
+# Static assets
+Disallow: /_next/
+Disallow: /assets/
+
+# Crawl delay for rate limiting
+Crawl-delay: 1

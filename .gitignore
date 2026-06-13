@@ -1,1 +1,28 @@
 .vercel
+.DS_Store
+*.pyc
+__pycache__/
+*.egg-info/
+dist/
+build/
+
+# Mobile
+mobile/node_modules/
+mobile/ios/App/
+mobile/android/app/
+
+# Layer 0 tunnels
+layer0_tunnels/**/__pycache__/
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db

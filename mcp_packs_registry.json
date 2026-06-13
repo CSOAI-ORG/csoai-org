@@ -1,0 +1,83 @@
+{
+  "packs": [
+    {
+      "id": "pack_eu_ai_act",
+      "name": "EU AI Act Emergency Pack",
+      "description": "7 MCP servers designed specifically to enforce EU AI Act Article 50 transparency and risk classification at runtime.",
+      "price_gbp": 999,
+      "billing_cycle": "one-time",
+      "servers_included": [
+        "csoai-layer0-compliance",
+        "csoai-risk-classifier",
+        "csoai-article50-watermark",
+        "csoai-human-oversight-trigger",
+        "csoai-post-market-monitor",
+        "csoai-accuracy-evaluator",
+        "csoai-gdpr-data-boundary"
+      ],
+      "stripe_link": "checkout.html"
+    },
+    {
+      "id": "pack_growth_distribution",
+      "name": "Brand Authority & Distribution Pack",
+      "description": "Automate your entire Go-To-Market strategy. The exact MCP tools CSOAI uses to get 200,000 downloads.",
+      "price_gbp": 499,
+      "billing_cycle": "one-time",
+      "servers_included": [
+        "csoai-brand-authority",
+        "csoai-aeo-geo-optimizer",
+        "csoai-conversion-funnel",
+        "csoai-social-automation",
+        "csoai-utm-tracker",
+        "csoai-launch-campaigner"
+      ],
+      "stripe_link": "checkout.html"
+    },
+    {
+      "id": "pack_enterprise_finance",
+      "name": "Agentic Finance Pack",
+      "description": "Pre-check compliance before any agent executes a payment via Stripe ACP, x402, or AP2.",
+      "price_gbp": 1499,
+      "billing_cycle": "annually",
+      "servers_included": [
+        "csoai-payment-precheck",
+        "csoai-aml-kyc-validator",
+        "csoai-x402-tunnel",
+        "csoai-stripe-acp-tunnel",
+        "csoai-google-ap2-tunnel"
+      ],
+      "stripe_link": "checkout.html"
+    },
+    {
+      "id": "pack_legacy_modernization",
+      "name": "Legacy COBOL Bridge Pack",
+      "description": "Securely bridge Mainframe and COBOL systems to modern AI agents with strict governance.",
+      "price_gbp": 4950,
+      "billing_cycle": "one-time",
+      "servers_included": [
+        "csoai-cobol-parser",
+        "csoai-mainframe-wrapper",
+        "csoai-sap-r3-connector",
+        "csoai-oracle-forms-connector",
+        "csoai-legacy-audit-trail"
+      ],
+      "stripe_link": "contact.html"
+    },
+    {
+      "id": "pack_global_governance",
+      "name": "Global BFT Governance Pack",
+      "description": "The ultimate institutional package. Cross-regional compliance mapping for EU, US, UK, CN, SG, and KR.",
+      "price_gbp": 2999,
+      "billing_cycle": "annually",
+      "servers_included": [
+        "csoai-cross-regional-handoff",
+        "csoai-bft-council-voter",
+        "csoai-tc260-validator",
+        "csoai-nist-rmf-mapper",
+        "csoai-iso42001-mapper",
+        "csoai-polygon-anchorer"
+      ],
+      "stripe_link": "checkout.html"
+    }
+  ]
+}

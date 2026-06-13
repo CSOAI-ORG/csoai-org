@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  # The Core Enterprise SDK / API Server
+  layer0-api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - ENV=production
+      - API_PORT=8000
+    restart: unless-stopped
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+  # The Growth Engine: Brand Authority & Distribution MCP Server
+  growth-mcp:
+    build: .
+    ports:
+      - "8001:8001"
+    environment:
+      - ENV=production
+      - MCP_PORT=8001
+    restart: unless-stopped
+    command: ["fastmcp", "run", "csoai_brand_authority_mcp.py", "--host", "0.0.0.0", "--port", "8001"]
+
+  # The Core Compliance MCP Server (Policy Engine & Identity Tunnels)
+  compliance-mcp:
+    build: .
+    ports:
+      - "8002:8002"
+    environment:
+      - ENV=production
+      - MCP_PORT=8002
+    restart: unless-stopped
+    command: ["fastmcp", "run", "layer0_compliance_mcp.py", "--host", "0.0.0.0", "--port", "8002"]
+
+  # The Finance MCP Server (Payments & Micropayment Pre-checks)
+  finance-mcp:
+    build: .
+    ports:
+      - "8003:8003"
+    environment:
+      - ENV=production
+      - MCP_PORT=8003
+    restart: unless-stopped
+    command: ["fastmcp", "run", "finance_mcp.py", "--host", "0.0.0.0", "--port", "8003"]
+
+  # The Legacy Bridge MCP Server (COBOL/Mainframe Bridge)
+  legacy-mcp:
+    build: .
+    ports:
+      - "8004:8004"
+    environment:
+      - ENV=production
+      - MCP_PORT=8004
+    restart: unless-stopped
+    command: ["fastmcp", "run", "legacy_bridge_mcp.py", "--host", "0.0.0.0", "--port", "8004"]
+
+networks:
+  default:
+    name: csoai-layer0-net
