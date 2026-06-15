@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Checkout — CSOAI</title>
+    <meta name="description" content="Complete your CSOAI certification payment securely via Stripe.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #c9a84c; --bg: #0a0a0f; --surface: #11111a; --text: #f8fafc; --muted: #94a3b8; --emerald: #10B981; --red: #EF4444; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+        .card { background: var(--surface); padding: 3rem; border-radius: 24px; border: 1px solid rgba(201,168,76,0.2); max-width: 500px; text-align: center; }
+        h1 { font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary); }
+        p { color: var(--muted); margin-bottom: 2rem; }
+        .price { font-size: 3rem; font-weight: 800; margin: 2rem 0; }
+        .btn { display: inline-block; padding: 1.25rem 3rem; background: var(--primary); color: #000; border-radius: 12px; font-weight: 800; text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.2s; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201, 168, 76, 0.4); }
+        .back-link { display: inline-block; margin-top: 2rem; color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+        .back-link:hover { color: var(--primary); }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div style="font-size: 4rem; margin-bottom: 1rem;">🔒</div>
+        <h1 id="tier-title">Loading...</h1>
+        <div class="price" id="tier-price">£—</div>
+        <p id="tier-desc">Redirecting to secure Stripe checkout...</p>
+        <a id="checkout-btn" href="#" class="btn" target="_blank">Complete Payment</a>
+        <br>
+        <a href="/pricing.html" class="back-link">← Back to pricing</a>
+    </div>
+    <script>
+        const tiers = {
+            smoke: { name: 'Smoke Test', price: '£1', desc: 'Single Agent Scan — OWASP Agentic Top 10 Check', url: 'https://buy.stripe.com/9B68wR6WgfZ0gYR8iA8k91W' },
+            casa: { name: 'CASA Certification', price: '£199/mo', desc: 'did:csoai Identity + Watchdog Certificate + PDCA Engine', url: 'https://buy.stripe.com/eVq14p1BWcMO4c59mE8k91T' },
+            art50: { name: 'Article 50 Emergency Kit', price: '£999', desc: 'EU AI Act compliance in 48 hours', url: 'https://buy.stripe.com/28E7sNdkEeUW5g96as8k91U' }
+        };
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const tierId = urlParams.get('tier') || 'casa';
+        
+        const tier = tiers[tierId] || tiers.casa;
+        
+        document.getElementById('tier-title').textContent = tier.name;
+        document.getElementById('tier-price').textContent = tier.price;
+        document.getElementById('tier-desc').textContent = tier.desc;
+        document.getElementById('checkout-btn').href = tier.url;
+        
+        // Auto-redirect after 2 seconds
+        setTimeout(() => {
+            window.location.href = tier.url;
+        }, 2000);
+    </script>
+</body>
+</html>

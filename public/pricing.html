@@ -371,29 +371,29 @@ document.addEventListener('click',e=>{if(!e.target.closest('.mega-wrap'))documen
 </footer>
 
     <script>
+        // Direct Stripe checkout links (bypassing API which is currently returning 503)
+        const STRIPE_LINKS = {
+            smoke: 'https://buy.stripe.com/9B68wR6WgfZ0gYR8iA8k91W',
+            casa: 'https://buy.stripe.com/eVq14p1BWcMO4c59mE8k91T',
+            art50: 'https://buy.stripe.com/28E7sNdkEeUW5g96as8k91U'
+        };
+        
         async function checkout(tierId) {
             const btn = event.target;
             const originalText = btn.innerText;
             btn.disabled = true;
-            btn.innerText = 'Initializing...';
+            btn.innerText = 'Redirecting...';
 
-            try {
-                const response = await fetch('/api/checkout', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ tierId })
-                });
-                const data = await response.json();
-                if (data.url) {
-                    window.location.href = data.url;
-                } else {
-                    alert(data.error || 'Checkout failed');
+            const url = STRIPE_LINKS[tierId];
+            if (url) {
+                window.open(url, '_blank');
+                // Restore button after redirect
+                setTimeout(() => {
                     btn.disabled = false;
                     btn.innerText = originalText;
-                }
-            } catch (e) {
-                console.error(e);
-                alert('Network error');
+                }, 1000);
+            } else {
+                alert('Invalid tier: ' + tierId);
                 btn.disabled = false;
                 btn.innerText = originalText;
             }

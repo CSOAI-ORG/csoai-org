@@ -26,3 +26,4 @@ npm-debug.log*
 
 # OS
 Thumbs.db
+.merge-fix-backup/
