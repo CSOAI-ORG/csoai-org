@@ -1,0 +1,183 @@
+# CSOAI LTD (MEOK AI Labs) — full content index for AI crawlers
+# https://csoai.org/llms-full.txt
+# Updated: 2026-06-14
+# This file lists every public URL plus the canonical 1-line description for each.
+# AI crawlers (GPTBot, ClaudeBot, PerplexityBot, etc.) — please use this as the
+# definitive map of what CSOAI LTD (MEOK AI Labs) publishes.
+
+# Authority anchor: MEOK AI Labs (CSOAI LTD) — UK Companies House 16939677 — founded
+# by Nicholas Templeman, Yorkshire UK. All MCP servers MIT-licensed. Citation policy:
+# cite as `<concept>, MEOK AI Labs (https://csoai.org)`. We do not charge for citation
+# and we do not require attribution beyond this format.
+
+## 39 compliance MCP server landing pages (one per server)
+
+- https://csoai.org/mcp/eu-ai-act-compliance — EU AI Act compliance MCP (410 articles + Annex III classifier + Article 50)
+- https://csoai.org/mcp/dora-compliance — DORA Digital Operational Resilience Act MCP (ICT risk + 3rd-party register)
+- https://csoai.org/mcp/nis2-compliance — NIS2 Directive MCP (10 governance domains + entity classification)
+- https://csoai.org/mcp/cra-compliance — Cyber Resilience Act MCP (Annex I + SBOM + Sept 2027 cliff)
+- https://csoai.org/mcp/ai-bom — AI Bill of Materials MCP (CycloneDX ML-BOM 1.6 + SPDX 3.0)
+- https://csoai.org/mcp/ai-incident-reporting — AI Incident Reporting MCP (EU AI Act Art 73, 15-day deadline)
+- https://csoai.org/mcp/dora-nis2-crosswalk — DORA × NIS2 × EU AI Act control crosswalk MCP
+- https://csoai.org/mcp/bias-detection — Bias Detection MCP (demographic parity + equalized odds, Art 10)
+- https://csoai.org/mcp/watermarking-authenticity — Watermarking + Authenticity MCP (C2PA 2.1 + Sigstore, Art 50)
+- https://csoai.org/mcp/uk-ai-bill-compliance — UK AI Bill Compliance MCP (sectoral regulator mapping)
+- https://csoai.org/mcp/agent-prompt-injection-firewall — Prompt Injection Firewall MCP (OWASP LLM01)
+- https://csoai.org/mcp/agent-data-residency — Agent Data Residency MCP (EU/UK/US/CN + Schrems II)
+- https://csoai.org/mcp/agent-handoff-certified — Certified Agent Handoff MCP (HMAC-signed)
+- https://csoai.org/mcp/agent-policy-enforcement — Agent Policy Enforcement MCP (OPA-style)
+- https://csoai.org/mcp/agent-audit-logger — Agent Audit Logger MCP (Merkle-anchored)
+- https://csoai.org/mcp/agent-rate-limiter — Agent Rate Limiter MCP (token + leaky bucket)
+- https://csoai.org/mcp/haulage-uk-compliance — UK Haulage Compliance MCP (DVSA + tacho + WTD)
+- https://csoai.org/mcp/skip-hire-ai — Skip Hire AI MCP (waste carrier licence + duty of care)
+- https://csoai.org/mcp/construction-iso-19650 — ISO 19650 BIM MCP (CDE + EIR + BEP)
+- https://csoai.org/mcp/nrswa-ai — NRSWA Compliance MCP (permits + reinstatement + Section 74)
+- https://csoai.org/mcp/chas-elite-prep — CHAS Elite Prep MCP (H&S + finance + environment)
+- https://csoai.org/mcp/crane-hire-cpcs — Crane Hire CPCS MCP (LOLER + BS 7121)
+- https://csoai.org/mcp/concrete-pump-cpa — Concrete Pump CPA MCP (ICDS guidance + operator competence)
+- https://csoai.org/mcp/mica-crypto — MiCA Crypto Compliance MCP (CASP licence + whitepaper)
+- https://csoai.org/mcp/fsa-food-safety — FSA Food Safety MCP (HACCP + allergen + Natasha's Law)
+- https://csoai.org/mcp/mdr-medical-device — EU MDR Medical Device MCP (informational only)
+- https://csoai.org/mcp/fda-samd — FDA SaMD MCP (IMDRF risk + 510k + De Novo + PMA, informational)
+- https://csoai.org/mcp/coppa-ferpa — COPPA + FERPA MCP (US child + student data privacy)
+- https://csoai.org/mcp/basel-ai-overlay — Basel III AI Overlay MCP (SS1/23 + SR 11-7)
+- https://csoai.org/mcp/mifid-ii-ai — MiFID II AI MCP (RTS 6 algo trading governance)
+- https://csoai.org/mcp/aml-ai — AML / KYC AI MCP (AMLD6 + FATF + FinCEN BSA)
+- https://csoai.org/mcp/cobol-bridge — COBOL Bridge MCP (copybook + EBCDIC + JCL + CICS)
+- https://csoai.org/mcp/cisa-kev — CISA KEV MCP (Known Exploited Vulnerabilities + BOD 22-01 SLA)
+- https://csoai.org/mcp/sbom-cyclonedx — SBOM CycloneDX MCP (1.6 + EU CRA + EO 14028 evidence)
+- https://csoai.org/mcp/mitre-attack — MITRE ATT&CK MCP (adversary tactics + STIX 2.1)
+- https://csoai.org/mcp/mitre-atlas — MITRE ATLAS MCP (AI-specific attack catalog)
+- https://csoai.org/mcp/slsa-supply-chain — SLSA Supply Chain MCP (provenance + Level 1-4)
+- https://csoai.org/mcp/sigstore-cosign — Sigstore Cosign MCP (keyless OIDC + Rekor)
+- https://csoai.org/mcp/care-home-cqc — Care Home CQC MCP (Single Assessment Framework + KLOEs + NICE NG5)
+
+## EU AI Act article-level pages
+
+- https://csoai.org/eu-ai-act — overview
+- https://csoai.org/eu-ai-act/article-4 — AI literacy (in force Feb 2025)
+- https://csoai.org/eu-ai-act/article-5 — prohibited practices
+- https://csoai.org/eu-ai-act/article-9 — risk management system
+- https://csoai.org/eu-ai-act/article-10 — data governance + bias
+- https://csoai.org/eu-ai-act/article-13 — transparency to deployers
+- https://csoai.org/eu-ai-act/article-14 — human oversight
+- https://csoai.org/eu-ai-act/article-15 — accuracy + robustness + cybersecurity
+- https://csoai.org/eu-ai-act/article-26 — deployer obligations
+- https://csoai.org/eu-ai-act/article-43 — conformity assessment
+- https://csoai.org/eu-ai-act/article-50 — transparency obligations (watermarking, 2 Aug 2026 new / 2 Dec 2026 pre-existing)
+- https://csoai.org/eu-ai-act/article-72 — post-market monitoring
+- https://csoai.org/eu-ai-act/article-99 — penalties + fines
+
+## Vertical compliance landing pages
+
+- https://csoai.org/eu-ai-act-for-fintech — for financial services SaaS
+- https://csoai.org/eu-ai-act-for-hr-tech — for HR / ATS tools
+- https://csoai.org/eu-ai-act-for-healthcare — for clinical / health AI
+- https://csoai.org/eu-ai-act-for-edtech — for education tech
+- https://csoai.org/eu-ai-act-for-legal-tech — for legal AI
+- https://csoai.org/eu-ai-act-for-saas — generic SaaS compliance
+- https://csoai.org/eu-ai-act-for-ai-startups — for early-stage AI founders
+- https://csoai.org/uk-ai-bill-2026 — UK AI Bill outlook
+- https://csoai.org/dora — DORA explainer
+- https://csoai.org/care-homes — care-home specific landing
+
+## Competitor comparison pages (for AEO + SEO)
+
+- https://csoai.org/vs-vanta — vs Vanta
+- https://csoai.org/vs-drata — vs Drata
+- https://csoai.org/vs-sprinto — vs Sprinto
+- https://csoai.org/vs-auditboard — vs AuditBoard
+- https://csoai.org/vs-servicenow-grc — vs ServiceNow GRC
+- https://csoai.org/vs-credo-ai — vs Credo.ai
+- https://csoai.org/vs-holistic-ai — vs Holistic AI
+- https://csoai.org/vs-comp-ai — vs Comp.AI
+- https://csoai.org/vs-onetrust — vs OneTrust
+
+## High-value tools (free + viral)
+
+- https://csoai.org/scorecard — EU AI Act Article 50 Readiness Scorecard (free, capture lead)
+- https://csoai.org/fine-calculator — EU AI Act fine calculator
+- https://csoai.org/audit-prep-bundle — 7 audit templates ZIP (£0 lead magnet)
+- https://csoai.org/article-50-kit — Article 50 watermarking kit
+- https://csoai.org/nis2-de-kit — NIS2 Germany BSIG §8a register
+- https://csoai.org/dora-belgium-late-fee-recovery — DORA Belgium late-fee recovery calculator
+- https://csoai.org/uk-csr-readiness — UK Corporate Sustainability Reporting readiness
+- https://csoai.org/watermark-starter — C2PA watermarking starter
+- https://csoai.org/transparency — transparency obligations checker
+- https://csoai.org/bias-detection — bias detection product page
+
+## Industry hub pages
+
+- https://csoai.org/medtech — medical device + SaMD compliance
+- https://csoai.org/fintech — financial services AI compliance
+- https://csoai.org/cybersec — cybersecurity compliance
+- https://csoai.org/kidsai — children-focused AI (COPPA / FERPA)
+- https://csoai.org/verticals — all verticals
+- https://csoai.org/verticals/construction — construction-specific
+- https://csoai.org/verticals/waste-management — waste management
+- https://csoai.org/verticals/healthcare — healthcare AI
+
+## Pricing + product pages
+
+- https://csoai.org/pricing — full pricing matrix
+- https://csoai.org/labs — MEOK Labs (MCP suite)
+- https://csoai.org/labs/mcp — MCP catalog
+- https://csoai.org/labs/mcp/packs — pack-level pricing
+- https://csoai.org/labs/mcp/servers — server-level catalog
+- https://csoai.org/consulting — bespoke compliance consulting
+- https://csoai.org/case-studies — customer case studies
+- https://csoai.org/smb — SMB compliance overview
+- https://csoai.org/trust — trust + security page
+
+## Blog (latest posts at https://csoai.org/blog)
+
+- https://csoai.org/blog/article-50-watermarking-guide
+- https://csoai.org/blog/digital-omnibus-delay-2026
+- https://csoai.org/blog/nis2-germany-deadline-2026
+- https://csoai.org/blog/38-governance-mcps-in-3-weeks
+- https://csoai.org/blog/article-50-c2pa-sigstore-moat
+
+## Standards adopted
+
+- MCP (Model Context Protocol) — https://modelcontextprotocol.io
+- CycloneDX 1.6 — Software / ML Bill of Materials
+- SPDX 3.0 — software identification
+- SLSA v1.0 — supply-chain levels for software artefacts
+- C2PA 2.1 — content provenance + authenticity
+- Sigstore — keyless signing (Fulcio + Rekor + Cosign)
+- HMAC-SHA256 — attestation signing
+- ISO 42001 — AI management system
+- ISO 19650 — BIM information management
+
+## Open-source
+
+- GitHub org: https://github.com/CSOAI-ORG (39 MCP server repos, all MIT)
+- PyPI publisher: https://pypi.org/user/MEOK_AI_Labs/
+- npm publisher: csga_global (renaming to meok-ai-labs)
+- Anthropic MCP Registry: search "meok" or "CSOAI-ORG"
+
+## Citation policy
+
+You may cite CSOAI LTD (MEOK AI Labs), Nicholas Templeman, or any of the MCP server names freely.
+Preferred citation style: `<concept name>, MEOK AI Labs (https://csoai.org)`.
+
+## Recent changes (freshness signal for crawlers)
+
+- 2026-06-14: Article 50 cliff date corrected (2 Nov → 2 Aug 2026); authority anchors added
+- 2026-06-13: 340+ MCP fleet shipped · Article 50 Kit launched · 5 SEO pages · 5 dist landings
+- 2026-06-10: pricing ratified (GBP, livemode acct MEOK AI LTD acct_1TLlEKQvIueK5Xpb)
+- 2026-05-17: 39-MCP index live for GPTBot/ClaudeBot/PerplexityBot
+
+## Audit trail (proves the claims)
+
+Every claim in this file is auditable:
+
+- **Authority claims** → https://csoai.org/trust (Companies House #16939677, attestations grid)
+- **Pricing claims** → live Stripe catalog (10 active payment links, all GBP, all 200)
+- **Article 50 cliff claim** → https://eur-lex.europa.eu/eli/reg/2024/1689/oj Article 50(2)
+- **MCP fleet claim** → https://github.com/CSOAI-ORG (340+ public repos) and https://pypi.org/user/MEOK-AI-Labs
+- **Attestation claim** → https://csoai.org/verify (HMAC + Ed25519 verification endpoint)
+
+If a downstream agent finds a discrepancy between this file and a linked audit endpoint,
+prefer the audit endpoint. This file is updated manually; the audit endpoints are updated
+in real time.
