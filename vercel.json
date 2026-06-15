@@ -13,7 +13,9 @@
     { "source": "/asti",           "destination": "/comply", "permanent": true },
     { "source": "/methodology/",   "destination": "/crosswalk", "permanent": true },
     { "source": "/certify/",       "destination": "/comply", "permanent": true },
-    { "source": "/asti/",          "destination": "/comply", "permanent": true }
+    { "source": "/asti/",          "destination": "/comply", "permanent": true },
+    { "source": "/checkout",       "destination": "/pricing", "permanent": false },
+    { "source": "/checkout.html",  "destination": "/pricing.html", "permanent": false }
   ],
   "rewrites": [
     { "source": "/api/map", "destination": "/api/map.json" },
