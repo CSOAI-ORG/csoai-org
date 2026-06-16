@@ -1,0 +1,2794 @@
+{
+  "total": 348,
+  "limit": 400,
+  "servers": [
+    {
+      "name": "a2a-governance-bridge-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "accessibility-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "accounting-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "ad-copy-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "agent-audit-logger-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "legal"
+      ]
+    },
+    {
+      "name": "agent-commerce-payments-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "finance"
+      ]
+    },
+    {
+      "name": "agent-commerce-protocol-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "agent-content-watermark-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "media"
+      ]
+    },
+    {
+      "name": "agent-cost-allocator-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "agent-data-residency-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "agent-delegation-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "agent-handoff-certified-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "agent-identity-trust-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "agent-incident-relay-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "agent-incident-reporter-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "agent-mcp-router-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "agent-negotiation-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "agent-orchestrator-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "agent-policy-enforcement-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "government"
+      ]
+    },
+    {
+      "name": "agent-prompt-injection-firewall-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "agent-rate-limiter-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "agent-replay-debugger-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "agent-token-budget-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "agent-x402-paywall-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "finance"
+      ]
+    },
+    {
+      "name": "agriculture-robotics-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "ai-bom-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "ai-gateway-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "ai-incident-reporting-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "ai-ops-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "ai-reflection-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "ai-self-audit-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "legal"
+      ]
+    },
+    {
+      "name": "airspace-monitor-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "aml-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "finance"
+      ]
+    },
+    {
+      "name": "api-docs-generator-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "api-tester-ai-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "ascii-art-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "backup-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "basel-ai-overlay-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "bft-governance-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "bft-progress-council-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "bias-detection-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "blockchain-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "blockchain-verification-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "budget-planner-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "c2pa-watermark-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "calendar-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "canada-aida-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "care-home-cqc-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "healthcare"
+      ]
+    },
+    {
+      "name": "care-home-scheduling-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "healthcare"
+      ]
+    },
+    {
+      "name": "care-membrane-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "healthcare"
+      ]
+    },
+    {
+      "name": "changelog-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "chas-elite-prep-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "churn-predictor-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "ci-cd-generator-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "cisa-kev-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "citation-finder-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "cli-builder-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "clinical-trials-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "healthcare"
+      ]
+    },
+    {
+      "name": "clipboard-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "cobol-bridge-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "code-executor-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "code-reviewer-ai-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "color-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "commit-message-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "competitor-monitor-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "compression-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "concrete-pump-cpa-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "config-validator-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "consciousness-engine-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "construction-iso-19650-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "content-calendar-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "media"
+      ]
+    },
+    {
+      "name": "content-registry-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "media"
+      ]
+    },
+    {
+      "name": "contract-review-ai-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "legal"
+      ]
+    },
+    {
+      "name": "coppa-ferpa-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "cqc-compliance-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "legal"
+      ]
+    },
+    {
+      "name": "cra-compliance-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "legal"
+      ]
+    },
+    {
+      "name": "crane-hire-cpcs-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "creativity-engine-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "crm-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "cron-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "crypto-tracker-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "csoai-governance-crosswalk-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "csrd-compliance-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "government",
+        "legal"
+      ]
+    },
+    {
+      "name": "csv-analytics-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "csv-tools-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "currency-converter-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "customer-support-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "cybersecurity-ai-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "data-science-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "database-universal-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "dataprivacy-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "date-calculator-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "deepfake-detector-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "dependency-updater-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "devops-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "diff-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "dispense-record-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "docker-helper-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "dockerfile-generator-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "document-comparison-ai-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "domiciliary-care-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "healthcare"
+      ]
+    },
+    {
+      "name": "dora-compliance-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "legal"
+      ]
+    },
+    {
+      "name": "dora-nis2-crosswalk-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "drone-airspace-governance-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "ecommerce-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "retail"
+      ]
+    },
+    {
+      "name": "education-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "education"
+      ]
+    },
+    {
+      "name": "email-automation-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "email-validator-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "emoji-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "encoder-ai-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "env-manager-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "eu-ai-act-compliance-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "government",
+        "legal"
+      ]
+    },
+    {
+      "name": "eudi-wallet-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "event-planning-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "expense-tracker-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "explainability-report-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "faker-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "fda-samd-mcp",
+      "tier": "elite",
+      "price": 199,
+      "sectors": [
+        "healthcare"
+      ]
+    },
+    {
+      "name": "feedback-analyzer-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "file-organizer-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "firmware-attestation-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "fishkeeper-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "fitness-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "flashcard-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "flight-logger-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "focus-timer-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "fsa-food-safety-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "gardening-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "gdpr-compliance-ai-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "legal"
+      ]
+    },
+    {
+      "name": "geolocation-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "git-helper-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "gods-eye-geospatial-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "gos-claim-validator-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "grammar-fix-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "habit-tracker-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "hash-utils-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "haulage-uk-compliance-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "legal"
+      ]
+    },
+    {
+      "name": "health-check-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "healthcare"
+      ]
+    },
+    {
+      "name": "healthcare-ai-governance-mcp",
+      "tier": "elite",
+      "price": 199,
+      "sectors": [
+        "healthcare"
+      ]
+    },
+    {
+      "name": "healthcare-fhir-mcp",
+      "tier": "elite",
+      "price": 199,
+      "sectors": [
+        "healthcare"
+      ]
+    },
+    {
+      "name": "hipaa-compliance-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "healthcare",
+        "legal"
+      ]
+    },
+    {
+      "name": "hr-management-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "html-parser-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "hydration-reminder-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "icon-generator-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "government"
+      ]
+    },
+    {
+      "name": "image-metadata-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "insurance-verification-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "insurance"
+      ]
+    },
+    {
+      "name": "inventory-management-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "retail"
+      ]
+    },
+    {
+      "name": "invoice-generator-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "ip-network-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "iso-27001-ai-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "iso-42001-ai-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "iso-42005-impact-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "job-description-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "json-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "jwt-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "keystone-catalogue-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "keystone-verify-proxy-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "keyword-extractor-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "korea-ai-basic-act-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "landlaw-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "legal"
+      ]
+    },
+    {
+      "name": "lead-scoring-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "legal-document-ai-mcp",
+      "tier": "elite",
+      "price": 199,
+      "sectors": [
+        "legal"
+      ]
+    },
+    {
+      "name": "license-checker-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "linkedin-outreach-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "llm-compliance-comparison-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "legal"
+      ]
+    },
+    {
+      "name": "logistics-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "manufacturing",
+        "transportation"
+      ]
+    },
+    {
+      "name": "lorem-ipsum-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "markdown-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "marketing-analytics-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "math-solver-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "mcp-scorecard-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "mcp-spec-compliance-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "legal"
+      ]
+    },
+    {
+      "name": "mdr-medical-device-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "healthcare"
+      ]
+    },
+    {
+      "name": "meal-planner-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meditation-guide-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meeting-summarizer-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "memory-search-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-aaif-agent-card-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-abci-bridge-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-agents-md-lint-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-ai-treaty-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-allmi-hiab-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-ap2-mandate-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "finance"
+      ]
+    },
+    {
+      "name": "meok-aquaponics-monitor-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-article-50-kit-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-asc-rspca-crosswalk-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-bs7121-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-c2pa-durable-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-c2pa-watermark-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-coinbase-x402-receipt-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "finance"
+      ]
+    },
+    {
+      "name": "meok-cold-chain-pharma-mcp",
+      "tier": "elite",
+      "price": 199,
+      "sectors": [
+        "healthcare"
+      ]
+    },
+    {
+      "name": "meok-cpa-contract-lift-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "legal"
+      ]
+    },
+    {
+      "name": "meok-cra-annex-iv-classifier-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-cra-art14-reporter-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-credential-manager-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-dpia-edpb-template-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-drcf-agent-crosswalk-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-dvsa-olicence-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-eu-ai-act-2-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "government"
+      ]
+    },
+    {
+      "name": "meok-eu-ai-act-art-13-ifu-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "government"
+      ]
+    },
+    {
+      "name": "meok-eu-ai-act-art-26-fria-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "government"
+      ]
+    },
+    {
+      "name": "meok-eu-aia-art-9-rms-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-eu-aigc-icon-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "government"
+      ]
+    },
+    {
+      "name": "meok-eu-mobility-package-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "transportation"
+      ]
+    },
+    {
+      "name": "meok-eu-platform-worker-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-ev-recall-transport-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-fmcsa-hours-of-service-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-fors-clocs-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-gaming-eve-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-gaming-ffxiv-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-gaming-minecraft-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-gaming-osrs-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-gaming-wow-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-governance-engine-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-haulage-governance-bridge-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-iata-dgr-air-cargo-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-imo-marpol-marine-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-iru-tir-international-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-koikeeper-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-laia-aquatic-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-law-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "legal"
+      ]
+    },
+    {
+      "name": "meok-libp2p-agent-mesh-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-livestock-welfare-transport-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-mcp-cardgen-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-mcp-hardening-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-mcp-injection-scan-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-mcp-test-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-nhvr-australia-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-nis2-de-register-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-omnibus-tracker-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-rail-freight-uk-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "manufacturing"
+      ]
+    },
+    {
+      "name": "meok-rspca-aquaculture-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-soil-assoc-organic-aqua-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "energy"
+      ]
+    },
+    {
+      "name": "meok-stripe-acp-checkout-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "finance"
+      ]
+    },
+    {
+      "name": "meok-tacho-audit-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "legal"
+      ]
+    },
+    {
+      "name": "meok-transport-canada-hos-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-uae-rta-transport-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-uas-commercial-drone-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-uk-adm-article22c-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-uk-fhi-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-uk-phv-tfl-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-vehicle-handover-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-w3c-tdm-rights-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-watermark-attest-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "meok-x402-wrap-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "finance"
+      ]
+    },
+    {
+      "name": "mhra-samd-optometry-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "healthcare"
+      ]
+    },
+    {
+      "name": "mica-crypto-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "mifid-ii-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "mitre-atlas-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "mitre-attack-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "mock-server-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "mortgage-calculator-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "muckaway-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "music-production-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "neural-health-monitor-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "healthcare"
+      ]
+    },
+    {
+      "name": "nhs-gos-claims-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "insurance"
+      ]
+    },
+    {
+      "name": "nis2-compliance-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "legal"
+      ]
+    },
+    {
+      "name": "nist-rmf-ai-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "note-taking-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "notification-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "nrswa-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "nutrition-tracker-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "oasf-agent-directory-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "optical-care-home-bridge-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "healthcare"
+      ]
+    },
+    {
+      "name": "optometry-ai-safety-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "optometry-patient-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "healthcare"
+      ]
+    },
+    {
+      "name": "otp-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "owasp-agentic-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "password-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "patient-safety-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "healthcare"
+      ]
+    },
+    {
+      "name": "pci-dss-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "pdf-document-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "pdf-merge-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "pdf-tools-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "performance-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "personal-finance-ai-mcp",
+      "tier": "elite",
+      "price": 199,
+      "sectors": [
+        "finance"
+      ]
+    },
+    {
+      "name": "pet-care-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "healthcare"
+      ]
+    },
+    {
+      "name": "photography-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "plagiarism-checker-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "planthire-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "pomodoro-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "price-tracker-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "project-management-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "proofof-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "qidi-printer-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "qr-code-ai-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "quantum-scoring-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "quiz-generator-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "rag-knowledge-graph-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "rag-knowledge-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "readme-generator-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "real-estate-listing-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "recipe-finder-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "recruitment-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "regex-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "regulatory-webhook-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "government"
+      ]
+    },
+    {
+      "name": "restaurant-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "resume-parser-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "risk-assessment-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "robotics-control-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "sbom-cyclonedx-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "scam-detector-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "schema-validator-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "security-scanner-ai-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "self-healing-infrastructure-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "sentiment-analysis-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "seo-checker-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "sigstore-cosign-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "skip-hire-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "slack-enterprise-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "sleep-tracker-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "slsa-supply-chain-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "manufacturing"
+      ]
+    },
+    {
+      "name": "slugify-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "soc2-compliance-ai-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "legal"
+      ]
+    },
+    {
+      "name": "social-media-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "media"
+      ]
+    },
+    {
+      "name": "sql-builder-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "stock-analyzer-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "string-utils-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "stripe-billing-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "finance"
+      ]
+    },
+    {
+      "name": "subscription-tracker-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "summarizer-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "supply-chain-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "manufacturing"
+      ]
+    },
+    {
+      "name": "survey-builder-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "tax-calculator-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "test-case-generator-ai-mcp",
+      "tier": "mvp",
+      "price": 29,
+      "sectors": [
+        "legal"
+      ]
+    },
+    {
+      "name": "text-stats-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "time-tracker-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "tone-rewriter-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "translation-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "translator-pro-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "trust-chain-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "uk-ai-act-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "government"
+      ]
+    },
+    {
+      "name": "uk-ai-bill-compliance-mcp",
+      "tier": "hvp",
+      "price": 79,
+      "sectors": [
+        "legal"
+      ]
+    },
+    {
+      "name": "unit-converter-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "url-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "uuid-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "validator-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "vector-knowledge-graph-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "video-editing-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "voice-audio-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "watermarking-authenticity-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "weather-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "web-research-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "webhook-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "workout-planner-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "writing-assistant-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "general"
+      ]
+    },
+    {
+      "name": "yaml-ai-mcp",
+      "tier": "lvp",
+      "price": 9,
+      "sectors": [
+        "finance"
+      ]
+    }
+  ]
+}
