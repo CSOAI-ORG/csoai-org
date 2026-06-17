@@ -3,10 +3,15 @@
 > The Layer 0 Trust Infrastructure for the Agentic Economy.
 
 ## Technical Assets
+- **MCP Catalog (machine-readable)** — https://csoai.org/.well-known/mcp.json (271 published MCP compliance servers, tiers + endpoints)
+- **Agent Card (A2A)** — https://csoai.org/.well-known/agent.json (also mirrored at https://csoai.org/agent.json)
 - **MCP Distribution Map** — https://csoai.org/mcp-distribution.html (GEO fleet registry, AEO-optimized)
 - **Premium MCP Packs** — https://csoai.org/mcp-packs.html (Curated server bundles for EU AI Act, Finance, and Legacy systems)
-- **MCP Registry** — `mcp_registry.json` (The sovereign data-source for the 202-node fleet)
-- **GitHub Organisation** — https://github.com/CSOAI-ORG (369+ open-source repositories)
+- **MCP Server Catalog (full)** — https://csoai.org/mcp_servers_catalog.json
+- **GitHub Organisation** — https://github.com/CSOAI-ORG (open-source compliance repositories)
+
+## Scale
+- 271 published MCP compliance servers (PyPI), covering EU AI Act, NIST AI RMF, ISO 42001, TC260 and cross-framework crosswalks.
 
 ## Legal Entity
 - Legal Name: CSOAI LTD

@@ -1,0 +1,53 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="55%" stop-color="#11111a"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect x="0" y="0" width="1200" height="8" fill="url(#accent)"/>
+
+  <!-- Shield mark -->
+  <g transform="translate(110, 215)">
+    <circle cx="90" cy="90" r="90" fill="#10b981" opacity="0.15"/>
+    <circle cx="90" cy="90" r="68" fill="#10b981" opacity="0.30"/>
+    <path d="M90 32 L138 52 L138 96 C138 132 116 158 90 172 C64 158 42 132 42 96 L42 52 Z" fill="#10b981"/>
+    <path d="M72 96 L86 110 L112 78" stroke="#0a0a0f" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="340" y="232" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif" font-size="92" font-weight="800" fill="#ffffff" letter-spacing="-2">CSOAI</text>
+  <text x="343" y="288" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="600" fill="#94a3b8">Council for the Safety of AI</text>
+
+  <!-- Tagline -->
+  <text x="343" y="360" font-family="system-ui, -apple-system, sans-serif" font-size="30" font-weight="700" fill="#10b981">Layer 0 Trust Infrastructure for the Agentic Economy</text>
+
+  <!-- Pillars -->
+  <g font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="#cbd5e1">
+    <text x="110" y="455">EU AI Act / Article 50 Compliance</text>
+    <text x="110" y="492">271 Published MCP Compliance Tools</text>
+    <text x="110" y="529">SIGIL Certificates &#183; Framework Crosswalks</text>
+  </g>
+
+  <!-- URL -->
+  <text x="110" y="585" font-family="'JetBrains Mono', monospace" font-size="24" fill="#0ea5e9">csoai.org</text>
+
+  <!-- Insured badge -->
+  <g transform="translate(890, 430)">
+    <rect x="0" y="0" width="230" height="110" rx="12" fill="#11111a" stroke="#10b981" stroke-width="2"/>
+    <text x="115" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#10b981">UK REGISTERED COMPANY</text>
+    <text x="115" y="72" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="24" font-weight="800" fill="#ffffff">CSOAI LTD</text>
+    <text x="115" y="96" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8">Company No. 16939677</text>
+  </g>
+</svg>
