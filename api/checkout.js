@@ -45,7 +45,9 @@ export default async function handler(req, res) {
           quantity: 1,
         },
       ],
-      mode: tierId === "casa" || tierId === "pack_finance" || tierId === "pack_governance" ? "subscription" : "payment",
+      // All prices in STRIPE_PRICES are currently recurring subscriptions.
+      // Flip to "payment" only when a one-time tier is explicitly added.
+      mode: tierId === "art50_kit" || tierId === "emergency_audit" ? "payment" : "subscription",
       success_url: `${process.env.BASE_URL || 'https://csoai.org'}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${process.env.BASE_URL || 'https://csoai.org'}/pricing`,
       metadata: {

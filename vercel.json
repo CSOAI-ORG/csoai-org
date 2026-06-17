@@ -12,15 +12,19 @@
     { "source": "/asti",           "destination": "/comply", "permanent": true },
     { "source": "/methodology/",   "destination": "/crosswalk", "permanent": true },
     { "source": "/asti/",          "destination": "/comply", "permanent": true },
-    { "source": "/checkout",       "destination": "/pricing", "permanent": false },
-    { "source": "/checkout.html",  "destination": "/pricing.html", "permanent": false }
+    { "source": "/signup",         "destination": "/pricing", "permanent": false },
+    { "source": "/signup/",        "destination": "/pricing", "permanent": false },
+    { "source": "/checkout",       "destination": "/pay", "permanent": false },
+    { "source": "/checkout/",      "destination": "/pay", "permanent": false }
   ],
   "rewrites": [
     { "source": "/api/map", "destination": "/api/map.json" },
     { "source": "/api/crosswalk", "destination": "/api/crosswalk.json" },
     { "source": "/api/dome/status", "destination": "/api/dome/status.json" },
     { "source": "/api/council/votes", "destination": "/api/council/votes.json" },
-    { "source": "/api/sigil/verify/:id", "destination": "/api/sigil/verify.json" }
+    { "source": "/api/sigil/verify/:id", "destination": "/api/sigil/verify.json" },
+    { "source": "/.well-known/casa-cert-dashboard", "destination": "/.well-known/casa-cert-dashboard.html" },
+    { "source": "/pay", "destination": "/api/checkout-page" }
   ],
   "headers": [
     {

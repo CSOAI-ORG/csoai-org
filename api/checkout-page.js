@@ -1,0 +1,109 @@
+/**
+ * CSOAI Checkout Page Renderer
+ * GET /api/checkout-page
+ *
+ * Returns the checkout HTML for the requested tier. Vercel does not reliably
+ * serve arbitrary static HTML files in this Next.js-hybrid project, so this
+ * function renders the page instead.
+ */
+
+const HTML = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Checkout — CSOAI</title>
+    <meta name="description" content="Complete your CSOAI certification payment securely via Stripe.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #c9a84c; --bg: #0a0a0f; --surface: #11111a; --text: #f8fafc; --muted: #94a3b8; --emerald: #10B981; --red: #EF4444; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+        .card { background: var(--surface); padding: 3rem; border-radius: 24px; border: 1px solid rgba(201,168,76,0.2); max-width: 500px; text-align: center; }
+        h1 { font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary); }
+        p { color: var(--muted); margin-bottom: 2rem; }
+        .price { font-size: 3rem; font-weight: 800; margin: 2rem 0; }
+        .btn { display: inline-block; padding: 1.25rem 3rem; background: var(--primary); color: #000; border-radius: 12px; font-weight: 800; text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.2s; border: none; cursor: pointer; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201, 168, 76, 0.4); }
+        .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+        .back-link { display: inline-block; margin-top: 2rem; color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+        .back-link:hover { color: var(--primary); }
+        .error { color: var(--red); font-size: 0.95rem; }
+        .spinner { width: 40px; height: 40px; border: 3px solid rgba(201,168,76,0.2); border-top-color: var(--primary); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 1.5rem; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div style="font-size: 4rem; margin-bottom: 1rem;">🔒</div>
+        <h1 id="tier-title">Loading...</h1>
+        <div class="price" id="tier-price">£—</div>
+        <p id="tier-desc">Preparing secure Stripe checkout...</p>
+        <div id="spinner" class="spinner"></div>
+        <button id="checkout-btn" class="btn" disabled>Complete Payment</button>
+        <p id="error-msg" class="error" style="display:none; margin-top:1rem;"></p>
+        <br>
+        <a href="/pricing.html" class="back-link">← Back to pricing</a>
+    </div>
+    <script>
+        const tiers = {
+            smoke:  { name: 'Smoke Test',         price: '£29',   desc: 'Single Agent Scan — OWASP Agentic Top 10 Check', interval: '/mo' },
+            casa:   { name: 'CASA Certification', price: '£499',  desc: 'did:csoai Identity + Watchdog Certificate + PDCA Engine', interval: '/mo' },
+            art50:  { name: 'Article 50 Emergency Kit', price: '£1,499', desc: 'EU AI Act compliance in 48 hours', interval: '/mo' },
+            pack_eu_ai_act: { name: 'EU AI Act Pack', price: '£999', desc: 'Enterprise EU AI Act MCP pack', interval: '/mo' },
+            pack_brand:     { name: 'Brand Safety Pack', price: '£99', desc: 'Brand protection MCP pack', interval: '/mo' },
+            pack_finance:   { name: 'Finance Pack', price: '£249', desc: 'Financial compliance MCP pack', interval: '/mo' },
+            pack_legacy:    { name: 'Legacy Pack', price: '£2,490', desc: 'Legacy system governance MCP pack', interval: '/mo' },
+            pack_governance:{ name: 'Governance Pack', price: '£9,588', desc: 'Full governance MCP pack', interval: '/mo' }
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const tierId = urlParams.get('tier') || 'casa';
+        const email = urlParams.get('email') || '';
+        const tier = tiers[tierId] || tiers.casa;
+
+        document.getElementById('tier-title').textContent = tier.name;
+        document.getElementById('tier-price').textContent = tier.price + (tier.interval || '');
+        document.getElementById('tier-desc').textContent = tier.desc;
+
+        const btn = document.getElementById('checkout-btn');
+        const spinner = document.getElementById('spinner');
+        const errorMsg = document.getElementById('error-msg');
+
+        async function createCheckout() {
+            try {
+                const res = await fetch('/api/checkout', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ tierId, email })
+                });
+                const data = await res.json();
+                if (!res.ok || !data.ok || !data.url) {
+                    throw new Error(data.error || 'Checkout session could not be created.');
+                }
+                spinner.style.display = 'none';
+                btn.disabled = false;
+                btn.textContent = 'Complete Payment';
+                btn.onclick = () => window.location.href = data.url;
+                setTimeout(() => { window.location.href = data.url; }, 1500);
+            } catch (err) {
+                spinner.style.display = 'none';
+                btn.style.display = 'none';
+                errorMsg.style.display = 'block';
+                errorMsg.textContent = err.message;
+                console.error('[checkout]', err);
+            }
+        }
+
+        createCheckout();
+    </script>
+</body>
+</html>`;
+
+export default async function handler(req, res) {
+  res.setHeader("Content-Type", "text/html; charset=utf-8");
+  res.setHeader("Cache-Control", "public, max-age=0, must-revalidate");
+  res.status(200).send(HTML);
+}
