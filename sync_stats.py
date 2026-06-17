@@ -5,7 +5,7 @@ import os
 import re
 from datetime import datetime, timezone
 
-REPO_COUNT = "369"
+REPO_COUNT = "518"
 DOWNLOAD_COUNT = "200,000"
 
 def get_eu_days():

@@ -27,3 +27,10 @@ npm-debug.log*
 # OS
 Thumbs.db
 .merge-fix-backup/
+
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+*credentials*
