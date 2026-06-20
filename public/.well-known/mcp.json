@@ -16,7 +16,8 @@
     "listed_in_catalog": 348,
     "registry": "https://pypi.org",
     "github_org": "https://github.com/CSOAI-ORG",
-    "last_updated": "2026-06-17"
+    "last_updated": "2026-06-19",
+    "a2a_servers_listed": 28
   },
   "gateway": {
     "url": "https://csoai.org/mcp/csoai-gateway",
@@ -432,14 +433,20 @@
   "servers": [
     {
       "name": "a2a-governance-bridge-mcp",
-      "tier": "lvp",
-      "price_gbp": 9,
+      "tier": "hvp",
+      "price_gbp": 1499,
       "sectors": [
-        "general"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/a2a-governance-bridge-mcp",
       "package": "a2a-governance-bridge-mcp",
-      "registry": "https://pypi.org/project/a2a-governance-bridge-mcp/"
+      "registry": "https://pypi.org/project/a2a-governance-bridge-mcp/",
+      "description": "A2A Governance Bridge MCP server. Tools: verify agent compliance, authorize a2a transaction, get trust registry. Built by MEOK AI Labs.",
+      "version": "1.1.12",
+      "stripe_checkout_url": "https://buy.stripe.com/28E7sNdkEeUW5g96as8k91U",
+      "stripe_tier_label": "Enterprise \u00a31,499/mo",
+      "github_url": "https://github.com/CSOAI-ORG/a2a-governance-bridge-mcp"
     },
     {
       "name": "accessibility-ai-mcp",
@@ -476,223 +483,343 @@
     },
     {
       "name": "agent-audit-logger-mcp",
-      "tier": "hvp",
-      "price_gbp": 79,
+      "tier": "mvp",
+      "price_gbp": 199,
       "sectors": [
-        "legal"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/agent-audit-logger-mcp",
       "package": "agent-audit-logger-mcp",
-      "registry": "https://pypi.org/project/agent-audit-logger-mcp/"
+      "registry": "https://pypi.org/project/agent-audit-logger-mcp/",
+      "description": "Hash-chained HMAC-signed audit log MCP for A2A (agent-to-agent) calls. Every tool-call, agent-handoff, decision gets a tamper-evident signed",
+      "version": "1.1.8",
+      "stripe_checkout_url": "https://buy.stripe.com/eVq14p1BWcMO4c59mE8k91T",
+      "stripe_tier_label": "Pro \u00a3199/mo",
+      "github_url": "https://github.com/CSOAI-ORG/agent-audit-logger-mcp"
     },
     {
       "name": "agent-commerce-payments-mcp",
-      "tier": "mvp",
+      "tier": "lvp",
       "price_gbp": 29,
       "sectors": [
-        "finance"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/agent-commerce-payments-mcp",
       "package": "agent-commerce-payments-mcp",
-      "registry": "https://pypi.org/project/agent-commerce-payments-mcp/"
+      "registry": "https://pypi.org/project/agent-commerce-payments-mcp/",
+      "description": "MCP server for agent commerce payments. Features create invoice, process payment, escrow funds. From MEOK AI Labs.",
+      "version": "1.0.11",
+      "stripe_checkout_url": "https://buy.stripe.com/9B67sNeoIcMObEx56o8k91S",
+      "stripe_tier_label": "Sovereign \u00a329/mo",
+      "github_url": "https://github.com/CSOAI-ORG/agent-commerce-payments-mcp"
     },
     {
       "name": "agent-commerce-protocol-mcp",
-      "tier": "mvp",
+      "tier": "lvp",
       "price_gbp": 29,
       "sectors": [
-        "general"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/agent-commerce-protocol-mcp",
       "package": "agent-commerce-protocol-mcp",
-      "registry": "https://pypi.org/project/agent-commerce-protocol-mcp/"
+      "registry": "https://pypi.org/project/agent-commerce-protocol-mcp/",
+      "description": "Agent Commerce Protocol MCP \u2014 bridges Stripe ACP + Google AP2 + Coinbase x402 for agent payments inside ChatGPT, AP2 coalition rails, and pa",
+      "version": "1.0.9",
+      "stripe_checkout_url": "https://buy.stripe.com/9B67sNeoIcMObEx56o8k91S",
+      "stripe_tier_label": "Sovereign \u00a329/mo",
+      "github_url": "https://github.com/CSOAI-ORG/agent-commerce-protocol-mcp"
     },
     {
       "name": "agent-content-watermark-mcp",
       "tier": "mvp",
-      "price_gbp": 29,
+      "price_gbp": 199,
       "sectors": [
-        "media"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/agent-content-watermark-mcp",
       "package": "agent-content-watermark-mcp",
-      "registry": "https://pypi.org/project/agent-content-watermark-mcp/"
+      "registry": "https://pypi.org/project/agent-content-watermark-mcp/",
+      "description": "Agent Content Watermark MCP \u2014 dedicated EU AI Act Article 50(2) GenAI watermarking. Visible + invisible + perceptual layers per the Code of ",
+      "version": "1.1.7",
+      "stripe_checkout_url": "https://buy.stripe.com/eVq14p1BWcMO4c59mE8k91T",
+      "stripe_tier_label": "Pro \u00a3199/mo",
+      "github_url": "https://github.com/CSOAI-ORG/agent-content-watermark-mcp"
     },
     {
       "name": "agent-cost-allocator-mcp",
       "tier": "mvp",
-      "price_gbp": 29,
+      "price_gbp": 199,
       "sectors": [
-        "general"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/agent-cost-allocator-mcp",
       "package": "agent-cost-allocator-mcp",
-      "registry": "https://pypi.org/project/agent-cost-allocator-mcp/"
+      "registry": "https://pypi.org/project/agent-cost-allocator-mcp/",
+      "description": "Agent Cost Allocator MCP \u2014 multi-tenant LLM cost attribution for chargeback billing. Companion to agent-token-budget. Splits one agent's spe",
+      "version": "1.0.5",
+      "stripe_checkout_url": "https://buy.stripe.com/eVq14p1BWcMO4c59mE8k91T",
+      "stripe_tier_label": "Pro \u00a3199/mo",
+      "github_url": "https://github.com/CSOAI-ORG/agent-cost-allocator-mcp"
     },
     {
       "name": "agent-data-residency-mcp",
       "tier": "mvp",
-      "price_gbp": 29,
+      "price_gbp": 199,
       "sectors": [
-        "general"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/agent-data-residency-mcp",
       "package": "agent-data-residency-mcp",
-      "registry": "https://pypi.org/project/agent-data-residency-mcp/"
+      "registry": "https://pypi.org/project/agent-data-residency-mcp/",
+      "description": "Agent data residency + GDPR Chapter V transfer-basis runtime guard. Programmatically answer 'where does this data live?' for agent-to-agent ",
+      "version": "1.0.7",
+      "stripe_checkout_url": "https://buy.stripe.com/eVq14p1BWcMO4c59mE8k91T",
+      "stripe_tier_label": "Pro \u00a3199/mo",
+      "github_url": "https://github.com/CSOAI-ORG/agent-data-residency-mcp"
     },
     {
       "name": "agent-delegation-mcp",
-      "tier": "mvp",
+      "tier": "lvp",
       "price_gbp": 29,
       "sectors": [
-        "general"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/agent-delegation-mcp",
       "package": "agent-delegation-mcp",
-      "registry": "https://pypi.org/project/agent-delegation-mcp/"
+      "registry": "https://pypi.org/project/agent-delegation-mcp/",
+      "description": "Agent Delegation MCP server. Tools: create task, delegate task, get task status. Built by MEOK AI Labs.",
+      "version": "1.0.10",
+      "stripe_checkout_url": "https://buy.stripe.com/9B67sNeoIcMObEx56o8k91S",
+      "stripe_tier_label": "Sovereign \u00a329/mo",
+      "github_url": "https://github.com/CSOAI-ORG/agent-delegation-mcp"
     },
     {
       "name": "agent-handoff-certified-mcp",
       "tier": "mvp",
-      "price_gbp": 29,
+      "price_gbp": 199,
       "sectors": [
-        "general"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/agent-handoff-certified-mcp",
       "package": "agent-handoff-certified-mcp",
-      "registry": "https://pypi.org/project/agent-handoff-certified-mcp/"
+      "registry": "https://pypi.org/project/agent-handoff-certified-mcp/",
+      "description": "Verifiable agent-to-agent task handoff with signed provenance chain. Initiating agent signs the offer, accepting agent signs acceptance, cha",
+      "version": "1.0.10",
+      "stripe_checkout_url": "https://buy.stripe.com/eVq14p1BWcMO4c59mE8k91T",
+      "stripe_tier_label": "Pro \u00a3199/mo",
+      "github_url": "https://github.com/CSOAI-ORG/agent-handoff-certified-mcp"
     },
     {
       "name": "agent-identity-trust-mcp",
-      "tier": "mvp",
-      "price_gbp": 29,
+      "tier": "hvp",
+      "price_gbp": 1499,
       "sectors": [
-        "general"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/agent-identity-trust-mcp",
       "package": "agent-identity-trust-mcp",
-      "registry": "https://pypi.org/project/agent-identity-trust-mcp/"
+      "registry": "https://pypi.org/project/agent-identity-trust-mcp/",
+      "description": "Agent Identity Trust tools for AI agents. Capabilities: register agent identity, issue credential, verify credential. Built by MEOK AI Labs.",
+      "version": "1.0.11",
+      "stripe_checkout_url": "https://buy.stripe.com/28E7sNdkEeUW5g96as8k91U",
+      "stripe_tier_label": "Enterprise \u00a31,499/mo",
+      "github_url": "https://github.com/CSOAI-ORG/agent-identity-trust-mcp"
     },
     {
       "name": "agent-incident-relay-mcp",
-      "tier": "mvp",
-      "price_gbp": 29,
+      "tier": "hvp",
+      "price_gbp": 1499,
       "sectors": [
-        "general"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/agent-incident-relay-mcp",
       "package": "agent-incident-relay-mcp",
-      "registry": "https://pypi.org/project/agent-incident-relay-mcp/"
+      "registry": "https://pypi.org/project/agent-incident-relay-mcp/",
+      "description": "Agent Incident Relay MCP \u2014 Article 73 5-clock broadcaster. One incident \u2192 simultaneous signed reports to EU AI Act Art 73, DORA Art 19, NIS2",
+      "version": "1.0.5",
+      "stripe_checkout_url": "https://buy.stripe.com/28E7sNdkEeUW5g96as8k91U",
+      "stripe_tier_label": "Enterprise \u00a31,499/mo",
+      "github_url": "https://github.com/CSOAI-ORG/agent-incident-relay-mcp"
     },
     {
       "name": "agent-incident-reporter-mcp",
-      "tier": "mvp",
-      "price_gbp": 29,
+      "tier": "hvp",
+      "price_gbp": 1499,
       "sectors": [
-        "general"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/agent-incident-reporter-mcp",
       "package": "agent-incident-reporter-mcp",
-      "registry": "https://pypi.org/project/agent-incident-reporter-mcp/"
+      "registry": "https://pypi.org/project/agent-incident-reporter-mcp/",
+      "description": "Signed, hash-chained, tamper-evident AI incident records (MCP server). EU AI Act Art 73 ready. By MEOK AI Labs / CSOAI.",
+      "version": "1.0.1",
+      "stripe_checkout_url": "https://buy.stripe.com/28E7sNdkEeUW5g96as8k91U",
+      "stripe_tier_label": "Enterprise \u00a31,499/mo",
+      "github_url": "https://github.com/CSOAI-ORG/agent-incident-reporter-mcp"
     },
     {
       "name": "agent-mcp-router-mcp",
-      "tier": "mvp",
-      "price_gbp": 29,
+      "tier": "hvp",
+      "price_gbp": 1499,
       "sectors": [
-        "general"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/agent-mcp-router-mcp",
       "package": "agent-mcp-router-mcp",
-      "registry": "https://pypi.org/project/agent-mcp-router-mcp/"
+      "registry": "https://pypi.org/project/agent-mcp-router-mcp/",
+      "description": "Agent MCP Router MCP \u2014 one router for the whole MEOK fleet. Holds 62 MEOK MCPs behind one namespaced endpoint. Install ONE thing, get all of",
+      "version": "1.1.6",
+      "stripe_checkout_url": "https://buy.stripe.com/28E7sNdkEeUW5g96as8k91U",
+      "stripe_tier_label": "Enterprise \u00a31,499/mo",
+      "github_url": "https://github.com/CSOAI-ORG/agent-mcp-router-mcp"
     },
     {
       "name": "agent-negotiation-mcp",
-      "tier": "mvp",
+      "tier": "lvp",
       "price_gbp": 29,
       "sectors": [
-        "general"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/agent-negotiation-mcp",
       "package": "agent-negotiation-mcp",
-      "registry": "https://pypi.org/project/agent-negotiation-mcp/"
+      "registry": "https://pypi.org/project/agent-negotiation-mcp/",
+      "description": "AI-powered agent negotiation MCP server for agents. Supports propose deal, evaluate offer, counter offer. By MEOK AI Labs.",
+      "version": "1.0.9",
+      "stripe_checkout_url": "https://buy.stripe.com/9B67sNeoIcMObEx56o8k91S",
+      "stripe_tier_label": "Sovereign \u00a329/mo",
+      "github_url": "https://github.com/CSOAI-ORG/agent-negotiation-mcp"
     },
     {
       "name": "agent-orchestrator-mcp",
-      "tier": "mvp",
-      "price_gbp": 29,
+      "tier": "hvp",
+      "price_gbp": 1499,
       "sectors": [
-        "general"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/agent-orchestrator-mcp",
       "package": "agent-orchestrator-mcp",
-      "registry": "https://pypi.org/project/agent-orchestrator-mcp/"
+      "registry": "https://pypi.org/project/agent-orchestrator-mcp/",
+      "description": "MCP server for agent orchestrator. Features create agent, list agents, delegate task. From MEOK AI Labs.",
+      "version": "1.0.10",
+      "stripe_checkout_url": "https://buy.stripe.com/28E7sNdkEeUW5g96as8k91U",
+      "stripe_tier_label": "Enterprise \u00a31,499/mo",
+      "github_url": "https://github.com/CSOAI-ORG/agent-orchestrator-mcp"
     },
     {
       "name": "agent-policy-enforcement-mcp",
-      "tier": "mvp",
-      "price_gbp": 29,
+      "tier": "hvp",
+      "price_gbp": 1499,
       "sectors": [
-        "government"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/agent-policy-enforcement-mcp",
       "package": "agent-policy-enforcement-mcp",
-      "registry": "https://pypi.org/project/agent-policy-enforcement-mcp/"
+      "registry": "https://pypi.org/project/agent-policy-enforcement-mcp/",
+      "description": "Per-agent-pair IAM for A2A. Define policies ('orchestrator may call billing only when amount<1000'), gate every A2A call via evaluate_call. ",
+      "version": "1.0.9",
+      "stripe_checkout_url": "https://buy.stripe.com/28E7sNdkEeUW5g96as8k91U",
+      "stripe_tier_label": "Enterprise \u00a31,499/mo",
+      "github_url": "https://github.com/CSOAI-ORG/agent-policy-enforcement-mcp"
     },
     {
       "name": "agent-prompt-injection-firewall-mcp",
       "tier": "mvp",
-      "price_gbp": 29,
+      "price_gbp": 199,
       "sectors": [
-        "general"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/agent-prompt-injection-firewall-mcp",
       "package": "agent-prompt-injection-firewall-mcp",
-      "registry": "https://pypi.org/project/agent-prompt-injection-firewall-mcp/"
+      "registry": "https://pypi.org/project/agent-prompt-injection-firewall-mcp/",
+      "description": "The WAF for agents. Pattern-based + heuristic firewall scans prompts, RAG documents, tool arguments, A2A payloads for OWASP LLM01 prompt inj",
+      "version": "1.0.11",
+      "stripe_checkout_url": "https://buy.stripe.com/eVq14p1BWcMO4c59mE8k91T",
+      "stripe_tier_label": "Pro \u00a3199/mo",
+      "github_url": "https://github.com/CSOAI-ORG/agent-prompt-injection-firewall-mcp"
     },
     {
       "name": "agent-rate-limiter-mcp",
-      "tier": "mvp",
+      "tier": "lvp",
       "price_gbp": 29,
       "sectors": [
-        "general"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/agent-rate-limiter-mcp",
       "package": "agent-rate-limiter-mcp",
-      "registry": "https://pypi.org/project/agent-rate-limiter-mcp/"
+      "registry": "https://pypi.org/project/agent-rate-limiter-mcp/",
+      "description": "Fleet-wide shared rate limiter for A2A + multi-MCP deployments. Most MCP servers rate-limit independently \u2014 a hostile agent hitting 10 MCPs ",
+      "version": "1.0.8",
+      "stripe_checkout_url": "https://buy.stripe.com/9B67sNeoIcMObEx56o8k91S",
+      "stripe_tier_label": "Sovereign \u00a329/mo",
+      "github_url": "https://github.com/CSOAI-ORG/agent-rate-limiter-mcp"
     },
     {
       "name": "agent-replay-debugger-mcp",
       "tier": "mvp",
-      "price_gbp": 29,
+      "price_gbp": 199,
       "sectors": [
-        "general"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/agent-replay-debugger-mcp",
       "package": "agent-replay-debugger-mcp",
-      "registry": "https://pypi.org/project/agent-replay-debugger-mcp/"
+      "registry": "https://pypi.org/project/agent-replay-debugger-mcp/",
+      "description": "Agent Replay Debugger MCP \u2014 record every agent step + replay deterministically. Step-debugger for agentic loops. Audit-evidence signed expor",
+      "version": "1.0.5",
+      "stripe_checkout_url": "https://buy.stripe.com/eVq14p1BWcMO4c59mE8k91T",
+      "stripe_tier_label": "Pro \u00a3199/mo",
+      "github_url": "https://github.com/CSOAI-ORG/agent-replay-debugger-mcp"
     },
     {
       "name": "agent-token-budget-mcp",
       "tier": "mvp",
-      "price_gbp": 29,
+      "price_gbp": 199,
       "sectors": [
-        "general"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/agent-token-budget-mcp",
       "package": "agent-token-budget-mcp",
-      "registry": "https://pypi.org/project/agent-token-budget-mcp/"
+      "registry": "https://pypi.org/project/agent-token-budget-mcp/",
+      "description": "Agent Token Budget MCP \u2014 per-session spend cap with signed budget-exhausted attestations. Twin of bft-progress-council-mcp (spend-axis vs st",
+      "version": "1.1.5",
+      "stripe_checkout_url": "https://buy.stripe.com/eVq14p1BWcMO4c59mE8k91T",
+      "stripe_tier_label": "Pro \u00a3199/mo",
+      "github_url": "https://github.com/CSOAI-ORG/agent-token-budget-mcp"
     },
     {
       "name": "agent-x402-paywall-mcp",
-      "tier": "mvp",
+      "tier": "lvp",
       "price_gbp": 29,
       "sectors": [
-        "finance"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/agent-x402-paywall-mcp",
       "package": "agent-x402-paywall-mcp",
-      "registry": "https://pypi.org/project/agent-x402-paywall-mcp/"
+      "registry": "https://pypi.org/project/agent-x402-paywall-mcp/",
+      "description": "Agent x402 Paywall MCP \u2014 wraps Coinbase x402 (HTTP 402) so agents pay per-call without Stripe accounts. On-chain settlement via USDC (Base/P",
+      "version": "1.0.9",
+      "stripe_checkout_url": "https://buy.stripe.com/9B67sNeoIcMObEx56o8k91S",
+      "stripe_tier_label": "Sovereign \u00a329/mo",
+      "github_url": "https://github.com/CSOAI-ORG/agent-x402-paywall-mcp"
     },
     {
       "name": "agriculture-robotics-mcp",
@@ -861,14 +988,20 @@
     },
     {
       "name": "bft-progress-council-mcp",
-      "tier": "lvp",
-      "price_gbp": 9,
+      "tier": "mvp",
+      "price_gbp": 199,
       "sectors": [
-        "general"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/bft-progress-council-mcp",
       "package": "bft-progress-council-mcp",
-      "registry": "https://pypi.org/project/bft-progress-council-mcp/"
+      "registry": "https://pypi.org/project/bft-progress-council-mcp/",
+      "description": "BFT Progress Council MCP \u2014 5-voter Byzantine council halts agentic loops when no real progress is happening. Stops tokens bleeding on infini",
+      "version": "1.1.8",
+      "stripe_checkout_url": "https://buy.stripe.com/eVq14p1BWcMO4c59mE8k91T",
+      "stripe_tier_label": "Pro \u00a3199/mo",
+      "github_url": "https://github.com/CSOAI-ORG/bft-progress-council-mcp"
     },
     {
       "name": "bias-detection-mcp",
@@ -2394,25 +2527,37 @@
     },
     {
       "name": "meok-aaif-agent-card-mcp",
-      "tier": "mvp",
-      "price_gbp": 29,
+      "tier": "hvp",
+      "price_gbp": 1499,
       "sectors": [
-        "general"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/meok-aaif-agent-card-mcp",
       "package": "meok-aaif-agent-card-mcp",
-      "registry": "https://pypi.org/project/meok-aaif-agent-card-mcp/"
+      "registry": "https://pypi.org/project/meok-aaif-agent-card-mcp/",
+      "description": "MEOK AAIF Agent Card MCP \u2014 Linux Foundation AAIF agent identity bridge. Issues + verifies + publishes /.well-known/agent-card. Bridges A2A a",
+      "version": "1.0.3",
+      "stripe_checkout_url": "https://buy.stripe.com/28E7sNdkEeUW5g96as8k91U",
+      "stripe_tier_label": "Enterprise \u00a31,499/mo",
+      "github_url": "https://github.com/CSOAI-ORG/meok-aaif-agent-card-mcp"
     },
     {
       "name": "meok-abci-bridge-mcp",
       "tier": "lvp",
-      "price_gbp": 9,
+      "price_gbp": 29,
       "sectors": [
-        "general"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/meok-abci-bridge-mcp",
       "package": "meok-abci-bridge-mcp",
-      "registry": "https://pypi.org/project/meok-abci-bridge-mcp/"
+      "registry": "https://pypi.org/project/meok-abci-bridge-mcp/",
+      "description": "MEOK ABCI Bridge MCP \u2014 read-only Tendermint / Cosmos blockchain query for agents. Built-in registry of 10 mainnets (Cosmos Hub, Osmosis, Cel",
+      "version": "1.0.2",
+      "stripe_checkout_url": "https://buy.stripe.com/9B67sNeoIcMObEx56o8k91S",
+      "stripe_tier_label": "Sovereign \u00a329/mo",
+      "github_url": "https://github.com/CSOAI-ORG/meok-abci-bridge-mcp"
     },
     {
       "name": "meok-agents-md-lint-mcp",
@@ -2449,14 +2594,20 @@
     },
     {
       "name": "meok-ap2-mandate-mcp",
-      "tier": "lvp",
-      "price_gbp": 9,
+      "tier": "mvp",
+      "price_gbp": 199,
       "sectors": [
-        "finance"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/meok-ap2-mandate-mcp",
       "package": "meok-ap2-mandate-mcp",
-      "registry": "https://pypi.org/project/meok-ap2-mandate-mcp/"
+      "registry": "https://pypi.org/project/meok-ap2-mandate-mcp/",
+      "description": "MEOK Google AP2 Mandate MCP \u2014 issue + verify + revoke signed user-side spend authorisations for agentic commerce. PSD2 SCA crosswalk + MiCA ",
+      "version": "1.0.2",
+      "stripe_checkout_url": "https://buy.stripe.com/eVq14p1BWcMO4c59mE8k91T",
+      "stripe_tier_label": "Pro \u00a3199/mo",
+      "github_url": "https://github.com/CSOAI-ORG/meok-ap2-mandate-mcp"
     },
     {
       "name": "meok-aquaponics-monitor-mcp",
@@ -2526,14 +2677,20 @@
     },
     {
       "name": "meok-coinbase-x402-receipt-mcp",
-      "tier": "lvp",
-      "price_gbp": 9,
+      "tier": "mvp",
+      "price_gbp": 199,
       "sectors": [
-        "finance"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/meok-coinbase-x402-receipt-mcp",
       "package": "meok-coinbase-x402-receipt-mcp",
-      "registry": "https://pypi.org/project/meok-coinbase-x402-receipt-mcp/"
+      "registry": "https://pypi.org/project/meok-coinbase-x402-receipt-mcp/",
+      "description": "MEOK Coinbase x402 Receipt MCP \u2014 signed settlement receipts for agentic payments. Base/Polygon/Solana/Lightning/Arbitrum/Optimism. MiCA Arti",
+      "version": "1.0.2",
+      "stripe_checkout_url": "https://buy.stripe.com/eVq14p1BWcMO4c59mE8k91T",
+      "stripe_tier_label": "Pro \u00a3199/mo",
+      "github_url": "https://github.com/CSOAI-ORG/meok-coinbase-x402-receipt-mcp"
     },
     {
       "name": "meok-cold-chain-pharma-mcp",
@@ -2878,14 +3035,20 @@
     },
     {
       "name": "meok-libp2p-agent-mesh-mcp",
-      "tier": "mvp",
+      "tier": "lvp",
       "price_gbp": 29,
       "sectors": [
-        "general"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/meok-libp2p-agent-mesh-mcp",
       "package": "meok-libp2p-agent-mesh-mcp",
-      "registry": "https://pypi.org/project/meok-libp2p-agent-mesh-mcp/"
+      "registry": "https://pypi.org/project/meok-libp2p-agent-mesh-mcp/",
+      "description": "MEOK libp2p Agent Mesh MCP \u2014 peer-to-peer agent discovery + addressing. PeerID + multiaddr + signed Agent Records + GossipSub topic derivati",
+      "version": "1.0.1",
+      "stripe_checkout_url": "https://buy.stripe.com/9B67sNeoIcMObEx56o8k91S",
+      "stripe_tier_label": "Sovereign \u00a329/mo",
+      "github_url": "https://github.com/CSOAI-ORG/meok-libp2p-agent-mesh-mcp"
     },
     {
       "name": "meok-livestock-welfare-transport-mcp",
@@ -3010,14 +3173,20 @@
     },
     {
       "name": "meok-stripe-acp-checkout-mcp",
-      "tier": "lvp",
-      "price_gbp": 9,
+      "tier": "mvp",
+      "price_gbp": 199,
       "sectors": [
-        "finance"
+        "a2a",
+        "agentic"
       ],
       "endpoint": "https://csoai.org/mcp/meok-stripe-acp-checkout-mcp",
       "package": "meok-stripe-acp-checkout-mcp",
-      "registry": "https://pypi.org/project/meok-stripe-acp-checkout-mcp/"
+      "registry": "https://pypi.org/project/meok-stripe-acp-checkout-mcp/",
+      "description": "MEOK Stripe ACP Checkout MCP \u2014 ChatGPT shopping bridge. Issues + verifies + signs Stripe Agentic Commerce Protocol checkout intents. AP2 man",
+      "version": "1.0.5",
+      "stripe_checkout_url": "https://buy.stripe.com/eVq14p1BWcMO4c59mE8k91T",
+      "stripe_tier_label": "Pro \u00a3199/mo",
+      "github_url": "https://github.com/CSOAI-ORG/meok-stripe-acp-checkout-mcp"
     },
     {
       "name": "meok-tacho-audit-mcp",
