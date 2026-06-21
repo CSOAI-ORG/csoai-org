@@ -1,0 +1,31 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "CSOAI",
+  "alternateName": "Council for the Safety of AI",
+  "url": "https://csoai.org",
+  "logo": "https://csoai.org/favicon.svg",
+  "description": "The sovereign, protocol-native trust and compliance layer for the agentic economy. CSOAI provides Ed25519 Watchdog certificates, BFT council governance, and MCP/A2A/AP2/x402 protocol enforcement for EU AI Act, NIST AI RMF, ISO 42001 compliance.",
+  "foundingDate": "2025",
+  "areaServed": ["European Union", "United Kingdom", "United States", "Global"],
+  "knowsAbout": [
+    "EU AI Act",
+    "NIST AI Risk Management Framework",
+    "ISO 42001",
+    "GDPR",
+    "DORA",
+    "NIS2",
+    "Byzantine Fault Tolerance",
+    "MCP Protocol",
+    "AI Governance"
+  ],
+  "sameAs": [
+    "https://github.com/CSOAI-ORG",
+    "https://meok.ai"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "nicholas@csoai.org"
+  }
+}

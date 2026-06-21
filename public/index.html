@@ -108,6 +108,14 @@
       ]
     }
     </script>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CSOAI-21JUN26"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CSOAI-21JUN26', { 'anonymize_ip': true });
+</script>
 </head>
 <body>
     <!-- ═══ MEGA NAV ═══ -->
@@ -328,5 +336,16 @@ document.addEventListener('click',e=>{if(!e.target.closest('.mega-wrap'))documen
 </div>
 
 </div>
+<!-- Cookie Consent (GDPR) -->
+<div id="cookie-consent" style="position:fixed;bottom:0;left:0;right:0;background:#0a0a0a;color:#fff;padding:16px;text-align:center;z-index:9999;font-family:sans-serif;display:none;border-top:2px solid #7c3aed;">
+  We use cookies for analytics (GA4) and essential site function. By continuing, you consent.
+  <button onclick="document.getElementById('cookie-consent').style.display='none';localStorage.setItem('cookie-consent','1')" style="margin-left:16px;background:#7c3aed;color:#fff;border:none;padding:8px 16px;cursor:pointer;border-radius:4px;">Accept</button>
+  <a href="/cookies.html" style="color:#7c3aed;margin-left:16px;">Learn more</a>
+</div>
+<script>
+  if (!localStorage.getItem('cookie-consent')) {
+    document.getElementById('cookie-consent').style.display = 'block';
+  }
+</script>
 </body>
 </html>
