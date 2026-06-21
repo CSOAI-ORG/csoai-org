@@ -1,41 +1,7 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "redirects": [
-    { "source": "/how-it-works",   "destination": "/", "permanent": true },
-    { "source": "/help-center",    "destination": "/training", "permanent": true },
-    { "source": "/watchdog",       "destination": "/comply", "permanent": true },
-    { "source": "/how-it-works/",  "destination": "/", "permanent": true },
-    { "source": "/help-center/",   "destination": "/training", "permanent": true },
-    { "source": "/watchdog/",      "destination": "/comply", "permanent": true },
-    { "source": "/methodology",    "destination": "/crosswalk", "permanent": true },
-    { "source": "/asti",           "destination": "/comply", "permanent": true },
-    { "source": "/methodology/",   "destination": "/crosswalk", "permanent": true },
-    { "source": "/asti/",          "destination": "/comply", "permanent": true },
-    { "source": "/signup",         "destination": "/pricing", "permanent": false },
-    { "source": "/signup/",        "destination": "/pricing", "permanent": false },
-    { "source": "/checkout",       "destination": "/pay", "permanent": false },
-    { "source": "/checkout/",      "destination": "/pay", "permanent": false }
-  ],
-  "rewrites": [
-    { "source": "/api/map", "destination": "/api/map.json" },
-    { "source": "/api/crosswalk", "destination": "/api/crosswalk.json" },
-    { "source": "/api/dome/status", "destination": "/api/dome/status.json" },
-    { "source": "/api/council/votes", "destination": "/api/council/votes.json" },
-    { "source": "/api/sigil/verify/:id", "destination": "/api/sigil/verify.json" },
-    { "source": "/.well-known/casa-cert-dashboard", "destination": "/.well-known/casa-cert-dashboard.html" },
-    { "source": "/pay", "destination": "/api/checkout-page" }
-  ],
   "headers": [
-    {
-      "source": "/api/(.*)",
-      "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" },
-        { "key": "Access-Control-Allow-Methods", "value": "GET, POST, OPTIONS" },
-        { "key": "Access-Control-Allow-Headers", "value": "X-CSOAI-Key, Content-Type" },
-        { "key": "Content-Type", "value": "application/json" }
-      ]
-    },
     {
       "source": "/(.*)",
       "headers": [
