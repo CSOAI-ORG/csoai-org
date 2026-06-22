@@ -76,6 +76,13 @@
   <url><loc>https://csoai.org/audit</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://csoai.org/partner</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://csoai.org/article-50-kit</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://csoai.org/article-50-explained</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://csoai.org/article-50-transparency</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://csoai.org/article-50-marking</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://csoai.org/eu-code-of-practice</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://csoai.org/code-of-practice-2nd-draft</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://csoai.org/framework-crosswalk</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://csoai.org/high-risk-classifier</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://csoai.org/countdown</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
   <url><loc>https://csoai.org/sandbox</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://csoai.org/packs</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>

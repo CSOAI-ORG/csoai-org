@@ -1,51 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://csoai.org/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://csoai.org/about</loc>
-    <lastmod>2026-04-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://csoai.org/mcp-infrastructure</loc>
-    <lastmod>2026-04-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://csoai.org/contact</loc>
-    <lastmod>2026-04-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://csoai.org/legal</loc>
-    <lastmod>2026-04-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://csoai.org/high-risk-classifier</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://csoai.org/article-50-explained</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://csoai.org/framework-crosswalk</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- Core v3.1 Pages -->
+  <url><loc>https://csoai.org/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://csoai.org/map</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://csoai.org/crosswalk</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://csoai.org/dome</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://csoai.org/council</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://csoai.org/sigil</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://csoai.org/comply</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://csoai.org/charter</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://csoai.org/training</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://csoai.org/ecosystem</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://csoai.org/prosperity</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  
+  <!-- Content Pages (from white/green site) -->
+  <url><loc>https://csoai.org/about</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://csoai.org/blog</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://csoai.org/case-studies</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/certification</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://csoai.org/contact</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/cookies</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://csoai.org/crosswalks</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/dashboard</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://csoai.org/enterprise</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/faq</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/glossary</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/guides</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/advisory</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/mcp-infrastructure</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/privacy</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://csoai.org/resources</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/status</loc><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://csoai.org/terms</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://csoai.org/api-docs</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  
+  <!-- Blog Articles -->
+  <url><loc>https://csoai.org/blog-ai-audit-best-practices</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/blog-ai-governance-legislation-2026</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/blog-ai-governance-trends-2026</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/blog-ai-risk-register</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/blog-algorithmic-accountability</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/blog-byzantine-consensus</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/blog-casa-certification-launch</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/blog-casa-certification-levels</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/blog-cmmc-for-ai</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/blog-eu-ai-act-compliance</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/blog-global-ai-governance-harmonization</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/blog-iso-42001-nist-ai-rmf</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/blog-proof-of-ai</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/blog-red-teaming-adversarial-testing</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  
+  <!-- Guides -->
+  <url><loc>https://csoai.org/guide-audit-checklist</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/guide-byzantine-consensus</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/guide-casa-certification</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/guide-cmmc-ai</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/guide-eu-ai-act</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/guide-framework-selection</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/guide-risk-register</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/guide-safety-testing</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  
+  <!-- API Endpoints (for discovery) -->
+  <url><loc>https://csoai.org/api/map.json</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/api/crosswalk.json</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/api/dome/status.json</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/api/council/votes.json</loc><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://csoai.org/.well-known/agent.json</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/.well-known/mcp.json</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/llms.txt</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+
+  <!-- Product & Conversion Pages -->
+  <url><loc>https://csoai.org/pricing</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://csoai.org/certify</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://csoai.org/verify</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://csoai.org/audit</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://csoai.org/partner</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/article-50-kit</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://csoai.org/article-50-explained</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://csoai.org/article-50-transparency</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://csoai.org/article-50-marking</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://csoai.org/eu-code-of-practice</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://csoai.org/code-of-practice-2nd-draft</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://csoai.org/framework-crosswalk</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://csoai.org/high-risk-classifier</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://csoai.org/countdown</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/sandbox</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/packs</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- MCP & Infrastructure Pages -->
+  <url><loc>https://csoai.org/mcp-servers</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://csoai.org/mcp-packs</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://csoai.org/mcp-distribution</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/matrix</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/opengrid</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/layer0</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- Institutional Pages -->
+  <url><loc>https://csoai.org/governance</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/identity</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/regulators</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/security</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/trust</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/finance</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://csoai.org/legacy</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+
+  <!-- Industry Landing Pages -->
+  <url><loc>https://csoai.org/industry-aviation</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/industry-banking</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/industry-cybersecurity</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/industry-education</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/industry-energy</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/industry-government</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/industry-healthcare</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/industry-logistics</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/industry-maritime</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/industry-mining</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/industry-pharma</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://csoai.org/industry-telecoms</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- Directory Indexes -->
+  <url><loc>https://csoai.org/frameworks/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://csoai.org/industries/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://csoai.org/sectors/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>
