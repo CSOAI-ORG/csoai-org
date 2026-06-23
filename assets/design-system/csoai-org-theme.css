@@ -1,0 +1,337 @@
+/*
+  CSOAI.org warm sovereign theme override.
+  Loaded after each page's inline styles to remap the dark navy/teal/gold
+  palette to the MEOK.AI warm cream/sage/coral/champagne-gold language.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Archivo:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Remap legacy variables */
+  --navy: #f7f3ee;
+  --dark-navy: #ede8e1;
+  --teal: #7d8c7e;
+  --teal-light: #a8b6a9;
+  --gold: #c8a873;
+  --gold-dark: #b08d52;
+  --white: #1a1816;
+  --gray-light: #d9cfc3;
+  --gray-dark: #4a4540;
+
+  /* MEOK tokens */
+  --meok-cream: #f7f3ee;
+  --meok-cream-dark: #ede8e1;
+  --meok-ivory: #fffdf9;
+  --meok-sand: #d9cfc3;
+  --meok-blush: #f9e6e0;
+  --meok-rose: #e8b4a8;
+  --meok-coral: #d98c7e;
+  --meok-sage: #7d8c7e;
+  --meok-gold: #c8a873;
+  --meok-gold-light: #e6d5b5;
+  --meok-lavender: #9ca6c9;
+  --meok-ink: #1a1816;
+  --meok-ink-soft: #4a4540;
+  --meok-ink-muted: #6b6560;
+  --meok-radius-lg: 24px;
+  --meok-shadow-md: 0 8px 24px rgba(26, 18, 12, 0.06), 0 2px 6px rgba(26, 18, 12, 0.03);
+  --meok-shadow-lg: 0 24px 60px rgba(26, 18, 12, 0.08), 0 8px 20px rgba(26, 18, 12, 0.04);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background:
+    radial-gradient(ellipse at 80% 0%, var(--meok-blush) 0%, transparent 45%),
+    radial-gradient(ellipse at 20% 100%, var(--meok-gold-light) 0%, transparent 35%),
+    linear-gradient(180deg, var(--meok-cream) 0%, var(--meok-cream-dark) 100%);
+  background-attachment: fixed;
+  color: var(--meok-ink);
+  line-height: 1.6;
+}
+
+/* Header / nav */
+header,
+#header {
+  background: rgba(247, 243, 238, 0.82) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(26, 24, 22, 0.06) !important;
+  box-shadow: 0 4px 20px rgba(26, 18, 12, 0.04) !important;
+}
+
+header.scrolled,
+#header.scrolled {
+  background: rgba(247, 243, 238, 0.96) !important;
+}
+
+.logo {
+  color: var(--meok-sage) !important;
+  letter-spacing: -0.03em;
+}
+
+.logo span {
+  color: var(--meok-gold) !important;
+}
+
+nav a {
+  color: var(--meok-ink-soft) !important;
+}
+
+nav a:hover {
+  color: var(--meok-sage) !important;
+}
+
+nav a::after {
+  background: var(--meok-gold) !important;
+}
+
+/* Hero */
+#hero {
+  background:
+    radial-gradient(ellipse at 70% 20%, rgba(249, 230, 224, 0.7) 0%, transparent 45%),
+    radial-gradient(ellipse at 30% 80%, rgba(230, 213, 181, 0.45) 0%, transparent 40%),
+    linear-gradient(135deg, var(--meok-cream) 0%, var(--meok-cream-dark) 100%) !important;
+  color: var(--meok-ink) !important;
+}
+
+#hero h1,
+#hero h2,
+#hero p,
+.hero-content h1,
+.hero-content h2,
+.hero-content p {
+  color: var(--meok-ink) !important;
+}
+
+.hero-bg-animated {
+  background:
+    radial-gradient(circle at 20% 50%, rgba(125, 140, 126, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(200, 168, 115, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(217, 140, 126, 0.08) 0%, transparent 50%) !important;
+}
+
+/* Buttons */
+.cta-button {
+  background: linear-gradient(135deg, var(--meok-sage), #657565) !important;
+  color: #fff !important;
+  border-radius: 999px !important;
+  box-shadow: 0 8px 24px rgba(125, 140, 126, 0.28) !important;
+  border: none !important;
+}
+
+.cta-button:hover {
+  box-shadow: 0 12px 32px rgba(125, 140, 126, 0.36) !important;
+  transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+  background: transparent !important;
+  color: var(--meok-gold-dark) !important;
+  border: 1.5px solid var(--meok-gold) !important;
+  box-shadow: none !important;
+}
+
+.cta-button.secondary:hover {
+  background: var(--meok-gold) !important;
+  color: #fff !important;
+}
+
+/* Section titles */
+.section-title,
+h1.section-title,
+h2.section-title {
+  color: var(--meok-ink) !important;
+}
+
+.section-subtitle {
+  color: var(--meok-ink-muted) !important;
+}
+
+/* Cards */
+.feature-card,
+.pricing-card,
+.number-card,
+.problem-card,
+.cert-card,
+.news-card,
+.leader-card,
+.partner-card,
+.layer-card,
+.timeline-content,
+.accordion-content,
+.ecosystem-card,
+.value-card {
+  background: rgba(255, 253, 249, 0.72) !important;
+  border: 1px solid rgba(26, 24, 22, 0.06) !important;
+  border-radius: var(--meok-radius-lg) !important;
+  box-shadow: var(--meok-shadow-md), inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--meok-ink) !important;
+}
+
+.feature-card:hover,
+.pricing-card:hover,
+.number-card:hover,
+.problem-card:hover,
+.cert-card:hover,
+.news-card:hover,
+.leader-card:hover,
+.partner-card:hover,
+.layer-card:hover {
+  box-shadow: var(--meok-shadow-lg), inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+  transform: translateY(-4px);
+}
+
+.feature-card h3,
+.feature-card h4,
+.pricing-card h3,
+.pricing-card h4,
+.number-card h3,
+.number-card h4,
+.problem-card h3,
+.cert-card h3,
+.news-card h3,
+.leader-card h3,
+.layer-card h3 {
+  color: var(--meok-ink) !important;
+}
+
+.feature-card p,
+.pricing-card p,
+.number-card p,
+.problem-card p,
+.cert-card p,
+.news-card p,
+.leader-card p,
+.layer-card p,
+.timeline-desc,
+.leader-bio,
+.accordion-text {
+  color: var(--meok-ink-muted) !important;
+}
+
+/* Accent icons / numbers */
+.layer-number,
+.number,
+.problem-icon,
+.cert-level {
+  background: linear-gradient(135deg, var(--meok-gold-light), var(--meok-blush)) !important;
+  color: var(--meok-ink-soft) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+
+.cert-price {
+  color: var(--meok-gold-dark) !important;
+}
+
+/* Timeline */
+.timeline-dot {
+  background: var(--meok-gold) !important;
+  box-shadow: 0 0 0 4px rgba(200, 168, 115, 0.2) !important;
+}
+
+.timeline-date {
+  color: var(--meok-sage) !important;
+}
+
+/* Accordion */
+.accordion-header {
+  background: rgba(255, 253, 249, 0.6) !important;
+  border: 1px solid rgba(26, 24, 22, 0.06) !important;
+  color: var(--meok-ink) !important;
+}
+
+.accordion-content {
+  background: rgba(255, 253, 249, 0.45) !important;
+}
+
+/* Footer */
+footer,
+.footer {
+  background: var(--meok-cream-dark) !important;
+  color: var(--meok-ink-muted) !important;
+  border-top: 1px solid rgba(26, 24, 22, 0.06) !important;
+}
+
+footer h4,
+.footer-section h4 {
+  color: var(--meok-ink) !important;
+}
+
+footer a,
+.footer-section a,
+.footer-bottom a {
+  color: var(--meok-ink-soft) !important;
+}
+
+footer a:hover,
+.footer-section a:hover,
+.footer-bottom a:hover {
+  color: var(--meok-sage) !important;
+}
+
+/* Links & text helpers */
+a {
+  color: var(--meok-sage);
+}
+
+a:hover {
+  color: #657565;
+}
+
+/* Stripe / pricing inline section */
+.stripe-section,
+.stripe-section a {
+  border-radius: var(--meok-radius-lg) !important;
+}
+
+.stripe-section a {
+  box-shadow: var(--meok-shadow-md) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stripe-section a:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--meok-shadow-lg) !important;
+}
+
+/* MEOK orb hero element */
+.meok-orb {
+  width: min(420px, 60vw);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 28%),
+    radial-gradient(circle at 70% 65%, rgba(200,168,115,0.35) 0%, rgba(200,168,115,0) 35%),
+    radial-gradient(circle at 40% 70%, rgba(217,140,126,0.25) 0%, rgba(217,140,126,0) 30%),
+    radial-gradient(circle at 55% 45%, rgba(156,166,201,0.2) 0%, rgba(156,166,201,0) 35%),
+    linear-gradient(135deg, #f0e6dc 0%, #e6ddd2 35%, #ddd3c8 65%, #d4c9bc 100%);
+  box-shadow:
+    inset -20px -20px 60px rgba(139, 120, 100, 0.15),
+    inset 20px 20px 60px rgba(255, 255, 255, 0.9),
+    0 30px 80px rgba(60, 45, 35, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+  animation: meok-float 6s ease-in-out infinite;
+}
+
+@keyframes meok-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
+
+/* Scroll reveal */
+.scroll-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

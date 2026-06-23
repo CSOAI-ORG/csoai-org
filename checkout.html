@@ -4,13 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Secure Checkout — CSOAI</title>
-    <meta name="description" content="Complete your CSOAI certification payment securely via Stripe.">
+    
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <meta name="theme-color" content="#F7F3EE">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://csoai.org/checkout.html">
+    <meta property="og:title" content="Secure Checkout — CSOAI">
+    <meta property="og:description" content="Complete your CSOAI certification payment securely via Stripe.">
+    <meta property="og:image" content="https://csoai.org/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://csoai.org/assets/og-image.png">
+<meta name="description" content="Complete your CSOAI certification payment securely via Stripe.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --primary: #c9a84c; --bg: #0a0a0f; --surface: #11111a; --text: #f8fafc; --muted: #94a3b8; --emerald: #10B981; --red: #EF4444; }
+        :root { --primary: #C8A873; --bg: #0a0a0f; --surface: #EDE8E111a; --text: #f8fafc; --muted: #94a3b8; --emerald: #10B981; --red: #EF4444; }
         body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); display: flex; align-items: center; justify-content: center; min-height: 100vh; }
         .card { background: var(--surface); padding: 3rem; border-radius: 24px; border: 1px solid rgba(201,168,76,0.2); max-width: 500px; text-align: center; }
         h1 { font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary); }
@@ -25,6 +36,7 @@
         .spinner { width: 40px; height: 40px; border: 3px solid rgba(201,168,76,0.2); border-top-color: var(--primary); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 1.5rem; }
         @keyframes spin { to { transform: rotate(360deg); } }
     </style>
+  <link rel="stylesheet" href="/assets/design-system/csoai-org-theme.css">
 </head>
 <body>
     <div class="card">

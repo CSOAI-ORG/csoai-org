@@ -4,14 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About — CSOAI</title>
-    <meta name="description" content="CSOAI is the Chief Standards Office for Artificial Intelligence. Founded by Nicholas Templeman, we build the governance infrastructure that powers safe AI at scale.">
+    
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <meta name="theme-color" content="#F7F3EE">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://csoai.org/about.html">
+    <meta property="og:title" content="About — CSOAI">
+    <meta property="og:description" content="CSOAI is the Chief Standards Office for Artificial Intelligence. Founded by Nicholas Templeman, we build the governance infrastructure that powers safe AI at scale.">
+    <meta property="og:image" content="https://csoai.org/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://csoai.org/assets/og-image.png">
+<meta name="description" content="CSOAI is the Chief Standards Office for Artificial Intelligence. Founded by Nicholas Templeman, we build the governance infrastructure that powers safe AI at scale.">
     <link rel="canonical" href="https://csoai.org/about">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --navy: #1B2A4A; --dark-navy: #0F1A2E; --teal: #0D7377; --teal-light: #14919B;
-            --gold: #D4A843; --gold-dark: #B8912E; --white: #FFFFFF; --gray-light: #E8E8E8; --gray-dark: #2A3F5F;
+            --navy: #F7F3EE; --dark-navy: #EDE8E1; --teal: #7D8C7E; --teal-light: #A8B6A9;
+            --gold: #C8A873; --gold-dark: #B08D52; --white: #1A1816; --gray-light: #D9CFC3; --gray-dark: #4A4540;
         }
         html { scroll-behavior: smooth; }
         body { font-family: 'Inter', sans-serif; background-color: var(--navy); color: var(--white); line-height: 1.6; overflow-x: hidden; }
@@ -30,32 +41,33 @@
         .cta-button.secondary { background: transparent; border: 2px solid var(--gold); color: var(--gold); box-shadow: none; }
         .cta-button.secondary:hover { background: var(--gold); color: var(--navy); }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
-        .page-hero { min-height: 50vh; display: flex; align-items: center; justify-content: center; padding-top: 100px; background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 50%, #0A1428 100%); text-align: center; }
+        .page-hero { min-height: 50vh; display: flex; align-items: center; justify-content: center; padding-top: 100px; background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 50%, #F7F3EE 100%); text-align: center; }
         .page-hero h1 { font-size: clamp(2rem, 6vw, 3.5rem); font-weight: 800; margin-bottom: 1rem; }
         .page-hero h1 span { color: var(--gold); }
-        .page-hero p { color: #B0B8C8; font-size: 1.1rem; max-width: 700px; margin: 0 auto; }
+        .page-hero p { color: #6B6560; font-size: 1.1rem; max-width: 700px; margin: 0 auto; }
         section { padding: 5rem 0; }
-        section.light-bg { background-color: #273548; }
+        section.light-bg { background-color: #F7F3EE; }
         h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: 1rem; }
         h2 span { color: var(--gold); }
-        p.lead { color: #B0B8C8; font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem; }
+        p.lead { color: #6B6560; font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem; }
         .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
         @media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } }
         .value-list { list-style: none; margin-top: 1.5rem; }
-        .value-list li { color: #B0B8C8; padding-left: 1.5rem; position: relative; margin-bottom: 0.8rem; }
+        .value-list li { color: #6B6560; padding-left: 1.5rem; position: relative; margin-bottom: 0.8rem; }
         .value-list li::before { content: '✓'; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
-        .card { background: linear-gradient(135deg, #273548 0%, #2A4A6A 100%); border: 1px solid rgba(13,115,119,0.3); padding: 2rem; border-radius: 8px; }
+        .card { background: linear-gradient(135deg, #F7F3EE 0%, #F7F3EE 100%); border: 1px solid rgba(13,115,119,0.3); padding: 2rem; border-radius: 8px; }
         .card h3 { color: var(--gold); margin-bottom: 0.5rem; }
-        .card p { color: #B0B8C8; font-size: 0.95rem; }
-        footer { background: linear-gradient(180deg, var(--dark-navy) 0%, #050A15 100%); border-top: 1px solid rgba(13,115,119,0.2); padding: 3rem 0 2rem; margin-top: 3rem; }
+        .card p { color: #6B6560; font-size: 0.95rem; }
+        footer { background: linear-gradient(180deg, var(--dark-navy) 0%, #EDE8E1 100%); border-top: 1px solid rgba(13,115,119,0.2); padding: 3rem 0 2rem; margin-top: 3rem; }
         .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
         .footer-section h4 { color: var(--gold); font-size: 1rem; font-weight: 700; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
         .footer-section ul { list-style: none; }
         .footer-section ul li { margin-bottom: 0.5rem; }
-        .footer-section a { color: #B0B8C8; text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease; }
+        .footer-section a { color: #6B6560; text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease; }
         .footer-section a:hover { color: var(--teal); }
-        .footer-bottom { border-top: 1px solid rgba(13,115,119,0.1); padding-top: 1.5rem; text-align: center; color: #8A92A2; font-size: 0.85rem; }
+        .footer-bottom { border-top: 1px solid rgba(13,115,119,0.1); padding-top: 1.5rem; text-align: center; color: #6B6560; font-size: 0.85rem; }
     </style>
+  <link rel="stylesheet" href="/assets/design-system/csoai-org-theme.css">
 </head>
 <body>
     <header id="header">
@@ -125,7 +137,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>CSOAI</h4>
-                    <p style="color:#B0B8C8;font-size:0.9rem;">The governance infrastructure for the global AI economy.</p>
+                    <p style="color:#6B6560;font-size:0.9rem;">The governance infrastructure for the global AI economy.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Explore</h4>
