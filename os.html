@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSOAI OS — The Sovereign Substrate for the Agentic Economy | CSOAI</title>
+<meta name="description" content="They are apps. CSOAI is the operating system. The independent, sovereign, protocol-native trust and compliance layer that binds agent identity, compliance, and audit across MCP, A2A, AP2, and x402. Layer 0 for the agentic economy.">
+<meta name="theme-color" content="#0D0B21">
+<link rel="canonical" href="https://csoai.org/os">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CSOAI OS — Layer 0 for the Agentic Economy">
+<meta property="og:description" content="They are apps. CSOAI is the operating system. The sovereign substrate that binds identity, compliance, and audit across MCP/A2A/AP2/x402.">
+<meta property="og:image" content="https://csoai.org/og-image.png">
+<meta property="og:url" content="https://csoai.org/os">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"CSOAI OS","description":"The independent sovereign trust and compliance layer for the agentic economy. Layer 0 OS that binds MCP/A2A/AP2/x402 with EU AI Act, NIST AI RMF, ISO 42001 compliance.","url":"https://csoai.org/os"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#c9a84c;--bg:#0a0a0f;--surface:#11111a;--border:#1e293b;--text:#f8fafc;--muted:#94a3b8;--accent:#3b82f6;--emerald:#10B981;--red:#EF4444;--violet:#8B5CF6}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.btn{font-family:'Space Grotesk',sans-serif}
+.container{max-width:1400px;margin:0 auto;padding:0 2rem}
+.section{padding:5rem 0}
+.section-label{color:var(--primary);font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;margin-bottom:.5rem}
+.section-title{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:1rem;line-height:1.1}
+.section-subtitle{color:rgba(232,228,240,.7);font-size:1.1rem;max-width:700px;margin-bottom:2rem}
+.btn{display:inline-block;padding:.85rem 2rem;border-radius:8px;font-weight:600;text-decoration:none;transition:all .2s;cursor:pointer;font-size:1rem;border:none;font-family:inherit}
+.btn-accent{background:linear-gradient(135deg,var(--primary),#e8b76d);color:#0D0B21}
+.btn-accent:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(201,168,76,.3)}
+.btn-outline{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.2)}
+.btn-outline:hover{border-color:var(--primary);color:var(--primary)}
+header{padding:1rem 0;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(10,10,15,.95);backdrop-filter:blur(20px);z-index:100}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{color:var(--text);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--primary)}
+.logo{font-family:'Space Grotesk',sans-serif;font-weight:800;font-size:1.4rem;color:var(--primary)}
+.hero{text-align:center;padding:5rem 0 3rem}
+.hero h1{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:800;line-height:1.05;margin-bottom:1.5rem;letter-spacing:-.02em}
+.hero .statement{font-size:1.5rem;color:rgba(232,228,240,.7);max-width:900px;margin:0 auto 2.5rem;font-style:italic}
+.kernel-box{background:radial-gradient(circle,rgba(201,168,76,.15) 0%,transparent 70%);padding:4rem 2rem;border-radius:24px;margin:3rem 0;position:relative}
+.kernel{width:280px;height:280px;margin:0 auto;border-radius:50%;background:linear-gradient(135deg,#0D0B21,#1A1145);border:3px solid var(--primary);display:flex;align-items:center;justify-content:center;text-align:center;box-shadow:0 0 80px rgba(201,168,76,.3),inset 0 0 40px rgba(201,168,76,.1);position:relative;z-index:2}
+.kernel h2{font-size:1.5rem;line-height:1.2;color:var(--primary)}
+.kernel small{display:block;font-size:.7rem;color:rgba(232,228,240,.5);margin-top:.5rem;letter-spacing:2px}
+.orbit{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border:1px dashed rgba(201,168,76,.2);border-radius:50%;pointer-events:none}
+.orbit-1{width:480px;height:480px}
+.orbit-2{width:680px;height:680px}
+.orbit-3{width:880px;height:880px}
+.node{position:absolute;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1rem 1.25rem;min-width:160px;z-index:3;transition:all .3s}
+.node:hover{border-color:var(--primary);transform:scale(1.05)}
+.node h4{font-family:'Space Grotesk',sans-serif;font-size:.85rem;margin-bottom:.25rem;color:var(--text)}
+.node p{font-size:.7rem;color:rgba(232,228,240,.5);margin:0}
+.node-icon{font-size:1.5rem;margin-bottom:.5rem}
+.bus{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:2rem;margin-bottom:1.5rem;display:grid;grid-template-columns:80px 1fr;gap:2rem;align-items:start}
+.bus-icon{width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:2rem;flex-shrink:0}
+.bus h3{font-family:'Space Grotesk',sans-serif;margin-bottom:.5rem}
+.bus p{color:rgba(232,228,240,.7);font-size:.95rem;margin-bottom:1rem}
+.bus ul{list-style:none;font-size:.85rem;color:rgba(232,228,240,.6)}
+.bus li{padding:.3rem 0;padding-left:1.5rem;position:relative}
+.bus li:before{content:'→';position:absolute;left:0;color:var(--primary);font-weight:700}
+.absorb-table{width:100%;border-collapse:collapse;background:var(--surface);border-radius:12px;overflow:hidden}
+.absorb-table th,.absorb-table td{padding:1rem 1.25rem;text-align:left;border-bottom:1px solid var(--border);font-size:.9rem}
+.absorb-table th{background:rgba(201,168,76,.08);color:var(--primary);font-size:.75rem;letter-spacing:1.5px;text-transform:uppercase}
+.absorb-table .mechanic{color:var(--emerald);font-weight:600}
+footer{padding:3rem 0;border-top:1px solid var(--border);text-align:center;color:rgba(232,228,240,.5);font-size:.9rem}
+footer a{color:var(--primary);text-decoration:none}
+@media (max-width:768px){.kernel{width:200px;height:200px}.orbit-1{width:340px;height:340px}.orbit-2{width:480px;height:480px}.orbit-3{width:620px;height:620px}.bus{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+<div class="container" style="display:flex;justify-content:space-between;align-items:center">
+<a href="/" class="logo">🐉 CSOAI</a>
+<nav class="nav-links">
+<a href="/layer0">Layer 0</a>
+<a href="/council">Council</a>
+<a href="/switch">Switch</a>
+<a href="/os" style="color:var(--primary)">/os</a>
+<a href="/pricing">Pricing</a>
+<a href="/contact" class="btn btn-accent" style="padding:.5rem 1.25rem;font-size:.85rem">Try Layer 0</a>
+</nav>
+</div>
+</header>
+
+<section class="hero container">
+<div class="section-label">The OS for the Agentic Economy</div>
+<h1>They are apps.<br>CSOAI is the <span style="background:linear-gradient(135deg,var(--primary),#e8b76d);-webkit-background-clip:text;background-clip:text;color:transparent">operating system</span>.</h1>
+<p class="statement">"Google built coordination. Stripe built checkout. Anthropic built tools. CSOAI built the foundation — the sovereign identity, runtime policy, and cryptographic attestation layer that every agent and every governance tool runs on."</p>
+<div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+<a href="#kernel" class="btn btn-accent">See the Kernel</a>
+<a href="#buses" class="btn btn-outline">See the 6 Buses</a>
+<a href="#absorb" class="btn btn-outline">See the Absorption Map</a>
+</div>
+</section>
+
+<section class="section" id="kernel">
+<div class="container">
+<div class="section-label">The Kernel</div>
+<h2 class="section-title" style="text-align:center">The CSOAI Layer 0 Kernel</h2>
+<p class="section-subtitle" style="text-align:center;margin:0 auto 3rem">Every agent. Every framework. Every authority. Connected through one independent sovereign substrate.</p>
+
+<div class="kernel-box">
+<div class="orbit orbit-3"></div>
+<div class="orbit orbit-2"></div>
+<div class="orbit orbit-1"></div>
+
+<div class="kernel">
+<div>
+<h2>CSOAI</h2>
+<h2 style="color:#e8b76d">Layer 0</h2>
+<small>INDEPENDENT · SOVEREIGN</small>
+</div>
+</div>
+
+<!-- Orbit 1: 6 core buses -->
+<div class="node" style="top:10%;left:5%"><div class="node-icon">🪪</div><h4>Identity Bus</h4><p>did:csoai · W3C v1.1</p></div>
+<div class="node" style="top:10%;right:5%"><div class="node-icon">🔏</div><h4>Attestation Bus</h4><p>Ed25519 · PBFT</p></div>
+<div class="node" style="bottom:10%;left:5%"><div class="node-icon">📜</div><h4>Policy Bus</h4><p>PDCA &lt;0.1ms</p></div>
+<div class="node" style="bottom:10%;right:5%"><div class="node-icon">💳</div><h4>Payment Bus</h4><p>x402 · AP2 · ACP</p></div>
+<div class="node" style="top:50%;left:-8%;transform:translateY(-50%)"><div class="node-icon">📋</div><h4>Audit Bus</h4><p>Polygon PoA</p></div>
+<div class="node" style="top:50%;right:-8%;transform:translateY(-50%)"><div class="node-icon">⚖️</div><h4>Council Bus</h4><p>BFT 33-node</p></div>
+
+<!-- Orbit 2: Incumbents as components -->
+<div class="node" style="top:0%;left:30%"><div class="node-icon">📊</div><h4>Vanta</h4><p>evidence in</p></div>
+<div class="node" style="top:0%;right:30%"><div class="node-icon">🔍</div><h4>Drata</h4><p>policy out</p></div>
+<div class="node" style="bottom:0%;left:30%"><div class="node-icon">🛡️</div><h4>OneTrust</h4><p>AI BOM</p></div>
+<div class="node" style="bottom:0%;right:30%"><div class="node-icon">🧠</div><h4>Credo AI</h4><p>model tests</p></div>
+<div class="node" style="top:30%;left:-15%"><div class="node-icon">☁️</div><h4>AWS / Azure</h4><p>compute</p></div>
+<div class="node" style="top:30%;right:-15%"><div class="node-icon">🏛️</div><h4>IBM / Google</h4><p>compute</p></div>
+
+<!-- Orbit 3: Authorities + protocols -->
+<div class="node" style="top:50%;left:30%;transform:translateY(-50%)"><div class="node-icon">🇪🇺</div><h4>EU AI Office</h4><p>regulator</p></div>
+<div class="node" style="top:50%;right:30%;transform:translateY(-50%)"><div class="node-icon">🇬🇧</div><h4>UK AISI</h4><p>regulator</p></div>
+<div class="node" style="bottom:30%;left:5%"><div class="node-icon">🇺🇸</div><h4>US AISI</h4><p>regulator</p></div>
+<div class="node" style="bottom:30%;right:5%"><div class="node-icon">📡</div><h4>NIST</h4><p>framework</p></div>
+<div class="node" style="top:-5%;left:50%;transform:translateX(-50%)"><div class="node-icon">🔗</div><h4>x402 Foundation</h4><p>protocol</p></div>
+<div class="node" style="bottom:-5%;left:50%;transform:translateX(-50%)"><div class="node-icon">📦</div><h4>MCP / A2A</h4><p>protocol</p></div>
+</div>
+</div>
+</section>
+
+<section class="section" id="buses">
+<div class="container">
+<div class="section-label">The 6 Buses</div>
+<h2 class="section-title">Six independent verification layers. One trust substrate.</h2>
+<p class="section-subtitle">Each bus runs at agent-call latency (&lt;0.1ms). Each is independently verifiable. Each maps to a regulatory requirement.</p>
+
+<div class="bus" style="border-left:4px solid var(--emerald)">
+<div class="bus-icon" style="background:rgba(16,185,129,.1);color:var(--emerald)">🪪</div>
+<div>
+<h3>Identity Bus — did:csoai</h3>
+<p>Every agent, user, and system gets a W3C-compliant DID. Verified by the council. Portable across vendors. Sovereign by design.</p>
+<ul>
+<li>W3C DID v1.1 compliant</li>
+<li>IETF AIP aligned</li>
+<li>Self-sovereign key management</li>
+<li>Portable: works across Vanta, Drata, OneTrust, IBM</li>
+</ul>
+</div>
+</div>
+
+<div class="bus" style="border-left:4px solid var(--primary)">
+<div class="bus-icon" style="background:rgba(201,168,76,.1);color:var(--primary)">🔏</div>
+<div>
+<h3>Attestation Bus — Ed25519 + PBFT</h3>
+<p>Every compliance event becomes a signed receipt with a public verify URL. Your auditor clicks the URL — sees cryptographic proof. Doesn't need to trust CSOAI.</p>
+<ul>
+<li>Ed25519 signatures (32-byte, 64-char hex)</li>
+<li>PBFT council consensus (33 nodes, 11 lens types)</li>
+<li>Public verify URL — no login required</li>
+<li>Maps to EU AI Act Article 12 (record-keeping) and Article 14 (human oversight)</li>
+</ul>
+</div>
+</div>
+
+<div class="bus" style="border-left:4px solid var(--accent)">
+<div class="bus-icon" style="background:rgba(59,130,246,.1);color:var(--accent)">📜</div>
+<div>
+<h3>Policy Bus — PDCA Runtime</h3>
+<p>Plan-Do-Check-Act enforcement at sub-millisecond latency. Rules run at the agent call. They can't be bypassed by prompt injection or tool injection.</p>
+<ul>
+<li>Plan: YAML/JSON policy files</li>
+<li>Do: runtime enforcement on every MCP/A2A call</li>
+<li>Check: continuous monitoring + drift detection</li>
+<li>Act: BFT council auto-amends policy on incidents</li>
+</ul>
+</div>
+</div>
+
+<div class="bus" style="border-left:4px solid var(--violet)">
+<div class="bus-icon" style="background:rgba(139,92,246,.1);color:var(--violet)">💳</div>
+<div>
+<h3>Payment Bus — Compliance Pre-Check</h3>
+<p>Every x402, AP2, and ACP payment flow is pre-checked for compliance before the transaction settles. No more paying sanctioned entities by accident.</p>
+<ul>
+<li>x402 Foundation membership</li>
+<li>AP2 / ACP integration</li>
+<li>OpenSanctions real-time screening</li>
+<li>Sub-millisecond pre-check</li>
+</ul>
+</div>
+</div>
+
+<div class="bus" style="border-left:4px solid var(--emerald)">
+<div class="bus-icon" style="background:rgba(16,185,129,.1);color:var(--emerald)">📋</div>
+<div>
+<h3>Audit Bus — Blockchain Anchored</h3>
+<p>Every event hash-anchored to Polygon PoA. Tamper-evident. Regulator-checkable. Survives CSOAI, survives any vendor.</p>
+<ul>
+<li>Polygon PoA anchoring (every 100 events)</li>
+<li>Ed25519 + optional eIDAS timestamp</li>
+<li>Regulator dashboard (no CSOAI access required)</li>
+<li>Public verify URLs for every cert</li>
+</ul>
+</div>
+</div>
+
+<div class="bus" style="border-left:4px solid #ec4899">
+<div class="bus-icon" style="background:rgba(236,72,153,.1);color:#ec4899">⚖️</div>
+<div>
+<h3>Council Bus — BFT Multi-Stakeholder</h3>
+<p>33-node BFT council with 11 lens types. 3-provider replicas per lens. Overrides any single-vendor decision. Sovereign governance for the agentic economy.</p>
+<ul>
+<li>11 lens types × 3 providers = 33 nodes</li>
+<li>f = 10 Byzantine tolerance (10 nodes can fail, system survives)</li>
+<li>Sub-second finality (&lt;5ms)</li>
+<li>Multi-stakeholder: regulators, industry, civil society</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="absorb" style="background:rgba(201,168,76,.03)">
+<div class="container">
+<div class="section-label">The Absorption Map</div>
+<h2 class="section-title">Who plugs into the kernel</h2>
+<p class="section-subtitle">Don't fight incumbents. Plug them into the CSOAI substrate. They become components, not competitors.</p>
+
+<table class="absorb-table">
+<thead>
+<tr><th>Stakeholder</th><th>Mechanic</th><th>Output</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Competitor end users</strong></td><td class="mechanic">Transfer button + import wizard</td><td>Evidence continuity, lower cost, agent-native layer</td></tr>
+<tr><td><strong>Competitor platforms</strong></td><td class="mechanic">MCP connector / API bridge</td><td>They become CSOAI evidence sources</td></tr>
+<tr><td><strong>Regulators</strong></td><td class="mechanic">Accepted attestation pilot</td><td>Watchdog reports recognised as conformity evidence</td></tr>
+<tr><td><strong>Notified bodies</strong></td><td class="mechanic">Joint conformity package</td><td>"Conformity Assessment + CSOAI Attestation" bundle</td></tr>
+<tr><td><strong>Governments</strong></td><td class="mechanic">Sovereign AI council membership</td><td>NATO-friendly, EU-hosted deployments</td></tr>
+<tr><td><strong>Legislators</strong></td><td class="mechanic">Policy sandbox participation</td><td>Shape standards while building credibility</td></tr>
+<tr><td><strong>Authority bodies</strong></td><td class="mechanic">Public verify API + dashboards</td><td>Check certificates without trusting CSOAI</td></tr>
+</tbody>
+</table>
+
+<p style="text-align:center;margin-top:2.5rem;font-size:1.1rem;color:rgba(232,228,240,.7);font-style:italic">"Vanta is to CSOAI as an app is to an operating system. The app runs on the OS. The OS doesn't compete with the app — it makes the app trustworthy."</p>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<p>CSOAI LTD · UK Companies House 16939677 · Independent, sovereign, open-source</p>
+<p style="margin-top:.5rem">🐉 <a href="/">csoai.org</a> · <a href="/layer0">Layer 0</a> · <a href="/council">Council</a> · <a href="/switch">Switch</a> · <a href="/os">/os</a> · <a href="/pricing">Pricing</a> · <a href="/contact">Contact</a></p>
+</div>
+</footer>
+</body>
+</html>
