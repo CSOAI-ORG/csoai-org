@@ -168,7 +168,27 @@ document.addEventListener('click',e=>{if(!e.target.closest('.mega-wrap'))documen
 </script>
     <div class="container">
         <div class="emergency-header">
-            <h1>🚨 ARTICLE 50 EMERGENCY KIT</h1>
+            
+<section class="social-proof" style="background:rgba(16,185,129,.05);border:1px solid rgba(16,185,129,.2);border-radius:12px;padding:2rem;margin:2rem auto;max-width:1100px">
+  <div style="text-align:center;margin-bottom:1.5rem">
+    <div style="color:#10B981;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:2px">Trusted by the swarm</div>
+    <h2 style="font-family:'Space Grotesk',sans-serif;font-size:1.5rem;margin-top:.5rem">Production-grade AI compliance</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;text-align:center">
+    <div><div style="font-size:2rem;font-weight:800;color:#10B981;font-family:'Space Grotesk',sans-serif">5,500+</div><div style="color:#94a3b8;font-size:.85rem">Watchdog Certs issued</div></div>
+    <div><div style="font-size:2rem;font-weight:800;color:#10B981;font-family:'Space Grotesk',sans-serif">60+</div><div style="color:#94a3b8;font-size:.85rem">BFT councils live</div></div>
+    <div><div style="font-size:2rem;font-weight:800;color:#10B981;font-family:'Space Grotesk',sans-serif">12</div><div style="color:#94a3b8;font-size:.85rem">Patents filed ($12.5M moat)</div></div>
+    <div><div style="font-size:2rem;font-weight:800;color:#10B981;font-family:'Space Grotesk',sans-serif">475</div><div style="color:#94a3b8;font-size:.85rem">Open-source repos</div></div>
+    <div><div style="font-size:2rem;font-weight:800;color:#10B981;font-family:'Space Grotesk',sans-serif">47</div><div style="color:#94a3b8;font-size:.85rem">Sovereign agents</div></div>
+    <div><div style="font-size:2rem;font-weight:800;color:#10B981;font-family:'Space Grotesk',sans-serif">13</div><div style="color:#94a3b8;font-size:.85rem">Framework crosswalk</div></div>
+  </div>
+  <div style="text-align:center;margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(16,185,129,.2);color:#94a3b8;font-size:.85rem">
+    <strong style="color:#10B981">Sovereign.</strong> Runs on M4 Mac or any on-prem · 
+    <strong style="color:#10B981">Independent.</strong> UK standards body, not Big Tech · 
+    <strong style="color:#10B981">Cryptographic.</strong> Ed25519-signed, publicly verifiable
+  </div>
+</section>
+<h1>🚨 ARTICLE 50 EMERGENCY KIT</h1>
             <div class="countdown">AUGUST 2, 2026 DEADLINE — 52 DAYS REMAINING</div>
         </div>
 
@@ -277,5 +297,24 @@ document.addEventListener('click',e=>{if(!e.target.closest('.mega-wrap'))documen
 </div>
 
 </div>
+
+<!-- Live Countdown to 2 Aug 2026 -->
+<div id="countdown-banner" style="position:fixed;top:0;left:0;right:0;background:linear-gradient(90deg,#EF4444,#DC2626);color:white;padding:8px;text-align:center;z-index:9999;font-family:monospace;font-weight:700;font-size:14px;border-bottom:2px solid #B91C1C;">
+  🚨 EU AI Act Article 50 — <span id="cd-days">--</span> days <span id="cd-hours">--</span>:<span id="cd-mins">--</span>:<span id="cd-secs">--</span> until 2 Aug 2026 enforcement
+</div>
+<script>
+function tick() {
+  const target = new Date('2026-08-02T00:00:00Z').getTime();
+  const now = Date.now();
+  const diff = target - now;
+  if (diff < 0) { document.getElementById('countdown-banner').innerHTML = '🚨 EU AI Act Article 50 — IN EFFECT'; return; }
+  const d = Math.floor(diff/86400000), h = Math.floor((diff%86400000)/3600000), m = Math.floor((diff%3600000)/60000), s = Math.floor((diff%60000)/1000);
+  document.getElementById('cd-days').textContent = d;
+  document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
+  document.getElementById('cd-mins').textContent = String(m).padStart(2,'0');
+  document.getElementById('cd-secs').textContent = String(s).padStart(2,'0');
+}
+setInterval(tick, 1000); tick();
+</script>
 </body>
 </html>
