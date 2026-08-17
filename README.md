@@ -4,8 +4,8 @@
 Not a certifier. Not an enforcer. No accreditation chain — an independent measurement instrument.
 
 ### Public grid (15 slots)
-- **13 live axes** — governance, safety, provenance, continuity, conformance, openness, machinery, care, cross-reality, detector-interop, art5-safeguard, swarm, affect.
-- **gspc_jail** — quarantine slot for models that fail critical thresholds (13 Aug floor; empty on the 12 Aug stamp).
+- **13 live axes** — see the living API for current axis names.
+- **gspc_jail** — containment floor, measured 13 Aug, empty on the 12 Aug stamp, new stamp only.
 - **Slot 15** — reserved, unnamed.
 
 Affect is **MEASURED** (n=41), counsel-pending — not a legal verdict.
@@ -26,6 +26,5 @@ Deterministic gold labels · no model judges another model · unparsed counts in
 ### Resources
 - **Banks** — [HuggingFace](https://huggingface.co/csoai)
 - **Boards dataset** — [csoai/gspc-boards](https://huggingface.co/datasets/csoai/gspc-boards)
-- **Layer-0 compliance MCPs** — EU AI Act (410 verbatim articles), DORA, CRA Annex IV, NIS2, C2PA/Art 50 watermarking. See pinned repos.
 
 🌐 [councilof.ai](https://councilof.ai) · 📊 [boards](https://huggingface.co/datasets/csoai/gspc-boards) · ✉️ nicholas@csoai.org
