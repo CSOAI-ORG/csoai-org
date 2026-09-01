@@ -22,7 +22,7 @@ Scores live here — this file is not the source of truth:
 | csoai.org/root.json | **STALE unsigned** merkle `4a9a5036…` — do not quote as the envelope |
 | Method | [doi:10.5281/zenodo.21991104](https://doi.org/10.5281/zenodo.21991104) |
 
-[![GSPC](https://img.shields.io/badge/GSPC-22%20axis%20·%2022%20measured-0B1F33)](https://councilof.ai/gspc-scoreboard)
+[![GSPC](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcouncilof.ai%2Fapi%2Fgspc&query=%24.totals.public_count&label=GSPC&color=0B1F33)](https://councilof.ai/gspc-scoreboard)
 
 If this file and the API disagree, the API is right. Measurement, not certification.
 
