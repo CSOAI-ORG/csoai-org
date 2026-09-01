@@ -12,17 +12,19 @@ Scores live here — this file is not the source of truth:
 
 **[GET councilof.ai/api/gspc](https://councilof.ai/api/gspc)** · schema `csoai.gspc-axes/0.5`
 
-| 31 Aug 2026 (from that API) | |
+| Live GET /api/gspc | |
 |---|---|
-| Slots on the board | **22** |
-| Measured | **15** |
-| UNMEASURED (declared empty) | **7** |
-| Behavioural GSPC | **14 / 14** (13 canonical + jail) |
-| Signed cards | **335** (`n_cards == n_cells`) |
-| Living stamp | **SIGNED** · `did:web:csoai.org#board-attestation-1` |
+| Slots | **22** |
+| Measured | **22** = **14 model-comparison + 8 fact runs** |
+| Not | 22/22 grades · not certified · TIE is TIE |
+| Signed cards | **335** |
+| councilof.ai/root.json | **SIGNED** public-root-v0 · merkle `d438fb12…` |
+| csoai.org/root.json | **STALE unsigned** merkle `4a9a5036…` — do not quote as the envelope |
 | Method | [doi:10.5281/zenodo.21991104](https://doi.org/10.5281/zenodo.21991104) |
 
-UNMEASURED is first-class. An empty slot is a visible gap, not a fail.
+[![GSPC](https://img.shields.io/badge/GSPC-22%20axis%20·%2022%20measured-0B1F33)](https://councilof.ai/gspc-scoreboard)
+
+If this file and the API disagree, the API is right. Measurement, not certification.
 
 **Verify (free, no login):** [councilof.ai/gspc-verify](https://councilof.ai/gspc-verify/) · [csoai.org/verify](https://csoai.org/verify)  
 DID: [csoai.org/.well-known/did.json](https://csoai.org/.well-known/did.json)
