@@ -1,8 +1,10 @@
 # Nicholas Templeman · Council of AI
 
-Founder of **[Council of AI](https://councilof.ai/about/) — Council for the Safety of Artificial Intelligence**, an AI measurement body operated by **CSOAI Ltd** (England and Wales, company 16939677).
+Founder of **[Council of AI](https://councilof.ai/about/) — Council for the Safety of Artificial Intelligence**, an operating AI measurement and evidence organisation run by **CSOAI Ltd** (England and Wales, company 16939677).
 
 We measure how AI systems behave on published tests and make the results available for others to inspect. Our work includes frozen test banks, deterministic grading where the method permits it, signed measurement records, free verification and public corrections.
+
+Public records include an [externally operated automated rerun](https://github.com/probityai/agent-evidence-vectors/actions/runs/41583335594), a [participant's open implementation proposal](https://github.com/w3c-cg/aikr/pull/25) and [technical use in an individual Internet-Draft](https://datatracker.ietf.org/doc/draft-gruszka-evaluation-receipt-mappings/04/). These establish technical use within their recorded scope; they do not establish customer deployments or institutional endorsement. See our [operating evidence](https://councilof.ai/traction/) alongside the source records.
 
 ## Inspect the work
 
@@ -12,6 +14,7 @@ We measure how AI systems behave on published tests and make the results availab
 | Test methods and grading rules | [Methodology](https://councilof.ai/methodology/) |
 | Check a supported signed record | [Free verifier](https://councilof.ai/gspc-verify/) |
 | Published corrections | [Corrections ledger](https://councilof.ai/corrections/) |
+| Documented external use and its limits | [Operating evidence](https://councilof.ai/traction/) |
 | Read evidence from your software | [Connection guide](https://councilof.ai/connect/) |
 | Discuss a defined evidence requirement | [Services](https://councilof.ai/services/) · [Contact](https://councilof.ai/contact/) |
 
