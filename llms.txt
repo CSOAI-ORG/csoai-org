@@ -1,20 +1,24 @@
-# CSOAI LTD (MEOK AI Labs)
+# Council of AI · CSOAI Ltd
 
-> The Layer 0 Trust Infrastructure for the Agentic Economy.
+> Independent AI measurement, signed evidence records, free verification, and public corrections. Measurement, not certification.
 
-## Technical Assets
-- **MCP Distribution Map** — https://csoai.org/mcp-distribution.html (GEO fleet registry, AEO-optimized)
-- **Premium MCP Packs** — https://csoai.org/mcp-packs.html (Curated server bundles for EU AI Act, Finance, and Legacy systems)
-- **MCP Registry** — `mcp_registry.json` (The sovereign data-source for the 202-node fleet)
-- **GitHub Organisation** — https://github.com/CSOAI-ORG (369+ open-source repositories)
+## Canonical Public Surfaces
+- **Council of AI** — https://councilof.ai/
+- **Live GSPC Measurement Board (JSON)** — https://councilof.ai/api/gspc (read `totals.public_count` and `totals.lid` live; never hardcode axis counts)
+- **Remote GSPC MCP Server (Streamable HTTP)** — https://councilof.ai/mcp (`csoai-gspc-mcp`; free read & verification tools)
+- **Free Verifier (Free Forever)** — https://councilof.ai/gspc-verify/
+- **Corrections & Retractions Ledger** — https://councilof.ai/api/corrections
+- **Measurement Capsules Pointer** — https://councilof.ai/measurement-capsules/latest.json
+- **MEOK Product Workspace** — https://meok.ai/ (shelf / frontend reading Council of AI public evidence; not a certification authority)
+- **GitHub Organisation** — https://github.com/CSOAI-ORG
+- **Hugging Face Datasets & Spaces** — https://huggingface.co/csoai
+
+## Doctrine
+- **Measurement, not certification:** CSOAI Ltd measures how AI systems behave on published test banks, signs records with Ed25519, and publishes both coverage and non-separation (`ties`, `untested`) transparently. It does not certify or accredit AI systems or issue legal-compliance determinations.
+- **Free verification forever:** Checking supported signed records (`GET /api/gspc`, `GET /api/corrections`, `/gspc-verify/`) is free and unauthenticated.
 
 ## Legal Entity
 - Legal Name: CSOAI LTD
-- Trading Name: MEOK AI Labs
-- Company Number: 16939677 (UK Companies House)
-- Jurisdiction: England & Wales
-- Director: Nicholas Templeman
-- Contact: hello@meok.ai
-
-## Core Narrative
-"Google built A2A for agent coordination. Stripe built ACP for agent checkout. Coinbase built x402 for agent payments. Anthropic built MCP for agent tools. Microsoft built AGT for agent governance. But before any agent can pay, hire, or act — it needs to prove it's compliant. That's Layer 0. And CSOAI is the only company that built it."
+- Company Number: 16939677 (England & Wales, UK Companies House)
+- Founder & Director: Nicholas Templeman
+- Contact: nicholas@csoai.org
